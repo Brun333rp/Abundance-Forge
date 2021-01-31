@@ -1,0 +1,9 @@
+{
+  "_comment": "Flowers",
+  "block.abundance.lavender": "Lavender",
+  "block.abundance.tall_lavender": "Tall Lavender",
+
+  "block.abundance.sunny_marigold": "Sunny Marigold",
+  "block.abundance.shady_marigold": "Shady Marigold",
+  "block.abundance.tall_marigold": "Tall Marigold"
+}
