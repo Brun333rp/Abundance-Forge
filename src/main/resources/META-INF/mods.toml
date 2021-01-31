@@ -4,31 +4,31 @@ license="All rights reserved"
 issueTrackerURL="http://my.issue.tracker/"
 
 [[mods]]
-modId="abundance"
-version="${file.jarVersion}"
-displayName="Abundance"
-displayURL="https://discord.gg/BgE4EpP"
-#logoFile="logo.png"
-authors="Team Aurora"
-description="New flowers and flowery biomes!"
+    modId="abundance"
+    version="${file.jarVersion}"
+    displayName="Abundance"
+    displayURL="https://discord.gg/BgE4EpP"
+    #logoFile="logo.png"
+    authors="Team Aurora"
+    description="New flowers and flowery biomes!"
 
 [[dependencies.abundance]]
-modId="forge"
-mandatory=true
-versionRange="[35.1.10,)"
-ordering="NONE"
-side="BOTH"
+    modId="forge"
+    mandatory=true
+    versionRange="[35.1.10,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.abundance]]
-modId="minecraft"
-mandatory=true
-versionRange="[1.16.4]"
-ordering="NONE"
-side="BOTH"
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4]"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.abundance]]
-modId="abnormals_core"
-mandatory=true
-versionRange="[3.0.6,)"
-ordering="AFTER"
-side="BOTH"
+    modId="abnormals_core"
+    mandatory=true
+    versionRange="[3.0.6,)"
+    ordering="AFTER"
+    side="BOTH"
