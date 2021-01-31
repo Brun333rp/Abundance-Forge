@@ -31,7 +31,7 @@ public class LavenderBlock extends AbnormalsFlowerBlock implements IGrowable {
 
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         DoublePlantBlock doubleplantblock = (DoublePlantBlock)(AbundanceBlocks.TALL_LAVENDER.get());
-        if (doubleplantblock.getDefaultState().isValidPosition(worldIn, pos) && worldIn.getBlockState(pos.up()).getBlock() == AbundanceBlocks.LAVENDER.get()) {
+        if (doubleplantblock.getDefaultState().isValidPosition(worldIn, pos) && worldIn.isAirBlock(pos.up())) {
             doubleplantblock.placeAt(worldIn, pos, 2);
         }
 
