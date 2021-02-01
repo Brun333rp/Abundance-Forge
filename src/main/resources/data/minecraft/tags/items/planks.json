@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "abundance:jacaranda_planks",
+    "abundance:redbud_planks",
+    "abundance:vertical_jacaranda_planks",
+    "abundance:vertical_redbud_planks"
+  ]
+}

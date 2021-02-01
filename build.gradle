@@ -87,6 +87,9 @@ dependencies {
 
     implementation fg.deobf("curse.maven:abnormals-core-382216:3157757")
     implementation fg.deobf("curse.maven:jei-238222:3157864")
+    implementation fg.deobf("curse.maven:autoreglib-250363:3128555")
+    implementation fg.deobf("curse.maven:quark-243121:3186934")
+    implementation fg.deobf("curse.maven:buzzier-bees-355458:3154937")
 }
 
 repositories {

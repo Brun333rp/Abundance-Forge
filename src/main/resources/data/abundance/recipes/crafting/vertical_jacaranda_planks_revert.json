@@ -1,0 +1,1 @@
+{"type": "minecraft:crafting_shapeless", "ingredients": [{"item": "abundance:vertical_jacaranda_planks"}], "result": {"item": "abundance:jacaranda_planks"}, "conditions": [{"type": "abnormals_core:quark_flag", "flag": "vertical_planks"}]}

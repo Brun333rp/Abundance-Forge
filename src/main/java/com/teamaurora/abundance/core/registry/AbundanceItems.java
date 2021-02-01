@@ -17,6 +17,9 @@ public class AbundanceItems {
     public static final RegistryObject<Item> LAVENDER_SALAD = HELPER.createItem("lavender_salad", ()->new SoupItem(new Item.Properties().maxStackSize(1).food(Foods.LAVENDER_SALAD).group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> LAVENDER_TEA = HELPER.createItem("lavender_tea", ()->new LavenderTeaItem(new Item.Properties().food(Foods.EMPTY).maxStackSize(16).group(ItemGroup.FOOD)));
 
+    public static final RegistryObject<Item> JACARANDA_BOAT = HELPER.createBoatItem("jacaranda", AbundanceBlocks.JACARANDA_PLANKS);
+    public static final RegistryObject<Item> REDBUD_BOAT = HELPER.createBoatItem("redbud", AbundanceBlocks.REDBUD_PLANKS);
+
     public static class Foods {
         public static final Food EMPTY = (new Food.Builder()).hunger(0).saturation(0.0F).setAlwaysEdible().build();
         public static final Food LAVENDER_SALAD = (new Food.Builder()).hunger(5).saturation(0.4F).build();
