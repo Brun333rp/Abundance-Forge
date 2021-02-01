@@ -2,10 +2,19 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 2,
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "abundance:tall_lavender",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
           "name": "abundance:lavender"
         }
       ],

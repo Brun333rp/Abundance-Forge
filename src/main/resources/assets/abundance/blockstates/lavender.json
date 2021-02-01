@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": {
-      "model": "abundance:block/lavender"
+    "age=0": {
+      "model": "abundance:block/lavender_0"
+    },
+    "age=1": {
+      "model": "abundance:block/lavender_1"
+    },
+    "age=2": {
+      "model": "abundance:block/lavender_2"
     }
   }
 }

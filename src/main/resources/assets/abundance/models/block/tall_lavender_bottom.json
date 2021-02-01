@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "abundance:block/tall_lavender_bottom"
+    "cross": "abundance:block/lavender_3_bottom"
   }
 }
