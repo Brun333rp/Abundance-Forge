@@ -1,6 +1,7 @@
 package com.teamaurora.abundance.core;
 
 import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
+import com.teamaurora.abundance.core.other.AbundanceCompat;
 import com.teamaurora.abundance.core.other.AbundanceRendering;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -31,7 +32,10 @@ public class Abundance
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            AbundanceCompat.registerCompostables();
+            AbundanceCompat.registerFlammables();
+        });
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "abundance:lavender_blossoms"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}

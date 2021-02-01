@@ -2,10 +2,9 @@ package com.teamaurora.abundance.core.registry;
 
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 import com.minecraftabnormals.abnormals_core.core.util.registry.ItemSubRegistryHelper;
+import com.teamaurora.abundance.common.item.LavenderTeaItem;
 import com.teamaurora.abundance.core.Abundance;
-import net.minecraft.item.BlockNamedItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
@@ -13,5 +12,13 @@ import net.minecraftforge.fml.common.Mod;
 public class AbundanceItems {
     public static final ItemSubRegistryHelper HELPER = Abundance.REGISTRY_HELPER.getItemSubHelper();
 
-    public static final RegistryObject<Item> LAVENDER = HELPER.createItem("lavender", ()->new BlockNamedItem(AbundanceBlocks.LAVENDER.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> LAVENDER = HELPER.createItem("lavender", ()->new BlockNamedItem(AbundanceBlocks.LAVENDER.get(), new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> LAVENDER_BLOSSOMS = HELPER.createItem("lavender_blossoms", ()->new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> LAVENDER_SALAD = HELPER.createItem("lavender_salad", ()->new SoupItem(new Item.Properties().maxStackSize(1).food(Foods.LAVENDER_SALAD).group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> LAVENDER_TEA = HELPER.createItem("lavender_tea", ()->new LavenderTeaItem(new Item.Properties().food(Foods.EMPTY).maxStackSize(16).group(ItemGroup.FOOD)));
+
+    public static class Foods {
+        public static final Food EMPTY = (new Food.Builder()).hunger(0).saturation(0.0F).setAlwaysEdible().build();
+        public static final Food LAVENDER_SALAD = (new Food.Builder()).hunger(5).saturation(0.4F).build();
+    }
 }

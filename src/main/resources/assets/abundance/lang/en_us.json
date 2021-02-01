@@ -1,10 +1,27 @@
 {
-  "_comment": "Flowers",
+  "_comment": "Lavender",
   "block.abundance.lavender": "Lavender",
   "block.abundance.tall_lavender": "Tall Lavender",
   "item.abundance.lavender": "Lavender",
 
+  "item.abundance.lavender_blossoms": "Lavender Blossoms",
+  "block.abundance.lavender_blossom_carpet": "Lavender Blossom Carpet",
+
+  "item.abundance.lavender_salad": "Lavender Salad",
+  "item.abundance.lavender_tea": "Lavender Tea",
+
+
+  "_comment1": "Marigolds",
   "block.abundance.sunny_marigold": "Sunny Marigold",
   "block.abundance.shady_marigold": "Shady Marigold",
-  "block.abundance.tall_marigold": "Tall Marigold"
+  "block.abundance.tall_marigold": "Tall Marigold",
+
+
+  "_comment2": "Jacaranda Trees",
+
+  "_comment3": "Redbud Trees",
+
+  "_comment4": "Biomes & Mobs",
+
+  "_comment5": "Saguaro Cactus"
 }
