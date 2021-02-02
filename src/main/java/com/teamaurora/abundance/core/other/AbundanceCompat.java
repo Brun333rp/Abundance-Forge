@@ -9,9 +9,63 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceItems.LAVENDER.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceItems.LAVENDER_BLOSSOMS.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.LAVENDER_BLOSSOM_CARPET.get(), 0.65F);
+
+        DataUtil.registerCompostable(AbundanceBlocks.JACARANDA_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.BUDDING_JACARANDA_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_JACARANDA_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.JACARANDA_SAPLING.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.JACARANDA_LEAF_CARPET.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.BUDDING_JACARANDA_LEAF_CARPET.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_JACARANDA_LEAF_CARPET.get(), 0.3F);
+
+        DataUtil.registerCompostable(AbundanceBlocks.REDBUD_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.REDBUD_SAPLING.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.REDBUD_LEAF_CARPET.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 0.3F);
+
     }
 
     public static void registerFlammables() {
         DataUtil.registerFlammable(AbundanceBlocks.LAVENDER_BLOSSOM_CARPET.get(), 30, 60);
+
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_JACARANDA_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.BUDDING_JACARANDA_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_JACARANDA_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_JACARANDA_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_PLANKS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_SLAB.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_STAIRS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_FENCE.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_FENCE_GATE.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.VERTICAL_JACARANDA_PLANKS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.BUDDING_JACARANDA_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_JACARANDA_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_VERTICAL_SLAB.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_BOOKSHELF.get(), 30, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_BEEHIVE.get(), 5, 20);
+
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_REDBUD_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_REDBUD_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_PLANKS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_SLAB.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_STAIRS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_FENCE.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_FENCE_GATE.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.VERTICAL_REDBUD_PLANKS.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_VERTICAL_SLAB.get(), 5, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_BOOKSHELF.get(), 30, 20);
+        DataUtil.registerFlammable(AbundanceBlocks.REDBUD_BEEHIVE.get(), 5, 20);
     }
 }
