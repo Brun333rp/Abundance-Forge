@@ -8,10 +8,7 @@ import com.minecraftabnormals.abnormals_core.common.blocks.sign.AbnormalsWallSig
 import com.minecraftabnormals.abnormals_core.common.blocks.wood.*;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 import com.mojang.datafixers.util.Pair;
-import com.teamaurora.abundance.common.block.BlossomCarpetBlock;
-import com.teamaurora.abundance.common.block.LavenderBlock;
-import com.teamaurora.abundance.common.block.MarigoldBlock;
-import com.teamaurora.abundance.common.block.TallLavenderBlock;
+import com.teamaurora.abundance.common.block.*;
 import com.teamaurora.abundance.common.block.trees.JacarandaTree;
 import com.teamaurora.abundance.common.block.trees.RedbudTree;
 import com.teamaurora.abundance.core.Abundance;
@@ -107,4 +104,6 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAVES = HELPER.createBlock("flowering_redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock("quark", "flowering_redbud_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(REDBUD_LEAVES.get())), ItemGroup.DECORATIONS);
 
+    // saguaro cactus
+    public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
 }
