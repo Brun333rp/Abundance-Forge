@@ -31,8 +31,15 @@ public class AbundanceBiomeFeatures {
         if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.LAVENDER_FIELDS.getKey())) {
             withLavenderFieldsFeatures(event.getGeneration(), event.getSpawns());
         }
-        if (DataUtil.matchesKeys(biomeName, Biomes.PLAINS, Biomes.FOREST, Biomes.WOODED_HILLS)) {
+        if (DataUtil.matchesKeys(biomeName, Biomes.FOREST, Biomes.WOODED_HILLS)) {
             event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.TREES_REDBUD_SPARSE);
+        } else if (DataUtil.matchesKeys(biomeName, Biomes.PLAINS)) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.TREES_REDBUD_SPARSER);
+        }
+        if (DataUtil.matchesKeys(biomeName, Biomes.PLAINS)) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.MARIGOLD);
+        } else if (DataUtil.matchesKeys(biomeName, Biomes.SUNFLOWER_PLAINS)) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.DENSE_MARIGOLD);
         }
     }
 
