@@ -13,6 +13,7 @@ import com.teamaurora.abundance.common.block.LavenderBlock;
 import com.teamaurora.abundance.common.block.MarigoldBlock;
 import com.teamaurora.abundance.common.block.TallLavenderBlock;
 import com.teamaurora.abundance.common.block.trees.JacarandaTree;
+import com.teamaurora.abundance.common.block.trees.RedbudTree;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -37,6 +38,9 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> SUNNY_MARIGOLD = HELPER.createBlock("sunny_marigold", ()->new MarigoldBlock(()->Effects.INSTANT_HEALTH, 1, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> SHADY_MARIGOLD = HELPER.createBlock("shady_marigold", ()->new MarigoldBlock(()->Effects.INSTANT_HEALTH, 1, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> TALL_MARIGOLD = HELPER.createBlock("tall_marigold", ()->new AbnormalsTallFlowerBlock(AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
+
+    // TODO: FIX CHEST UVS!
+    // dunno why they're so janky - bottom pixel of lid/top pixel of base seems to have z-fighting
 
     // jacaranda
     public static final RegistryObject<Block> STRIPPED_JACARANDA_LOG = HELPER.createBlock("stripped_jacaranda_log", ()->new StrippedLogBlock(Block.Properties.from(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
@@ -77,7 +81,7 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> REDBUD_LOG= HELPER.createBlock("redbud_log", ()->new AbnormalsLogBlock(STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_WOOD = HELPER.createBlock("redbud_wood", ()->new WoodBlock(STRIPPED_REDBUD_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_LEAVES = HELPER.createBlock("redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> REDBUD_SAPLING = HELPER.createBlock("redbud_sapling", ()->new AbnormalsSaplingBlock(new OakTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_SAPLING = HELPER.createBlock("redbud_sapling", ()->new AbnormalsSaplingBlock(new RedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> POTTED_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_redbud_sapling", ()->new FlowerPotBlock(REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> REDBUD_PLANKS = HELPER.createBlock("redbud_planks", ()->new PlanksBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_SLAB = HELPER.createBlock("redbud_slab", ()->new WoodSlabBlock(Block.Properties.from(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
