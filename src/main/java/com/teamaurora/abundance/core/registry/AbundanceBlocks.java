@@ -12,6 +12,7 @@ import com.teamaurora.abundance.common.block.BlossomCarpetBlock;
 import com.teamaurora.abundance.common.block.LavenderBlock;
 import com.teamaurora.abundance.common.block.MarigoldBlock;
 import com.teamaurora.abundance.common.block.TallLavenderBlock;
+import com.teamaurora.abundance.common.block.trees.JacarandaTree;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -43,7 +44,7 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> JACARANDA_LOG= HELPER.createBlock("jacaranda_log", ()->new AbnormalsLogBlock(STRIPPED_JACARANDA_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> JACARANDA_WOOD = HELPER.createBlock("jacaranda_wood", ()->new WoodBlock(STRIPPED_JACARANDA_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> JACARANDA_LEAVES = HELPER.createBlock("jacaranda_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> JACARANDA_SAPLING = HELPER.createBlock("jacaranda_sapling", ()->new AbnormalsSaplingBlock(new OakTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> JACARANDA_SAPLING = HELPER.createBlock("jacaranda_sapling", ()->new AbnormalsSaplingBlock(new JacarandaTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> POTTED_JACARANDA_SAPLING = HELPER.createBlockNoItem("potted_jacaranda_sapling", ()->new FlowerPotBlock(JACARANDA_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> JACARANDA_PLANKS = HELPER.createBlock("jacaranda_planks", ()->new PlanksBlock(Block.Properties.from(Blocks.OAK_PLANKS)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> JACARANDA_SLAB = HELPER.createBlock("jacaranda_slab", ()->new WoodSlabBlock(Block.Properties.from(Blocks.OAK_SLAB)), ItemGroup.BUILDING_BLOCKS);
