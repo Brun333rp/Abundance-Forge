@@ -107,4 +107,11 @@ public class AbundanceBlocks {
 
     // saguaro cactus
     public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
+
+    // random new flowers
+    public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new AbnormalsFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> NEMOPHILA = HELPER.createBlock("nemophila", ()->new AbnormalsFlowerBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> PURPLE_AFRICAN_DAISY = HELPER.createBlock("purple_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> YELLOW_AFRICAN_DAISY = HELPER.createBlock("yellow_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
 }

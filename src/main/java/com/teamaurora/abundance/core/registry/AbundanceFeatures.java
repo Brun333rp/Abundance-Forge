@@ -1,16 +1,15 @@
 package com.teamaurora.abundance.core.registry;
 
 import com.google.common.collect.ImmutableList;
-import com.teamaurora.abundance.common.world.gen.feature.JacarandaFeature;
-import com.teamaurora.abundance.common.world.gen.feature.LavenderFeature;
-import com.teamaurora.abundance.common.world.gen.feature.MarigoldFeature;
-import com.teamaurora.abundance.common.world.gen.feature.RedbudFeature;
+import com.teamaurora.abundance.common.world.gen.feature.*;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.blockplacer.ColumnBlockPlacer;
+import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
+import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
@@ -34,6 +33,7 @@ public class AbundanceFeatures {
 
     public static final RegistryObject<Feature<NoFeatureConfig>> LAVENDER = FEATURES.register("lavender", ()->new LavenderFeature(NoFeatureConfig.field_236558_a_));
     public static final RegistryObject<Feature<NoFeatureConfig>> MARIGOLD = FEATURES.register("marigold", ()->new MarigoldFeature(NoFeatureConfig.field_236558_a_));
+    public static final RegistryObject<Feature<NoFeatureConfig>> NEMOPHILA = FEATURES.register("nemophila", ()->new NemophilaFeature(NoFeatureConfig.field_236558_a_));
 
     public static final class BlockStates {
         public static final BlockState JACARANDA_LOG = AbundanceBlocks.JACARANDA_LOG.get().getDefaultState();
@@ -47,6 +47,11 @@ public class AbundanceFeatures {
         public static final BlockState FLOWERING_REDBUD_LEAVES = AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get().getDefaultState();
 
         public static final BlockState SAGUARO_CACTUS = AbundanceBlocks.SAGUARO_CACTUS.get().getDefaultState();
+
+        public static final BlockState CHICORY = AbundanceBlocks.CHICORY.get().getDefaultState();
+        public static final BlockState AMARANTHUS = AbundanceBlocks.AMARANTHUS.get().getDefaultState();
+        public static final BlockState PURPLE_AFRICAN_DAISY = AbundanceBlocks.PURPLE_AFRICAN_DAISY.get().getDefaultState();
+        public static final BlockState YELLOW_AFRICAN_DAISY = AbundanceBlocks.YELLOW_AFRICAN_DAISY.get().getDefaultState();
     }
 
     public static final class Configs {
@@ -71,6 +76,11 @@ public class AbundanceFeatures {
                 new StraightTrunkPlacer(0, 0, 0),
                 new TwoLayerFeature(0, 0, 0)
         )).setIgnoreVines().build();
+
+        public static final BlockClusterFeatureConfig CHICORY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.CHICORY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
+        public static final BlockClusterFeatureConfig AMARANTHUS_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.AMARANTHUS), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
+        public static final BlockClusterFeatureConfig YELLOW_AFRICAN_DAISY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.YELLOW_AFRICAN_DAISY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
+        public static final BlockClusterFeatureConfig PURPLE_AFRICAN_DAISY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.PURPLE_AFRICAN_DAISY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
     }
 
     public static final class Configured {
@@ -94,6 +104,17 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS = Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.SAGUARO_CACTUS), new ColumnBlockPlacer(1, 2))).tries(10).func_227317_b_().build());
         public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS_DECORATED = PATCH_SAGUARO_CACTUS.withPlacement(Features.Placements.PATCH_PLACEMENT).func_242731_b(5);
 
+        public static final ConfiguredFeature<?, ?> NEMOPHILA = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
+        public static final ConfiguredFeature<?, ?> NEMOPHILA_DENSE = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(4, 0.2F, 2)));
+
+        public static final ConfiguredFeature<?, ?> CHICORY = Feature.RANDOM_PATCH.withConfiguration(Configs.CHICORY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(24)));
+        public static final ConfiguredFeature<?, ?> AMARANTHUS = Feature.RANDOM_PATCH.withConfiguration(Configs.AMARANTHUS_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(24)));
+        public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
+        public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
+        public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
+        public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
+
+
         private static <FC extends IFeatureConfig> void register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
             Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(Abundance.MODID, name), configuredFeature);
         }
@@ -116,6 +137,16 @@ public class AbundanceFeatures {
 
             register("patch_saguaro_cactus", PATCH_SAGUARO_CACTUS);
             register("patch_saguaro_cactus_decorated", PATCH_SAGUARO_CACTUS_DECORATED);
+
+            register("nemophila", NEMOPHILA);
+            register("nemophila_dense", NEMOPHILA_DENSE);
+
+            register("amaranthus", AMARANTHUS);
+            register("chicory", CHICORY);
+            register("yellow_african_daisy", YELLOW_AFRICAN_DAISY);
+            register("purple_african_daisy", PURPLE_AFRICAN_DAISY);
+            register("yellow_african_daisy_sparse", YELLOW_AFRICAN_DAISY_SPARSE);
+            register("purple_african_daisy_sparse", PURPLE_AFRICAN_DAISY_SPARSE);
         }
     }
 }
