@@ -34,7 +34,10 @@ public class AbundanceBiomeFeatures {
 
         if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.LAVENDER_FIELDS.getKey())) {
             withLavenderFieldsFeatures(event.getGeneration(), event.getSpawns());
+        } else if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.NEMOPHILA_FIELDS.getKey())) {
+            withNemophilaFieldsFeatures(event.getGeneration(), event.getSpawns());
         }
+
         if (DataUtil.matchesKeys(biomeName, Biomes.FOREST, Biomes.WOODED_HILLS)) {
             event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.TREES_REDBUD_SPARSE);
         } else if (DataUtil.matchesKeys(biomeName, Biomes.PLAINS)) {
@@ -110,5 +113,30 @@ public class AbundanceBiomeFeatures {
         DefaultBiomeFeatures.withBatsAndHostiles(spawns);
         DefaultBiomeFeatures.withPassiveMobs(spawns);
         spawns.isValidSpawnBiomeForPlayer();
+    }
+
+    public static void withNemophilaFieldsFeatures(BiomeGenerationSettingsBuilder builder, MobSpawnInfoBuilder spawns) {
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(builder);
+        builder.withStructure(StructureFeatures.RUINED_PORTAL);
+        DefaultBiomeFeatures.withCavesAndCanyons(builder);
+        DefaultBiomeFeatures.withLavaAndWaterLakes(builder);
+        DefaultBiomeFeatures.withMonsterRoom(builder);
+
+        DefaultBiomeFeatures.withCommonOverworldBlocks(builder);
+        DefaultBiomeFeatures.withOverworldOres(builder);
+        DefaultBiomeFeatures.withDisks(builder);
+
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.TREES_JACARANDA);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.FLOWER_PLAIN_DECORATED);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.PATCH_GRASS_PLAIN);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.NEMOPHILA_DENSE);
+
+        DefaultBiomeFeatures.withNormalMushroomGeneration(builder);
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.PATCH_SUGAR_CANE);
+        DefaultBiomeFeatures.withLavaAndWaterSprings(builder);
+        DefaultBiomeFeatures.withFrozenTopLayer(builder);
+
+        DefaultBiomeFeatures.withBatsAndHostiles(spawns);
+        DefaultBiomeFeatures.withPassiveMobs(spawns);
     }
 }

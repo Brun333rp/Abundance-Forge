@@ -14,13 +14,16 @@ public class AbundanceBiomes {
     private static final BiomeSubRegistryHelper HELPER = Abundance.REGISTRY_HELPER.getBiomeSubHelper();
 
     public static final BiomeSubRegistryHelper.KeyedBiome LAVENDER_FIELDS = HELPER.createBiome("lavender_fields", () -> makeLavenderFieldsBiome(-0.05F, 0.0F));
+    public static final BiomeSubRegistryHelper.KeyedBiome NEMOPHILA_FIELDS = HELPER.createBiome("nemophila_fields", () -> makeNemophilaFieldsBiome(0.1F, 0.025F));
 
     public static void registerBiomesToDictionary() {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(LAVENDER_FIELDS.getKey(), 3));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(NEMOPHILA_FIELDS.getKey(), 3));
     }
 
     public static void addBiomeTypes() {
         BiomeDictionary.addTypes(LAVENDER_FIELDS.getKey(), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(NEMOPHILA_FIELDS.getKey(), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.OVERWORLD);
     }
 
     private static Biome makeLavenderFieldsBiome(float depth, float scale) {
@@ -31,6 +34,27 @@ public class AbundanceBiomes {
                 .scale(scale)
                 .temperature(0.8F)
                 .downfall(0.6F)
+                .setEffects((new BiomeAmbience.Builder())
+                        .setWaterColor(4159204)
+                        .setWaterFogColor(329011)
+                        .setFogColor(12638463)
+                        .withSkyColor(getSkyColorWithTemperatureModifier(0.7F))
+                        .setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
+                        .build())
+                .withMobSpawnSettings(new MobSpawnInfo.Builder().copy())
+                .withGenerationSettings((new BiomeGenerationSettings.Builder())
+                        .withSurfaceBuilder(ConfiguredSurfaceBuilders.field_244178_j)
+                        .build()).build();
+    }
+
+    private static Biome makeNemophilaFieldsBiome(float depth, float scale) {
+        return (new Biome.Builder())
+                .precipitation(Biome.RainType.RAIN)
+                .category(Biome.Category.PLAINS)
+                .depth(depth)
+                .scale(scale)
+                .temperature(0.7F)
+                .downfall(0.75F)
                 .setEffects((new BiomeAmbience.Builder())
                         .setWaterColor(4159204)
                         .setWaterFogColor(329011)
