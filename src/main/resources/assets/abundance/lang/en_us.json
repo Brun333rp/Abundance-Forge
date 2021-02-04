@@ -89,5 +89,6 @@
   "_comment4": "Biomes & Mobs",
 
   "_comment5": "Saguaro Cactus",
-  "block.abundance.saguaro_cactus": "Saguaro Cactus"
+  "block.abundance.saguaro_cactus": "Saguaro Cactus",
+  "effect.abundance.succumbing": "Succumbing"
 }

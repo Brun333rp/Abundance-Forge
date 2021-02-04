@@ -3,15 +3,18 @@ package com.teamaurora.abundance.common.block;
 import java.util.Random;
 
 import com.teamaurora.abundance.core.registry.AbundanceBlocks;
+import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.pathfinding.PathType;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -100,6 +103,10 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
         entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
+        if (entityIn instanceof LivingEntity) {
+            LivingEntity living = (LivingEntity) entityIn;
+            living.addPotionEffect(new EffectInstance(AbundanceEffects.SUCCUMBING.get(), 1200, 0, false, true, true));
+        }
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
