@@ -10,6 +10,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.blockplacer.ColumnBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
@@ -44,6 +45,8 @@ public class AbundanceFeatures {
         public static final BlockState FLOWERING_REDBUD_LOG = AbundanceBlocks.FLOWERING_REDBUD_LOG.get().getDefaultState();
         public static final BlockState REDBUD_LEAVES = AbundanceBlocks.REDBUD_LEAVES.get().getDefaultState();
         public static final BlockState FLOWERING_REDBUD_LEAVES = AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get().getDefaultState();
+
+        public static final BlockState SAGUARO_CACTUS = AbundanceBlocks.SAGUARO_CACTUS.get().getDefaultState();
     }
 
     public static final class Configs {
@@ -88,6 +91,9 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
         public static final ConfiguredFeature<?, ?> DENSE_MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1)));
 
+        public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS = Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.SAGUARO_CACTUS), new ColumnBlockPlacer(1, 2))).tries(10).func_227317_b_().build());
+        public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS_DECORATED = PATCH_SAGUARO_CACTUS.withPlacement(Features.Placements.PATCH_PLACEMENT).func_242731_b(5);
+
         private static <FC extends IFeatureConfig> void register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
             Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(Abundance.MODID, name), configuredFeature);
         }
@@ -107,6 +113,9 @@ public class AbundanceFeatures {
             register("trees_redbud_sparser", TREES_REDBUD_SPARSER);
 
             register("lavender", LAVENDER);
+
+            register("patch_saguaro_cactus", PATCH_SAGUARO_CACTUS);
+            register("patch_saguaro_cactus_decorated", PATCH_SAGUARO_CACTUS_DECORATED);
         }
     }
 }
