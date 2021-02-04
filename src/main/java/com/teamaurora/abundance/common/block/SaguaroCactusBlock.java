@@ -9,6 +9,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
@@ -25,9 +27,12 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
+import javax.annotation.Nullable;
+
 // TODO: Make this not just a cactus clone
 public class SaguaroCactusBlock extends Block implements net.minecraftforge.common.IPlantable {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_15;
+    protected static final VoxelShape COLLISION_SHAPE = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);
 
     public SaguaroCactusBlock(AbstractBlock.Properties properties) {
         super(properties);
@@ -69,6 +74,10 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
         }
     }
 
+    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+        return COLLISION_SHAPE;
+    }
+
     /**
      * Update the provided state given the provided neighbor facing and neighbor state, returning a new state.
      * For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately
@@ -83,17 +92,10 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
         return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
+    @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
-        /*for(Direction direction : Direction.Plane.HORIZONTAL) {
-            BlockState blockstate = worldIn.getBlockState(pos.offset(direction));
-            Material material = blockstate.getMaterial();
-            if (material.isSolid() || worldIn.getFluidState(pos.offset(direction)).isTagged(FluidTags.LAVA)) {
-                return false;
-            }
-        }*/
-
         BlockState blockstate1 = worldIn.getBlockState(pos.down());
-        return blockstate1.canSustainPlant(worldIn, pos, Direction.UP, this) && !worldIn.getBlockState(pos.up()).getMaterial().isLiquid();
+        return (blockstate1.getBlock() == Blocks.SAND || blockstate1.getBlock() == Blocks.RED_SAND || blockstate1.getBlock() == AbundanceBlocks.SAGUARO_CACTUS.get()) && !worldIn.getBlockState(pos.up()).getMaterial().isLiquid();
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
@@ -118,14 +120,9 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
         return getDefaultState();
     }
 
+    @Nullable
     @Override
-    public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction facing, net.minecraftforge.common.IPlantable plantable) {
-        BlockState plant = plantable.getPlant(world, pos.offset(facing));
-        net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.offset(facing));
-
-        if (plant.getBlock() == AbundanceBlocks.SAGUARO_CACTUS.get())
-            return state.isIn(Blocks.RED_SAND) || state.isIn(AbundanceBlocks.SAGUARO_CACTUS.get()) || state.isIn(Blocks.SAND) || state.isIn(Blocks.RED_SAND);
-
-        return super.canSustainPlant(state, world, pos, facing, plantable);
+    public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, @Nullable MobEntity entity) {
+        return PathNodeType.DAMAGE_CACTUS;
     }
 }
