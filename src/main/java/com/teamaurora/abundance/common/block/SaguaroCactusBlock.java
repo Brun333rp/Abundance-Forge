@@ -120,6 +120,12 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
 
     @Override
     public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction facing, net.minecraftforge.common.IPlantable plantable) {
-        return state.isIn(AbundanceBlocks.SAGUARO_CACTUS.get()) || state.isIn(Blocks.SAND) || state.isIn(Blocks.RED_SAND) || state.getBlock() == Blocks.RED_SAND;
+        BlockState plant = plantable.getPlant(world, pos.offset(facing));
+        net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.offset(facing));
+
+        if (plant.getBlock() == AbundanceBlocks.SAGUARO_CACTUS.get())
+            return state.isIn(Blocks.RED_SAND) || state.isIn(AbundanceBlocks.SAGUARO_CACTUS.get()) || state.isIn(Blocks.SAND) || state.isIn(Blocks.RED_SAND);
+
+        return super.canSustainPlant(state, world, pos, facing, plantable);
     }
 }
