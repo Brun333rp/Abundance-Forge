@@ -101,5 +101,6 @@
   "block.abundance.yellow_african_daisy": "Yellow African Daisy",
 
   "_comment7": "Misc",
-  "item.abundance.sunflower_seeds": "Sunflower Seeds"
+  "item.abundance.sunflower_seeds": "Sunflower Seeds",
+  "block.abundance.sunflower_seed_sack": "Sunflower Seed Sack"
 }
