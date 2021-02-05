@@ -16,7 +16,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import static com.teamaurora.abundance.core.Abundance.MODID;
 
-// The value here should match an entry in the META-INF/mods.toml file
+/**
+ * THE BIG FUCKIN TO-DO LIST
+ * Add all basic cypress blocks & items
+ * Cypress tree shaping
+ * Add bayou biome & reveal mod
+ * Add cypress knees
+ * Add gooseberries
+ * Add cypress branches
+ */
 @Mod("abundance")
 public class Abundance
 {
