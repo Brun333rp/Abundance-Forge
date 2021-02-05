@@ -11,7 +11,7 @@ import java.util.Random;
 public class JacarandaTree extends Tree {
     @Nullable
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
-        if (randomIn.nextInt(5) == 0) {
+        if (randomIn.nextBoolean()) {
             return largeHive ? AbundanceFeatures.Configured.JACARANDA_BEES_005 : AbundanceFeatures.Configured.JACARANDA;
         } else {
             return largeHive ? AbundanceFeatures.Configured.FLOWERING_JACARANDA_BEES_005 : AbundanceFeatures.Configured.FLOWERING_JACARANDA;
