@@ -98,5 +98,8 @@
   "block.abundance.chicory": "Chicory",
   "block.abundance.nemophila": "Nemophila",
   "block.abundance.purple_african_daisy": "Purple African Daisy",
-  "block.abundance.yellow_african_daisy": "Yellow African Daisy"
+  "block.abundance.yellow_african_daisy": "Yellow African Daisy",
+
+  "_comment7": "Misc",
+  "item.abundance.sunflower_seeds": "Sunflower Seeds"
 }

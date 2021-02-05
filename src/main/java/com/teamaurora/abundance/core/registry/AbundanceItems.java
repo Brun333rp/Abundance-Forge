@@ -20,8 +20,11 @@ public class AbundanceItems {
     public static final RegistryObject<Item> JACARANDA_BOAT = HELPER.createBoatItem("jacaranda", AbundanceBlocks.JACARANDA_PLANKS);
     public static final RegistryObject<Item> REDBUD_BOAT = HELPER.createBoatItem("redbud", AbundanceBlocks.REDBUD_PLANKS);
 
+    public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", ()->new Item(new Item.Properties().group(ItemGroup.MISC).food(Foods.SUNFLOWER_SEEDS)));
+
     public static class Foods {
         public static final Food EMPTY = (new Food.Builder()).hunger(0).saturation(0.0F).setAlwaysEdible().build();
         public static final Food LAVENDER_SALAD = (new Food.Builder()).hunger(5).saturation(0.4F).build();
+        public static final Food SUNFLOWER_SEEDS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     }
 }
