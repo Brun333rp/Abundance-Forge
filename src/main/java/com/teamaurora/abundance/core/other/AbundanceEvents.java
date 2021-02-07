@@ -5,6 +5,7 @@ import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,7 +15,7 @@ public class AbundanceEvents {
     @SubscribeEvent
     public static void onLivingEntityDamage(LivingDamageEvent event) {
         LivingEntity entity = event.getEntityLiving();
-        if (entity.isPotionActive(AbundanceEffects.SUCCUMBING.get())) {
+        if (entity.isPotionActive(AbundanceEffects.SUCCUMBING.get()) && event.getSource() != DamageSource.MAGIC) {
             int amplifier = entity.getActivePotionEffect(AbundanceEffects.SUCCUMBING.get()).getAmplifier();
             entity.addPotionEffect(new EffectInstance(Effects.POISON, 100 + 25 * amplifier, 0, false, false, false));
         }
