@@ -6,6 +6,7 @@ import org.apache.commons.lang3.tuple.Pair;
 public class AbundanceConfig {
     public static class Common {
         public final ForgeConfigSpec.ConfigValue<Integer> lavenderFieldsWeight;
+        public final ForgeConfigSpec.ConfigValue<Integer> lavenderForestWeight;
         public final ForgeConfigSpec.ConfigValue<Integer> nemophilaFieldsWeight;
 
         Common(ForgeConfigSpec.Builder builder) {
@@ -16,6 +17,7 @@ public class AbundanceConfig {
                     .push("biome_weights");
 
             lavenderFieldsWeight = builder.define("Lavender Fields weight", 3);
+            lavenderForestWeight = builder.define("Lavender Forest weight", 2);
             nemophilaFieldsWeight = builder.define("Nemophila Fields weight", 3);
 
             builder.pop();

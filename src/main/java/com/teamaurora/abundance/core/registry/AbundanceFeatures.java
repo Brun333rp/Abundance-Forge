@@ -97,8 +97,10 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> TREES_REDBUD_SPARSE = REDBUD.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
         public static final ConfiguredFeature<?, ?> TREES_REDBUD_SPARSER = REDBUD.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(256)));
         public static final ConfiguredFeature<?, ?> TREES_JACARANDA = JACARANDA_BEES_0002.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(16)));
+        public static final ConfiguredFeature<?, ?> TREES_JACARANDA_MIXED = Feature.RANDOM_SELECTOR.withConfiguration((new MultipleRandomFeatureConfig(ImmutableList.of(Configured.JACARANDA_BEES_0002.withChance(0.5F)), Configured.FLOWERING_JACARANDA_BEES_0002))).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.5F, 1)));
 
         public static final ConfiguredFeature<?, ?> LAVENDER = AbundanceFeatures.LAVENDER.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1)));
+        public static final ConfiguredFeature<?, ?> LAVENDER_SPARSE = AbundanceFeatures.LAVENDER.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(3)));
         public static final ConfiguredFeature<?, ?> MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
         public static final ConfiguredFeature<?, ?> DENSE_MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1)));
 
@@ -136,8 +138,10 @@ public class AbundanceFeatures {
             register("trees_redbud_sparse", TREES_REDBUD_SPARSE);
             register("trees_redbud_sparser", TREES_REDBUD_SPARSER);
             register("trees_jacaranda", TREES_JACARANDA);
+            register("trees_jacaranda_mixed", TREES_JACARANDA_MIXED);
 
             register("lavender", LAVENDER);
+            register("lavender_sparse", LAVENDER_SPARSE);
 
             register("patch_saguaro_cactus", PATCH_SAGUARO_CACTUS);
             register("patch_saguaro_cactus_decorated", PATCH_SAGUARO_CACTUS_DECORATED);
