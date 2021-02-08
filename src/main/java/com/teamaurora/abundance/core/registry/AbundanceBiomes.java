@@ -2,6 +2,7 @@ package com.teamaurora.abundance.core.registry;
 
 import com.minecraftabnormals.abnormals_core.core.util.registry.BiomeSubRegistryHelper;
 import com.teamaurora.abundance.core.Abundance;
+import com.teamaurora.abundance.core.AbundanceConfig;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
@@ -17,8 +18,8 @@ public class AbundanceBiomes {
     public static final BiomeSubRegistryHelper.KeyedBiome NEMOPHILA_FIELDS = HELPER.createBiome("nemophila_fields", () -> makeNemophilaFieldsBiome(0.1F, 0.025F));
 
     public static void registerBiomesToDictionary() {
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(LAVENDER_FIELDS.getKey(), 3));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(NEMOPHILA_FIELDS.getKey(), 3));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(LAVENDER_FIELDS.getKey(), AbundanceConfig.COMMON.lavenderFieldsWeight.get()));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(NEMOPHILA_FIELDS.getKey(), AbundanceConfig.COMMON.nemophilaFieldsWeight.get()));
     }
 
     public static void addBiomeTypes() {
