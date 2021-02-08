@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/coral_fan",
   "textures": {
-    "cross": "abundance:block/nemophila"
+    "fan": "abundance:block/nemophila"
   }
 }

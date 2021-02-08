@@ -1,7 +1,14 @@
 {
-  "variants": {
-    "": {
-      "model": "abundance:block/nemophila"
+  "multipart": [
+    {
+      "apply": {
+        "model": "abundance:block/nemophila"
+      }
+    },
+    {
+      "apply": {
+        "model": "abundance:block/nemophila2"
+      }
     }
-  }
+  ]
 }
