@@ -35,7 +35,7 @@ public class AbundanceBlocks {
     // marigold
     public static final RegistryObject<Block> SUNNY_MARIGOLD = HELPER.createBlock("sunny_marigold", ()->new MarigoldBlock(()->Effects.INSTANT_HEALTH, 1, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> SHADY_MARIGOLD = HELPER.createBlock("shady_marigold", ()->new MarigoldBlock(()->Effects.INSTANT_HEALTH, 1, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> TALL_MARIGOLD = HELPER.createBlock("tall_marigold", ()->new AbnormalsTallFlowerBlock(AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> TALL_MARIGOLD = HELPER.createBlock("tall_marigold", ()->new TallMarigoldBlock(AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
 
     // TODO: FIX CHEST UVS!
     // dunno why they're so janky - bottom pixel of lid/top pixel of base seems to have z-fighting
@@ -110,7 +110,7 @@ public class AbundanceBlocks {
 
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new AbnormalsFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new ThiccFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> NEMOPHILA = HELPER.createBlock("nemophila", ()->new NemophilaBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> PURPLE_AFRICAN_DAISY = HELPER.createBlock("purple_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> YELLOW_AFRICAN_DAISY = HELPER.createBlock("yellow_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
