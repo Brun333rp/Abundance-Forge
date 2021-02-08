@@ -23,6 +23,12 @@ public class MarigoldFeature extends Feature<NoFeatureConfig> {
         for (BlockPos pos2 : BlockPos.getAllInBoxMutable(pos.add(-3, -3, -3), pos.add(3, 3, 3))) {
             if (pos.withinDistance(pos2, 3.0) && AbundanceBlocks.SUNNY_MARIGOLD.get().getDefaultState().isValidPosition(worldIn, pos2) && isAirAt(worldIn, pos2)) {
                 int variant = rand.nextInt(4);
+                if (!pos.withinDistance(pos2, 2.0) && rand.nextInt(3) == 0) {
+                    variant = 3;
+                }
+                if (!pos.withinDistance(pos2, 1.0) && rand.nextInt(3) == 0) {
+                    variant = 3;
+                }
                 if (variant == 0) {
                     worldIn.setBlockState(pos2, AbundanceBlocks.SUNNY_MARIGOLD.get().getDefaultState(), 2);
                     i++;

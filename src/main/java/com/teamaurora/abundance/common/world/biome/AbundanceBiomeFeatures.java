@@ -51,6 +51,9 @@ public class AbundanceBiomeFeatures {
         if (DataUtil.matchesKeys(biomeName, Biomes.PLAINS, Biomes.FOREST, Biomes.WOODED_HILLS)) {
             event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.CHICORY);
             event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.NEMOPHILA);
+        } else if (DataUtil.matchesKeys(biomeName, Biomes.FLOWER_FOREST)) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.NEMOPHILA_NOT_QUITE_AS_DENSE);
+            event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.CHICORY_DENSE);
         }
         if (DataUtil.matchesKeys(biomeName, Biomes.JUNGLE, Biomes.JUNGLE_EDGE, Biomes.JUNGLE_HILLS, Biomes.BAMBOO_JUNGLE, Biomes.BAMBOO_JUNGLE_HILLS, Biomes.MODIFIED_JUNGLE, Biomes.MODIFIED_JUNGLE_EDGE)) {
             event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.AMARANTHUS);

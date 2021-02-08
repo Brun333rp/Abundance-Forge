@@ -106,10 +106,12 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS_DECORATED = PATCH_SAGUARO_CACTUS.withPlacement(Features.Placements.PATCH_PLACEMENT).func_242731_b(5);
 
         public static final ConfiguredFeature<?, ?> NEMOPHILA = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
+        public static final ConfiguredFeature<?, ?> NEMOPHILA_NOT_QUITE_AS_DENSE = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(4)));
         public static final ConfiguredFeature<?, ?> NEMOPHILA_DENSE = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(24, 0.2F, 2)));
 
         public static final ConfiguredFeature<?, ?> CHICORY = Feature.RANDOM_PATCH.withConfiguration(Configs.CHICORY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(24)));
-        public static final ConfiguredFeature<?, ?> AMARANTHUS = Feature.RANDOM_PATCH.withConfiguration(Configs.AMARANTHUS_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(24)));
+        public static final ConfiguredFeature<?, ?> CHICORY_DENSE = Feature.RANDOM_PATCH.withConfiguration(Configs.CHICORY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(6)));
+        public static final ConfiguredFeature<?, ?> AMARANTHUS = Feature.RANDOM_PATCH.withConfiguration(Configs.AMARANTHUS_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(6)));
         public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
         public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
         public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
@@ -141,10 +143,12 @@ public class AbundanceFeatures {
             register("patch_saguaro_cactus_decorated", PATCH_SAGUARO_CACTUS_DECORATED);
 
             register("nemophila", NEMOPHILA);
+            register("nemophila_not_quite_as_dense", NEMOPHILA_NOT_QUITE_AS_DENSE);
             register("nemophila_dense", NEMOPHILA_DENSE);
 
             register("amaranthus", AMARANTHUS);
             register("chicory", CHICORY);
+            register("chicory_dense", CHICORY_DENSE);
             register("yellow_african_daisy", YELLOW_AFRICAN_DAISY);
             register("purple_african_daisy", PURPLE_AFRICAN_DAISY);
             register("yellow_african_daisy_sparse", YELLOW_AFRICAN_DAISY_SPARSE);
