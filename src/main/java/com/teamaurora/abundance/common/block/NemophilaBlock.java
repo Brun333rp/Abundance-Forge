@@ -3,6 +3,7 @@ package com.teamaurora.abundance.common.block;
 import com.minecraftabnormals.abnormals_core.common.blocks.AbnormalsFlowerBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.potion.Effect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -20,5 +21,10 @@ public class NemophilaBlock extends AbnormalsFlowerBlock {
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         return SHAPE;
+    }
+
+    @Override
+    public boolean isReplaceable(BlockState state, BlockItemUseContext useContext) {
+        return true;
     }
 }
