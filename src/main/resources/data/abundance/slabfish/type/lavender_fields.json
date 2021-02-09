@@ -1,5 +1,6 @@
 {
   "rarity": "common",
+  "priority": 1,
   "displayName": {
     "translate": "entity.abundance.slabfish.type.lavender_fields"
   },
