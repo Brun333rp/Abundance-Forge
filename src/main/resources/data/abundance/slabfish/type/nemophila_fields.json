@@ -1,0 +1,19 @@
+{
+  "rarity": "common",
+  "displayName": {
+    "translate": "entity.abundance.slabfish.type.nemophila_fields"
+  },
+  "conditions": [
+    {
+      "type": "environmental:event",
+      "events": [
+        "spawn",
+        "breed"
+      ]
+    },
+    {
+      "type": "environmental:biome",
+      "biome": "abundance:nemophila_fields"
+    }
+  ]
+}

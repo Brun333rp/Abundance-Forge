@@ -1,0 +1,28 @@
+{
+  "rarity": "common",
+  "displayName": {
+    "translate": "entity.abundance.slabfish.type.lavender_fields"
+  },
+  "conditions": [
+    {
+      "type": "environmental:event",
+      "events": [
+        "spawn",
+        "breed"
+      ]
+    },
+    {
+      "type": "environmental:or",
+      "conditions": [
+        {
+          "type": "environmental:biome",
+          "biome": "abundance:lavender_fields"
+        },
+        {
+          "type": "environmental:biome",
+          "biome": "abundance:lavender_forest"
+        }
+      ]
+    }
+  ]
+}

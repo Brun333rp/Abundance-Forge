@@ -88,6 +88,9 @@
 
 
   "_comment4": "Biomes & Mobs",
+  "entity.abundance.slabfish.type.lavender_fields": "Lavender Fields",
+  "entity.abundance.slabfish.type.nemophila_fields": "Nemophila Fields",
+
 
   "_comment5": "Saguaro Cactus",
   "block.abundance.saguaro_cactus": "Saguaro Cactus",
