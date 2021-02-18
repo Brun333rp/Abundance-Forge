@@ -24,7 +24,7 @@ public class AbundanceItems {
 
     public static class Foods {
         public static final Food EMPTY = (new Food.Builder()).hunger(0).saturation(0.0F).setAlwaysEdible().build();
-        public static final Food LAVENDER_SALAD = (new Food.Builder()).hunger(5).saturation(0.4F).build();
+        public static final Food LAVENDER_SALAD = (new Food.Builder()).hunger(6).saturation(0.5F).build();
         public static final Food SUNFLOWER_SEEDS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     }
 }
