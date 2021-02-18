@@ -18,7 +18,7 @@ public class AbundanceConfig {
 
             lavenderFieldsWeight = builder.define("Lavender Fields weight", 3);
             lavenderForestWeight = builder.define("Lavender Forest weight", 2);
-            nemophilaFieldsWeight = builder.define("Nemophila Fields weight", 3);
+            nemophilaFieldsWeight = builder.define("Nemophila Fields weight", 0);
 
             builder.pop();
             builder.pop();
