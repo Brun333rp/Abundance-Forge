@@ -9,6 +9,7 @@ import com.minecraftabnormals.abnormals_core.common.blocks.wood.*;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 import com.mojang.datafixers.util.Pair;
 import com.teamaurora.abundance.common.block.*;
+import com.teamaurora.abundance.common.block.trees.FloweringRedbudTree;
 import com.teamaurora.abundance.common.block.trees.JacarandaTree;
 import com.teamaurora.abundance.common.block.trees.RedbudTree;
 import com.teamaurora.abundance.core.Abundance;
@@ -76,7 +77,7 @@ public class AbundanceBlocks {
     // redbud
     public static final RegistryObject<Block> STRIPPED_REDBUD_LOG = HELPER.createBlock("stripped_redbud_log", ()->new StrippedLogBlock(Block.Properties.from(Blocks.STRIPPED_OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD = HELPER.createBlock("stripped_redbud_wood", ()->new StrippedWoodBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
-    public static final RegistryObject<Block> REDBUD_LOG= HELPER.createBlock("redbud_log", ()->new AbnormalsLogBlock(STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_LOG = HELPER.createBlock("redbud_log", ()->new AbnormalsLogBlock(STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_WOOD = HELPER.createBlock("redbud_wood", ()->new WoodBlock(STRIPPED_REDBUD_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_LEAVES = HELPER.createBlock("redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> REDBUD_SAPLING = HELPER.createBlock("redbud_sapling", ()->new AbnormalsSaplingBlock(new RedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
@@ -104,6 +105,10 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> FLOWERING_REDBUD_LOG= HELPER.createBlock("flowering_redbud_log", ()->new AbnormalsLogBlock(STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAVES = HELPER.createBlock("flowering_redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock("quark", "flowering_redbud_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(REDBUD_LEAVES.get())), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_LEAVES = HELPER.createBlock("budding_redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock("quark", "budding_redbud_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(REDBUD_LEAVES.get())), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", ()->new AbnormalsSaplingBlock(new FloweringRedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", ()->new FlowerPotBlock(REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // saguaro cactus
     public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);

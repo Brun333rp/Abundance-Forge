@@ -44,6 +44,7 @@ public class AbundanceFeatures {
         public static final BlockState REDBUD_LOG = AbundanceBlocks.REDBUD_LOG.get().getDefaultState();
         public static final BlockState FLOWERING_REDBUD_LOG = AbundanceBlocks.FLOWERING_REDBUD_LOG.get().getDefaultState();
         public static final BlockState REDBUD_LEAVES = AbundanceBlocks.REDBUD_LEAVES.get().getDefaultState();
+        public static final BlockState BUDDING_REDBUD_LEAVES = AbundanceBlocks.BUDDING_REDBUD_LEAVES.get().getDefaultState();
         public static final BlockState FLOWERING_REDBUD_LEAVES = AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get().getDefaultState();
 
         public static final BlockState SAGUARO_CACTUS = AbundanceBlocks.SAGUARO_CACTUS.get().getDefaultState();
@@ -70,8 +71,15 @@ public class AbundanceFeatures {
                 new TwoLayerFeature(0, 0, 0)
         )).setIgnoreVines().build();
         public static final BaseTreeFeatureConfig REDBUD_TREE_CONFIG = (new BaseTreeFeatureConfig.Builder(
+                new SimpleBlockStateProvider(BlockStates.REDBUD_LOG),
+                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LEAVES, 5).addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 1),
+                new BlobFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0), 0),
+                new StraightTrunkPlacer(0, 0, 0),
+                new TwoLayerFeature(0, 0, 0)
+        )).setIgnoreVines().build();
+        public static final BaseTreeFeatureConfig FLOWERING_REDBUD_TREE_CONFIG = (new BaseTreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LOG, 1).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LOG, 1),
-                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LEAVES, 2).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LEAVES, 1),
+                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 2).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LEAVES, 1),
                 new BlobFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0), 0),
                 new StraightTrunkPlacer(0, 0, 0),
                 new TwoLayerFeature(0, 0, 0)
@@ -92,6 +100,7 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_JACARANDA_BEES_0002 = AbundanceFeatures.JACARANDA_TREE.get().withConfiguration(Configs.FLOWERING_JACARANDA_TREE_CONFIG.func_236685_a_(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)));
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBUD = AbundanceFeatures.REDBUD_TREE.get().withConfiguration(Configs.REDBUD_TREE_CONFIG);
+        public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_REDBUD = AbundanceFeatures.REDBUD_TREE.get().withConfiguration(Configs.FLOWERING_REDBUD_TREE_CONFIG);
 
         public static final ConfiguredFeature<?, ?> TREES_JACARANDA_REDBUD = Feature.RANDOM_SELECTOR.withConfiguration((new MultipleRandomFeatureConfig(ImmutableList.of(Configured.JACARANDA_BEES_0002.withChance(0.1F), Configured.REDBUD.withChance(0.3F)), Configured.FLOWERING_JACARANDA_BEES_0002))).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(8)));
         public static final ConfiguredFeature<?, ?> TREES_REDBUD_SPARSE = REDBUD.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
@@ -133,6 +142,7 @@ public class AbundanceFeatures {
             register("flowering_jacaranda_bees_0002", FLOWERING_JACARANDA_BEES_0002);
 
             register("redbud", REDBUD);
+            register("flowering_redbud", FLOWERING_REDBUD);
 
             register("trees_jacaranda_redbud", TREES_JACARANDA_REDBUD);
             register("trees_redbud_sparse", TREES_REDBUD_SPARSE);

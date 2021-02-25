@@ -82,9 +82,13 @@
 
   "item.abundance.redbud_boat": "Redbud Boat",
 
+  "block.abundance.budding_redbud_leaves": "Budding Redbud Leaves",
+  "block.abundance.budding_redbud_leaf_carpet": "Budding Redbud Leaf Carpet",
   "block.abundance.flowering_redbud_leaves": "Flowering Redbud Leaves",
   "block.abundance.flowering_redbud_leaf_carpet": "Flowering Redbud Leaf Carpet",
   "block.abundance.flowering_redbud_log": "Flowering Redbud Log",
+  "block.abundance.flowering_redbud_sapling": "Flowering Redbud Sapling",
+  "block.abundance.potted_flowering_redbud_sapling": "Potted Flowering Redbud Sapling",
 
 
   "_comment4": "Biomes & Mobs",

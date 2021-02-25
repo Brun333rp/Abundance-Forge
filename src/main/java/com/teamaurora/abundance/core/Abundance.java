@@ -2,7 +2,6 @@ package com.teamaurora.abundance.core;
 
 import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
 import com.teamaurora.abundance.core.other.AbundanceCompat;
-import com.teamaurora.abundance.core.other.AbundanceRendering;
 import com.teamaurora.abundance.core.registry.AbundanceBiomes;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import com.teamaurora.abundance.core.registry.AbundanceFeatures;
@@ -44,7 +43,6 @@ public class Abundance
         MinecraftForge.EVENT_BUS.register(this);
 
         eventBus.addListener(this::commonSetup);
-        eventBus.addListener(this::clientSetup);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AbundanceConfig.COMMON_SPEC);
     }
@@ -58,12 +56,6 @@ public class Abundance
             AbundanceBiomes.addBiomeTypes();
             AbundanceBiomes.registerBiomesToDictionary();
             AbundanceBiomes.addSubBiomes();
-        });
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-            AbundanceRendering.setupRenderLayer();
         });
     }
 }
