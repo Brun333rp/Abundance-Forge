@@ -32,7 +32,6 @@ import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 
-// TODO: Make this not just a cactus clone
 public class SaguaroCactusBlock extends Block implements net.minecraftforge.common.IPlantable {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_15;
     protected static final VoxelShape COLLISION_SHAPE = Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);

@@ -28,10 +28,10 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
 
     @Override
     public boolean generate(ISeedReader worldIn, ChunkGenerator generator, Random rand, BlockPos position, BaseTreeFeatureConfig config) {
-        int height = rand.nextInt(2) + 3;
+        int height = rand.nextInt(3) + 4;
         Direction dir = Direction.byHorizontalIndex(rand.nextInt(4));
         boolean back = rand.nextBoolean();
-        if (position.getY() <= 0 || position.getY() + height > worldIn.getHeight() - 2) {
+        if (position.getY() <= 0 || position.getY() + height > worldIn.getHeight()) {
             return false;
         }
         Block downward = worldIn.getBlockState(position.down()).getBlock();
@@ -47,17 +47,10 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
             TreeUtil.setForcedState(worldIn, position.up(i), AbundanceBlocks.SAGUARO_CACTUS.get().getDefaultState());
         }
         int height1, height2, depth1, depth2;
-        if (height == 3) {
-            depth1 = 1;
-            depth2 = 1;
-            height1 = 2;
-            height2 = 2;
-        } else {
-            depth1 = 1 + rand.nextInt(2);
-            depth2 = 1 + rand.nextInt(2);
-            height1 = randBetween(depth1 + 1, 3, rand);
-            height2 = randBetween(depth2 + 1, 3, rand);
-        }
+        depth1 = 1 + rand.nextInt(height - 3);
+        depth2 = 1 + rand.nextInt(height - 3);
+        height1 = randBetween(depth1 + 1, height - 1, rand);
+        height2 = randBetween(depth2 + 1, height - 1, rand);
         for (int i = depth1; i <= height1; i++) {
             BlockState sag1 = AbundanceBlocks.SMALL_SAGUARO_CACTUS.get().getDefaultState();
             if (i == depth1) {
