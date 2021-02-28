@@ -39,6 +39,7 @@ public class Abundance
 
         AbundanceFeatures.FEATURES.register(eventBus);
         AbundanceEffects.EFFECTS.register(eventBus);
+        AbundanceEffects.POTIONS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -56,6 +57,8 @@ public class Abundance
             AbundanceBiomes.addBiomeTypes();
             AbundanceBiomes.registerBiomesToDictionary();
             AbundanceBiomes.addSubBiomes();
+
+            AbundanceEffects.registerBrewingRecipes();
         });
     }
 }

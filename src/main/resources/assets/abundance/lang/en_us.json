@@ -99,6 +99,7 @@
   "_comment5": "Saguaro Cactus",
   "block.abundance.saguaro_cactus": "Saguaro Cactus",
   "block.abundance.small_saguaro_cactus": "Small Saguaro Cactus",
+  "block.abundance.saguaro_flower": "Saguaro Flower",
   "effect.abundance.succumbing": "Succumbing",
 
   "_comment6": "Flowers",
@@ -110,5 +111,22 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Sunflower Seeds",
-  "block.abundance.sunflower_seed_sack": "Sunflower Seed Sack"
+  "block.abundance.sunflower_seed_sack": "Sunflower Seed Sack",
+
+  "_comment8": "Potions",
+  "item.minecraft.potion.effect.succumbing": "Potion of Succumbing",
+  "item.minecraft.potion.effect.succumbing_strong": "Potion of Succumbing",
+  "item.minecraft.potion.effect.succumbing_long": "Potion of Succumbing",
+
+  "item.minecraft.splash_potion.effect.succumbing": "Splash Potion of Succumbing",
+  "item.minecraft.splash_potion.effect.succumbing_strong": "Splash Potion of Succumbing",
+  "item.minecraft.splash_potion.effect.succumbing_long": "Splash Potion of Succumbing",
+
+  "item.minecraft.lingering_potion.effect.succumbing": "Lingering Potion of Succumbing",
+  "item.minecraft.lingering_potion.effect.succumbing_strong": "Lingering Potion of Succumbing",
+  "item.minecraft.lingering_potion.effect.succumbing_long": "Lingering Potion of Succumbing",
+
+  "item.minecraft.tipped_arrow.effect.succumbing": "Arrow of Succumbing",
+  "item.minecraft.tipped_arrow.effect.succumbing_strong": "Arrow of Succumbing",
+  "item.minecraft.tipped_arrow.effect.succumbing_long": "Arrow of Succumbing"
 }
