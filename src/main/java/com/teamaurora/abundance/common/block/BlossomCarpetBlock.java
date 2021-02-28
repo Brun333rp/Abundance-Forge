@@ -14,7 +14,7 @@ public class BlossomCarpetBlock extends LeafCarpetBlock {
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-        if (worldIn.isAirBlock(pos.down()) && entityIn instanceof LivingEntity && entityIn.getType() != EntityType.BAT && entityIn.getType() != EntityType.BEE) {
+        if (worldIn.isAirBlock(pos.down()) && entityIn instanceof LivingEntity && entityIn.getPosY() < pos.getY() && entityIn.getType() != EntityType.BAT && entityIn.getType() != EntityType.BEE) {
             worldIn.destroyBlock(pos, false);
         }
     }
