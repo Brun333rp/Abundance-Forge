@@ -8,7 +8,9 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.FoliageColors;
+import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -61,21 +63,46 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.YELLOW_AFRICAN_DAISY.get(), RenderType.getCutout());
     }
 
+    private static int blendColors(int color1, int color2, float biasTowards1) {
+        int r1 = (color1 & 0xFF0000) >>> 16;
+        int g1 = (color1 & 0x00FF00) >>> 8;
+        int b1 = color1 & 0x0000FF;
+        int r2 = (color2 & 0xFF0000) >>> 16;
+        int g2 = (color2 & 0x00FF00) >>> 8;
+        int b2 = color2 & 0x0000FF;
+
+        float biasTowards2 = 1 - biasTowards1;
+
+        int r3 = Math.round(r1 * biasTowards1 + r2 * biasTowards2);
+        int g3 = Math.round(g1 * biasTowards1 + g2 * biasTowards2);
+        int b3 = Math.round(b1 * biasTowards1 + b2 * biasTowards2);
+
+        return (r3 << 16) + (g3 << 8) + b3;
+    }
+
+    private static int getRedbudColor(IBlockDisplayReader worldIn, BlockPos blockPosIn) {
+        return blendColors(0xACE352, BiomeColors.getFoliageColor(worldIn, blockPosIn), 0.5F);
+    }
+
     public static void registerBlockColors() {
         BlockColors blockColors = Minecraft.getInstance().getBlockColors();
-        DataUtil.registerBlockColor(blockColors, (x, world, pos, u) -> world != null && pos != null ? BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefault(), Arrays.asList(
+        DataUtil.registerBlockColor(blockColors, (x, world, pos, u) -> world != null && pos != null ? getRedbudColor(world, pos) : 0xACE352, Arrays.asList(
                 AbundanceBlocks.REDBUD_LEAVES,
                 AbundanceBlocks.REDBUD_LEAF_CARPET,
                 AbundanceBlocks.BUDDING_REDBUD_LEAVES,
-                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET
+                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
+                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET
         ));
 
         ItemColors itemColors = Minecraft.getInstance().getItemColors();
-        DataUtil.registerBlockItemColor(itemColors, (color, items) -> FoliageColors.getDefault(), Arrays.asList(
+        DataUtil.registerBlockItemColor(itemColors, (color, items) -> 0xACE352, Arrays.asList(
                 AbundanceBlocks.REDBUD_LEAVES,
                 AbundanceBlocks.REDBUD_LEAF_CARPET,
                 AbundanceBlocks.BUDDING_REDBUD_LEAVES,
-                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET
+                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
+                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET
         ));
     }
 }

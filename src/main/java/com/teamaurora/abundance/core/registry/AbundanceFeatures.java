@@ -72,14 +72,14 @@ public class AbundanceFeatures {
         )).setIgnoreVines().build();
         public static final BaseTreeFeatureConfig REDBUD_TREE_CONFIG = (new BaseTreeFeatureConfig.Builder(
                 new SimpleBlockStateProvider(BlockStates.REDBUD_LOG),
-                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LEAVES, 5).addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 1),
+                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LEAVES, 3).addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 1),
                 new BlobFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0), 0),
                 new StraightTrunkPlacer(0, 0, 0),
                 new TwoLayerFeature(0, 0, 0)
         )).setIgnoreVines().build();
         public static final BaseTreeFeatureConfig FLOWERING_REDBUD_TREE_CONFIG = (new BaseTreeFeatureConfig.Builder(
                 new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.REDBUD_LOG, 1).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LOG, 1),
-                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 2).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LEAVES, 1),
+                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.BUDDING_REDBUD_LEAVES, 4).addWeightedBlockstate(BlockStates.FLOWERING_REDBUD_LEAVES, 1),
                 new BlobFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0), 0),
                 new StraightTrunkPlacer(0, 0, 0),
                 new TwoLayerFeature(0, 0, 0)
