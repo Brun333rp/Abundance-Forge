@@ -31,6 +31,8 @@ public class AbundanceFeatures {
     public static final RegistryObject<Feature<BaseTreeFeatureConfig>> JACARANDA_TREE = FEATURES.register("jacaranda_tree", ()->new JacarandaFeature(BaseTreeFeatureConfig.CODEC));
     public static final RegistryObject<Feature<BaseTreeFeatureConfig>> REDBUD_TREE = FEATURES.register("redbud_tree", ()->new RedbudFeature(BaseTreeFeatureConfig.CODEC));
 
+    public static final RegistryObject<Feature<BaseTreeFeatureConfig>> SAGUARO_CACTUS = FEATURES.register("saguaro_cactus", ()->new SaguaroCactusFeature(BaseTreeFeatureConfig.CODEC));
+
     public static final RegistryObject<Feature<NoFeatureConfig>> LAVENDER = FEATURES.register("lavender", ()->new LavenderFeature(NoFeatureConfig.field_236558_a_));
     public static final RegistryObject<Feature<NoFeatureConfig>> MARIGOLD = FEATURES.register("marigold", ()->new MarigoldFeature(NoFeatureConfig.field_236558_a_));
     public static final RegistryObject<Feature<NoFeatureConfig>> NEMOPHILA = FEATURES.register("nemophila", ()->new NemophilaFeature(NoFeatureConfig.field_236558_a_));
@@ -113,8 +115,8 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
         public static final ConfiguredFeature<?, ?> DENSE_MARIGOLD = AbundanceFeatures.MARIGOLD.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1)));
 
-        public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS = Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.SAGUARO_CACTUS), new ColumnBlockPlacer(1, 2))).tries(10).func_227317_b_().build());
-        public static final ConfiguredFeature<?, ?> PATCH_SAGUARO_CACTUS_DECORATED = PATCH_SAGUARO_CACTUS.withPlacement(Features.Placements.PATCH_PLACEMENT).func_242731_b(5);
+        public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAGUARO_CACTUS = AbundanceFeatures.SAGUARO_CACTUS.get().withConfiguration(Configs.JACARANDA_TREE_CONFIG); // this can use any config - it was originally a NoFeatureConfig but was changed to BaseTreeFeatureConfig to reuse sapling code
+        public static final ConfiguredFeature<?, ?> SAGUARO_CACTUS_DECORATED = SAGUARO_CACTUS.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 3)));
 
         public static final ConfiguredFeature<?, ?> NEMOPHILA = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
         public static final ConfiguredFeature<?, ?> NEMOPHILA_NOT_QUITE_AS_DENSE = AbundanceFeatures.NEMOPHILA.get().withConfiguration(NoFeatureConfig.field_236559_b_).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(4)));
@@ -153,8 +155,8 @@ public class AbundanceFeatures {
             register("lavender", LAVENDER);
             register("lavender_sparse", LAVENDER_SPARSE);
 
-            register("patch_saguaro_cactus", PATCH_SAGUARO_CACTUS);
-            register("patch_saguaro_cactus_decorated", PATCH_SAGUARO_CACTUS_DECORATED);
+            register("saguaro_cactus", SAGUARO_CACTUS);
+            register("saguaro_cactus_decorated", SAGUARO_CACTUS_DECORATED);
 
             register("nemophila", NEMOPHILA);
             register("nemophila_not_quite_as_dense", NEMOPHILA_NOT_QUITE_AS_DENSE);

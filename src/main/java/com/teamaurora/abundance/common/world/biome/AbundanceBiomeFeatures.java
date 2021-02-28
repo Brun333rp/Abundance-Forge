@@ -89,7 +89,7 @@ public class AbundanceBiomeFeatures {
                     }
                 }
                 toRemove.forEach(features::remove);
-                event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.PATCH_SAGUARO_CACTUS_DECORATED);
+                event.getGeneration().withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.SAGUARO_CACTUS_DECORATED);
             }
         }
     }

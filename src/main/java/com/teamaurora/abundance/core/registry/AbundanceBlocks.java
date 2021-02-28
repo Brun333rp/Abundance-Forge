@@ -12,6 +12,7 @@ import com.teamaurora.abundance.common.block.*;
 import com.teamaurora.abundance.common.block.trees.FloweringRedbudTree;
 import com.teamaurora.abundance.common.block.trees.JacarandaTree;
 import com.teamaurora.abundance.common.block.trees.RedbudTree;
+import com.teamaurora.abundance.common.block.trees.SaguaroCactusTree;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -113,7 +114,7 @@ public class AbundanceBlocks {
     // saguaro cactus
     public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> SMALL_SAGUARO_CACTUS = HELPER.createBlock("small_saguaro_cactus", ()->new SmallSaguaroCactusBlock(AbstractBlock.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> SAGUARO_SPROUT = HELPER.createBlockNoItem("saguaro_flower", ()->new SaguaroSproutBlock(new OakTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).sound(SoundType.CLOTH)));
+    public static final RegistryObject<Block> SAGUARO_SPROUT = HELPER.createBlockNoItem("saguaro_flower", ()->new SaguaroSproutBlock(new SaguaroCactusTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).sound(SoundType.CLOTH)));
 
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
