@@ -28,11 +28,11 @@ public class LavenderFeature extends Feature<NoFeatureConfig> {
                         if (rand.nextBoolean()) {
                             if (AbundanceBlocks.TALL_LAVENDER.get().getDefaultState().isValidPosition(worldIn, pos2) && isAirAt(worldIn, pos2.up())) {
                                 ((DoublePlantBlock) AbundanceBlocks.TALL_LAVENDER.get()).placeAt(worldIn, pos2, 2);
+                                worldIn.setBlockState(pos2.down(), Blocks.COARSE_DIRT.getDefaultState(), 2);
                                 i++;
                             }
                         } else {
                             worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, rand.nextInt(2)+1), 2);
-                            if (rand.nextBoolean()) worldIn.setBlockState(pos2.down(2), Blocks.COARSE_DIRT.getDefaultState(), 2);
                             i++;
                         }
                     }
@@ -40,10 +40,8 @@ public class LavenderFeature extends Feature<NoFeatureConfig> {
                     if (rand.nextInt(3) == 0) {
                         if (rand.nextBoolean()) {
                             worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, 2), 2);
-                            worldIn.setBlockState(pos2.down(2), Blocks.COARSE_DIRT.getDefaultState(), 2);
                         } else {
                             worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, rand.nextInt(2)), 2);
-                            if (rand.nextBoolean()) worldIn.setBlockState(pos2.down(2), Blocks.COARSE_DIRT.getDefaultState(), 2);
                         }
                         i++;
                     }
