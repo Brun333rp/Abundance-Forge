@@ -1,5 +1,6 @@
 package com.teamaurora.abundance.common.item;
 
+import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.UseAction;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -29,13 +31,7 @@ public class LavenderTeaItem extends Item {
 
         if (livingEntity instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) livingEntity;
-
-            /*if (player.isPotionActive(HanamiEffects.INSTABILITY.get())) {
-                int modifier = player.getActivePotionEffect(HanamiEffects.INSTABILITY.get()).getAmplifier();
-                player.addPotionEffect(new EffectInstance(HanamiEffects.INSTABILITY.get(), 1200, Math.min(modifier + 1, 2), false, false, true));
-            } else {
-                player.addPotionEffect(new EffectInstance(HanamiEffects.INSTABILITY.get(), 1200, 0, false, false, true));
-            }*/
+            player.addPotionEffect(new EffectInstance(AbundanceEffects.SUPPORTIVE.get(), 200, 0, false, true, true));
         }
 
         if (stack.isEmpty()) {

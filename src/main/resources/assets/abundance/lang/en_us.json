@@ -10,6 +10,7 @@
 
   "item.abundance.lavender_salad": "Lavender Salad",
   "item.abundance.lavender_tea": "Lavender Tea",
+  "effect.abundance.supportive": "Supportive",
 
 
   "_comment1": "Marigolds",
@@ -117,16 +118,26 @@
   "item.minecraft.potion.effect.succumbing": "Potion of Succumbing",
   "item.minecraft.potion.effect.succumbing_strong": "Potion of Succumbing",
   "item.minecraft.potion.effect.succumbing_long": "Potion of Succumbing",
-
   "item.minecraft.splash_potion.effect.succumbing": "Splash Potion of Succumbing",
   "item.minecraft.splash_potion.effect.succumbing_strong": "Splash Potion of Succumbing",
   "item.minecraft.splash_potion.effect.succumbing_long": "Splash Potion of Succumbing",
-
   "item.minecraft.lingering_potion.effect.succumbing": "Lingering Potion of Succumbing",
   "item.minecraft.lingering_potion.effect.succumbing_strong": "Lingering Potion of Succumbing",
   "item.minecraft.lingering_potion.effect.succumbing_long": "Lingering Potion of Succumbing",
-
   "item.minecraft.tipped_arrow.effect.succumbing": "Arrow of Succumbing",
   "item.minecraft.tipped_arrow.effect.succumbing_strong": "Arrow of Succumbing",
-  "item.minecraft.tipped_arrow.effect.succumbing_long": "Arrow of Succumbing"
+  "item.minecraft.tipped_arrow.effect.succumbing_long": "Arrow of Succumbing",
+
+  "item.minecraft.potion.effect.supportive": "Potion of Supporting",
+  "item.minecraft.potion.effect.supportive_strong": "Potion of Supporting",
+  "item.minecraft.potion.effect.supportive_long": "Potion of Supporting",
+  "item.minecraft.splash_potion.effect.supportive": "Splash Potion of Supporting",
+  "item.minecraft.splash_potion.effect.supportive_strong": "Splash Potion of Supporting",
+  "item.minecraft.splash_potion.effect.supportive_long": "Splash Potion of Supporting",
+  "item.minecraft.lingering_potion.effect.supportive": "Lingering Potion of Supporting",
+  "item.minecraft.lingering_potion.effect.supportive_strong": "Lingering Potion of Supporting",
+  "item.minecraft.lingering_potion.effect.supportive_long": "Lingering Potion of Supporting",
+  "item.minecraft.tipped_arrow.effect.supportive": "Arrow of Supporting",
+  "item.minecraft.tipped_arrow.effect.supportive_strong": "Arrow of Supporting",
+  "item.minecraft.tipped_arrow.effect.supportive_long": "Arrow of Supporting"
 }
