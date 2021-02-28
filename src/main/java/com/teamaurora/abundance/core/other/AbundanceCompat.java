@@ -20,12 +20,17 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_JACARANDA_LEAF_CARPET.get(), 0.3F);
 
         DataUtil.registerCompostable(AbundanceBlocks.REDBUD_LEAVES.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.BUDDING_REDBUD_LEAVES.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.REDBUD_SAPLING.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_SAPLING.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.REDBUD_LEAF_CARPET.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 0.3F);
 
         DataUtil.registerCompostable(AbundanceBlocks.SAGUARO_CACTUS.get(), 0.5F);
+        DataUtil.registerCompostable(AbundanceBlocks.SMALL_SAGUARO_CACTUS.get(), 0.5F);
+        DataUtil.registerCompostable(AbundanceItems.SAGUARO_FLOWER.get(), 0.5F);
 
         DataUtil.registerCompostable(AbundanceBlocks.SUNNY_MARIGOLD.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.SHADY_MARIGOLD.get(), 0.65F);
@@ -36,6 +41,9 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceBlocks.NEMOPHILA.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.PURPLE_AFRICAN_DAISY.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.YELLOW_AFRICAN_DAISY.get(), 0.65F);
+
+        DataUtil.registerCompostable(AbundanceItems.SUNFLOWER_SEEDS.get(), 0.3F);
+        DataUtil.registerCompostable(AbundanceBlocks.SUNFLOWER_SEED_SACK.get(), 1.0F);
     }
 
     public static void registerFlammables() {
@@ -63,6 +71,7 @@ public class AbundanceCompat {
         DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_BEEHIVE.get(), 5, 20);
 
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LEAVES.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.BUDDING_REDBUD_LEAVES.get(), 30, 60);
         DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get(), 30, 60);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LOG.get(), 5, 5);
         DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LOG.get(), 5, 5);
@@ -76,9 +85,12 @@ public class AbundanceCompat {
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_FENCE_GATE.get(), 5, 20);
         DataUtil.registerFlammable(AbundanceBlocks.VERTICAL_REDBUD_PLANKS.get(), 5, 20);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LEAF_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), 30, 60);
         DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 30, 60);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_VERTICAL_SLAB.get(), 5, 20);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_BOOKSHELF.get(), 30, 20);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_BEEHIVE.get(), 5, 20);
+
+        DataUtil.registerFlammable(AbundanceBlocks.SUNFLOWER_SEED_SACK.get(), 5, 20);
     }
 }
