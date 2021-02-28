@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "texture": "abundance:block/small_saguaro_cactus_side",
-    "particle": "abundance:block/small_saguaro_cactus_side"
+    "texture": "abundance:block/small_saguaro_cactus_top",
+    "particle": "abundance:block/small_saguaro_cactus_top"
   },
   "elements": [
     {   "from": [ 4, 4, 4 ],

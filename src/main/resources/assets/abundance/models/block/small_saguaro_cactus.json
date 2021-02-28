@@ -1,0 +1,21 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "texture": "abundance:block/small_saguaro_cactus_side",
+    "top": "abundance:block/small_saguaro_cactus_top",
+    "particle": "abundance:block/small_saguaro_cactus_side"
+  },
+  "elements": [
+    {   "from": [ 4, 4, 4 ],
+      "to": [ 12, 12, 12 ],
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east": { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west": { "texture": "#texture" },
+        "up": { "texture": "#top" },
+        "down": { "texture": "#texture" }
+      }
+    }
+  ]
+}

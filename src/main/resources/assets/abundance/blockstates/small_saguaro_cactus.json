@@ -66,15 +66,6 @@
         {
           "model": "abundance:block/small_saguaro_cactus_noside",
           "weight": 2
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside1"
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside2"
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside3"
         }
       ]
     },
@@ -84,23 +75,7 @@
       },
       "apply": [
         {
-          "model": "abundance:block/small_saguaro_cactus_noside1",
-          "y": 90,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside2",
-          "y": 90,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside3",
-          "y": 90,
-          "uvlock": true
-        },
-        {
           "model": "abundance:block/small_saguaro_cactus_noside",
-          "weight": 2,
           "y": 90,
           "uvlock": true
         }
@@ -112,23 +87,7 @@
       },
       "apply": [
         {
-          "model": "abundance:block/small_saguaro_cactus_noside2",
-          "y": 180,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside3",
-          "y": 180,
-          "uvlock": true
-        },
-        {
           "model": "abundance:block/small_saguaro_cactus_noside",
-          "weight": 2,
-          "y": 180,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside1",
           "y": 180,
           "uvlock": true
         }
@@ -140,23 +99,7 @@
       },
       "apply": [
         {
-          "model": "abundance:block/small_saguaro_cactus_noside3",
-          "y": 270,
-          "uvlock": true
-        },
-        {
           "model": "abundance:block/small_saguaro_cactus_noside",
-          "weight": 2,
-          "y": 270,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside1",
-          "y": 270,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside2",
           "y": 270,
           "uvlock": true
         }
@@ -168,23 +111,8 @@
       },
       "apply": [
         {
-          "model": "abundance:block/small_saguaro_cactus_noside",
+          "model": "abundance:block/small_saguaro_cactus_noside_top",
           "weight": 2,
-          "x": 270,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside3",
-          "x": 270,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside1",
-          "x": 270,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside2",
           "x": 270,
           "uvlock": true
         }
@@ -196,23 +124,7 @@
       },
       "apply": [
         {
-          "model": "abundance:block/small_saguaro_cactus_noside3",
-          "x": 90,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside2",
-          "x": 90,
-          "uvlock": true
-        },
-        {
-          "model": "abundance:block/small_saguaro_cactus_noside1",
-          "x": 90,
-          "uvlock": true
-        },
-        {
           "model": "abundance:block/small_saguaro_cactus_noside",
-          "weight": 2,
           "x": 90,
           "uvlock": true
         }
