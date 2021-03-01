@@ -37,7 +37,7 @@ public class SmallSaguaroCactusBlock extends SixWayBlock implements IPlantable {
     }
 
     public boolean canConnect(Block block) {
-        return block == Blocks.SAND || block == Blocks.RED_SAND || block == this || block == AbundanceBlocks.SAGUARO_CACTUS.get();
+        return block == Blocks.SAND || block == Blocks.RED_SAND || block == this || block == AbundanceBlocks.SAGUARO_CACTUS.get() || block == AbundanceBlocks.SAGUARO_FLOWER.get();
     }
 
     public BlockState getStateForPlacement(BlockItemUseContext context) {
