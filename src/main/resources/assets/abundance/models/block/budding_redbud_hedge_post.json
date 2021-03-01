@@ -1,0 +1,8 @@
+{
+  "parent": "abundance:block/hedge_post_overlay",
+  "textures": {
+    "log": "abundance:block/redbud_log",
+    "leaf": "abundance:block/budding_redbud_leaves",
+    "overlay": "abundance:block/budding_redbud_leaves_overlay"
+  }
+}

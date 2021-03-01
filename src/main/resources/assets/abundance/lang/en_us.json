@@ -43,6 +43,11 @@
   "block.abundance.jacaranda_ladder": "Jacaranda Ladder",
   "block.abundance.jacaranda_vertical_slab": "Jacaranda Vertical Slab",
   "block.abundance.vertical_jacaranda_planks": "Vertical Jacaranda Planks",
+  "block.abundance.jacaranda_hedge": "Jacaranda Hedge",
+  "block.abundance.budding_jacaranda_hedge": "Budding Jacaranda Hedge",
+  "block.abundance.flowering_jacaranda_hedge": "Flowering Jacaranda Hedge",
+  "block.abundance.jacaranda_post": "Jacaranda Post",
+  "block.abundance.stripped_jacaranda_post": "Stripped Jacaranda Post",
   "block.abundance.jacaranda_beehive": "Jacaranda Beehive",
   "block.abundance.potted_jacaranda_sapling": "Potted Jacaranda Sapling",
 
@@ -78,6 +83,11 @@
   "block.abundance.redbud_ladder": "Redbud Ladder",
   "block.abundance.redbud_vertical_slab": "Redbud Vertical Slab",
   "block.abundance.vertical_redbud_planks": "Vertical Redbud Planks",
+  "block.abundance.redbud_hedge": "Redbud Hedge",
+  "block.abundance.budding_redbud_hedge": "Budding Redbud Hedge",
+  "block.abundance.flowering_redbud_hedge": "Flowering Redbud Hedge",
+  "block.abundance.redbud_post": "Redbud Post",
+  "block.abundance.stripped_redbud_post": "Stripped Redbud Post",
   "block.abundance.redbud_beehive": "Redbud Beehive",
   "block.abundance.potted_redbud_sapling": "Potted Redbud Sapling",
 

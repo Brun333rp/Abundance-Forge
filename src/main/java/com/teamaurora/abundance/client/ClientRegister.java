@@ -47,6 +47,10 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.JACARANDA_TRAPDOOR.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.JACARANDA_DOOR.get(), RenderType.getCutout());
 
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.JACARANDA_HEDGE.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_JACARANDA_HEDGE.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_JACARANDA_HEDGE.get(), RenderType.getCutoutMipped());
+
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_REDBUD_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_REDBUD_SAPLING.get(), RenderType.getCutout());
@@ -55,6 +59,10 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_LADDER.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
 
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.AMARANTHUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.CHICORY.get(), RenderType.getCutout());
@@ -91,20 +99,26 @@ public class ClientRegister {
         DataUtil.registerBlockColor(blockColors, (x, world, pos, u) -> world != null && pos != null ? getRedbudColor(world, pos) : 0xACE352, Arrays.asList(
                 AbundanceBlocks.REDBUD_LEAVES,
                 AbundanceBlocks.REDBUD_LEAF_CARPET,
+                AbundanceBlocks.REDBUD_HEDGE,
                 AbundanceBlocks.BUDDING_REDBUD_LEAVES,
                 AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.BUDDING_REDBUD_HEDGE,
                 AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET
+                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.FLOWERING_REDBUD_HEDGE
         ));
 
         ItemColors itemColors = Minecraft.getInstance().getItemColors();
         DataUtil.registerBlockItemColor(itemColors, (color, items) -> 0xACE352, Arrays.asList(
                 AbundanceBlocks.REDBUD_LEAVES,
                 AbundanceBlocks.REDBUD_LEAF_CARPET,
+                AbundanceBlocks.REDBUD_HEDGE,
                 AbundanceBlocks.BUDDING_REDBUD_LEAVES,
                 AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.BUDDING_REDBUD_HEDGE,
                 AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET
+                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET,
+                AbundanceBlocks.FLOWERING_REDBUD_HEDGE
         ));
     }
 }
