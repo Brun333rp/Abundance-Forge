@@ -31,7 +31,7 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
         int height = rand.nextInt(3) + 4;
         Direction dir = Direction.byHorizontalIndex(rand.nextInt(4));
         boolean back = rand.nextBoolean();
-        if (position.getY() <= 0 || position.getY() + height > worldIn.getHeight()) {
+        if (position.getY() <= 0 || position.getY() + height + 1 > worldIn.getHeight()) {
             return false;
         }
         Block downward = worldIn.getBlockState(position.down()).getBlock();
@@ -46,6 +46,7 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
         for (int i = 0; i <= height; i++) {
             TreeUtil.setForcedState(worldIn, position.up(i), AbundanceBlocks.SAGUARO_CACTUS.get().getDefaultState());
         }
+        TreeUtil.setForcedState(worldIn, position.up(height+1), AbundanceBlocks.SAGUARO_FLOWER.get().getDefaultState());
         int height1, height2, depth1, depth2;
         depth1 = 1 + rand.nextInt(height - 3);
         depth2 = 1 + rand.nextInt(height - 3);
@@ -56,7 +57,12 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
             if (i == depth1) {
                 sag1 = sag1.with(SixWayBlock.UP, true).with(SixWayBlock.FACING_TO_PROPERTY_MAP.get(dir.getOpposite()), true);
             } else if (i == height1) {
-                sag1 = sag1.with(SixWayBlock.DOWN, true);
+                if (rand.nextBoolean()) {
+                    sag1 = sag1.with(SixWayBlock.DOWN, true).with(SixWayBlock.UP, true);
+                    TreeUtil.setForcedState(worldIn, position.offset(dir).up(i+1), AbundanceBlocks.SAGUARO_FLOWER.get().getDefaultState());
+                } else {
+                    sag1 = sag1.with(SixWayBlock.DOWN, true);
+                }
             } else {
                 sag1 = sag1.with(SixWayBlock.UP, true).with(SixWayBlock.DOWN, true);
             }
@@ -68,7 +74,12 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
                 if (i == depth2) {
                     sag2 = sag2.with(SixWayBlock.UP, true).with(SixWayBlock.FACING_TO_PROPERTY_MAP.get(dir), true);
                 } else if (i == height2) {
-                    sag2 = sag2.with(SixWayBlock.DOWN, true);
+                    if (rand.nextBoolean()) {
+                        sag2 = sag2.with(SixWayBlock.DOWN, true).with(SixWayBlock.UP, true);
+                        TreeUtil.setForcedState(worldIn, position.offset(dir.getOpposite()).up(i+1), AbundanceBlocks.SAGUARO_FLOWER.get().getDefaultState());
+                    } else {
+                        sag2 = sag2.with(SixWayBlock.DOWN, true);
+                    }
                 } else {
                     sag2 = sag2.with(SixWayBlock.UP, true).with(SixWayBlock.DOWN, true);
                 }
