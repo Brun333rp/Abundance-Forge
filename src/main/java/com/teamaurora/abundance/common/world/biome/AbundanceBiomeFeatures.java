@@ -127,6 +127,8 @@ public class AbundanceBiomeFeatures {
         DefaultBiomeFeatures.withLavaAndWaterLakes(builder);
         DefaultBiomeFeatures.withMonsterRoom(builder);
 
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, AbundanceFeatures.Configured.FOREST_FLOWER_VEGETATION_LAVENDER);
+
         DefaultBiomeFeatures.withCommonOverworldBlocks(builder);
         DefaultBiomeFeatures.withOverworldOres(builder);
         DefaultBiomeFeatures.withDisks(builder);

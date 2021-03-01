@@ -17,7 +17,7 @@ public class AbundanceBiomes {
     private static final BiomeSubRegistryHelper HELPER = Abundance.REGISTRY_HELPER.getBiomeSubHelper();
 
     public static final BiomeSubRegistryHelper.KeyedBiome LAVENDER_FIELDS = HELPER.createBiome("lavender_fields", () -> makeLavenderFieldsBiome(-0.05F, 0.0F));
-    public static final BiomeSubRegistryHelper.KeyedBiome LAVENDER_FOREST = HELPER.createBiome("lavender_forest", () -> makeLavenderFieldsBiome(0.75F, 0.15F));
+    public static final BiomeSubRegistryHelper.KeyedBiome LAVENDER_FOREST = HELPER.createBiome("lavender_forest", () -> makeLavenderFieldsBiome(0.375F, 0.15F));
     public static final BiomeSubRegistryHelper.KeyedBiome NEMOPHILA_FIELDS = HELPER.createBiome("nemophila_fields", () -> makeNemophilaFieldsBiome(0.1F, 0.025F));
 
     public static void addSubBiomes() {

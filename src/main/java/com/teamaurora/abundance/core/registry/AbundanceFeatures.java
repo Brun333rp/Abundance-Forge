@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.teamaurora.abundance.common.world.gen.feature.*;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -22,6 +23,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = Abundance.MODID)
 public class AbundanceFeatures {
@@ -55,6 +58,11 @@ public class AbundanceFeatures {
         public static final BlockState AMARANTHUS = AbundanceBlocks.AMARANTHUS.get().getDefaultState();
         public static final BlockState PURPLE_AFRICAN_DAISY = AbundanceBlocks.PURPLE_AFRICAN_DAISY.get().getDefaultState();
         public static final BlockState YELLOW_AFRICAN_DAISY = AbundanceBlocks.YELLOW_AFRICAN_DAISY.get().getDefaultState();
+
+        public static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
+        public static final BlockState PINK_TULIP = Blocks.PINK_TULIP.getDefaultState();
+        public static final BlockState LILAC = Blocks.LILAC.getDefaultState();
+        public static final BlockState PEONY = Blocks.PEONY.getDefaultState();
     }
 
     public static final class Configs {
@@ -130,6 +138,17 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
         public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
 
+        private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> LAVENDER_FOREST_FLOWER_VEGETATION_LIST = ImmutableList.of(() -> {
+            return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.ALLIUM), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build());
+        }, () -> {
+            return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.PINK_TULIP), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build());
+        }, () -> {
+            return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.LILAC), new DoublePlantBlockPlacer())).tries(64).func_227317_b_().build());
+        }, () -> {
+            return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.PEONY), new DoublePlantBlockPlacer())).tries(64).func_227317_b_().build());
+        });
+        public static final ConfiguredFeature<?, ?> FOREST_FLOWER_VEGETATION_LAVENDER = Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(LAVENDER_FOREST_FLOWER_VEGETATION_LIST)).func_242730_a(FeatureSpread.func_242253_a(-1, 4)).withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(5);
+
 
         private static <FC extends IFeatureConfig> void register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
             Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(Abundance.MODID, name), configuredFeature);
@@ -169,6 +188,8 @@ public class AbundanceFeatures {
             register("purple_african_daisy", PURPLE_AFRICAN_DAISY);
             register("yellow_african_daisy_sparse", YELLOW_AFRICAN_DAISY_SPARSE);
             register("purple_african_daisy_sparse", PURPLE_AFRICAN_DAISY_SPARSE);
+
+            register("forest_flower_vegetation_lavender", FOREST_FLOWER_VEGETATION_LAVENDER);
         }
     }
 }
