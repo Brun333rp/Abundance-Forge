@@ -110,7 +110,9 @@
   "_comment5": "Saguaro Cactus",
   "block.abundance.saguaro_cactus": "Cactus saguaro",
   "block.abundance.small_saguaro_cactus": "Cactus saguaro pequeño",
+  "block.abundance.saguaro_sprout": "Brote de saguaro",
   "block.abundance.saguaro_flower": "Flor de saguaro",
+  "item.abundance.saguaro_flower": "Flor de saguaro",
   "effect.abundance.succumbing": "Desistencia",
 
   "_comment6": "Flowers",
