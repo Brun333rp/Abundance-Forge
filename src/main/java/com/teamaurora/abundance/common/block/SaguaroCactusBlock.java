@@ -49,33 +49,6 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
 
     }
 
-    /**
-     * Performs a random tick on a block.
-     */
-    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        BlockPos blockpos = pos.up();
-        if (worldIn.isAirBlock(blockpos)) {
-            int i;
-            for(i = 1; worldIn.getBlockState(pos.down(i)).isIn(this); ++i) {
-            }
-
-            if (i < 3) {
-                int j = state.get(AGE);
-                if(net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, blockpos, state, true)) {
-                    if (j == 15) {
-                        worldIn.setBlockState(blockpos, this.getDefaultState());
-                        BlockState blockstate = state.with(AGE, Integer.valueOf(0));
-                        worldIn.setBlockState(pos, blockstate, 4);
-                        blockstate.neighborChanged(worldIn, blockpos, this, pos, false);
-                    } else {
-                        worldIn.setBlockState(pos, state.with(AGE, Integer.valueOf(j + 1)), 4);
-                    }
-                    net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state);
-                }
-            }
-        }
-    }
-
     public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         return COLLISION_SHAPE;
     }
