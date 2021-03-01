@@ -39,6 +39,9 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> SHADY_MARIGOLD = HELPER.createBlock("shady_marigold", ()->new MarigoldBlock(()->Effects.INSTANT_HEALTH, 1, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> TALL_MARIGOLD = HELPER.createBlock("tall_marigold", ()->new TallMarigoldBlock(AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
 
+    public static final RegistryObject<Block> POTTED_SUNNY_MARIGOLD = HELPER.createBlockNoItem("potted_sunny_marigold", ()->new FlowerPotBlock(SUNNY_MARIGOLD.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_SHADY_MARIGOLD = HELPER.createBlockNoItem("potted_shady_marigold", ()->new FlowerPotBlock(SHADY_MARIGOLD.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+
     // TODO: FIX CHEST UVS!
     // dunno why they're so janky - bottom pixel of lid/top pixel of base seems to have z-fighting
 
@@ -119,13 +122,14 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> BUDDING_REDBUD_HEDGE = HELPER.createCompatFuelBlock("quark", "budding_redbud_hedge", () -> new HedgeBlock(AbstractBlock.Properties.from(Blocks.OAK_FENCE)), 300, ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_HEDGE = HELPER.createCompatFuelBlock("quark", "flowering_redbud_hedge", () -> new HedgeBlock(AbstractBlock.Properties.from(Blocks.OAK_FENCE)), 300, ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", ()->new AbnormalsSaplingBlock(new FloweringRedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", ()->new FlowerPotBlock(REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", ()->new FlowerPotBlock(FLOWERING_REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // saguaro cactus
     public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> SMALL_SAGUARO_CACTUS = HELPER.createBlock("small_saguaro_cactus", ()->new SmallSaguaroCactusBlock(AbstractBlock.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> SAGUARO_SPROUT = HELPER.createBlockNoItem("saguaro_sprout", ()->new SaguaroSproutBlock(new SaguaroCactusTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).sound(SoundType.CLOTH)));
     public static final RegistryObject<Block> SAGUARO_FLOWER = HELPER.createBlockNoItem("saguaro_flower", ()->new SaguaroFlowerBlock(AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)));
+    public static final RegistryObject<Block> POTTED_SAGUARO_SPROUT = HELPER.createBlockNoItem("potted_saguaro_sprout", ()->new FlowerPotBlock(SAGUARO_SPROUT.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
@@ -133,6 +137,12 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> NEMOPHILA = HELPER.createBlock("nemophila", ()->new NemophilaBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> PURPLE_AFRICAN_DAISY = HELPER.createBlock("purple_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> YELLOW_AFRICAN_DAISY = HELPER.createBlock("yellow_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+
+    public static final RegistryObject<Block> POTTED_CHICORY = HELPER.createBlockNoItem("potted_chicory", ()->new FlowerPotBlock(CHICORY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_AMARANTHUS = HELPER.createBlockNoItem("potted_amaranthus", ()->new FlowerPotBlock(AMARANTHUS.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_NEMOPHILA = HELPER.createBlockNoItem("potted_nemophila", ()->new FlowerPotBlock(NEMOPHILA.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_PURPLE_AFRICAN_DAISY = HELPER.createBlockNoItem("potted_purple_african_daisy", ()->new FlowerPotBlock(PURPLE_AFRICAN_DAISY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+    public static final RegistryObject<Block> POTTED_YELLOW_AFRICAN_DAISY = HELPER.createBlockNoItem("potted_yellow_african_daisy", ()->new FlowerPotBlock(YELLOW_AFRICAN_DAISY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // sacc
     public static final RegistryObject<Block> SUNFLOWER_SEED_SACK = HELPER.createCompatBlock("quark", "sunflower_seed_sack", ()->new Block(Block.Properties.create(Material.WOOL, MaterialColor.GRAY).hardnessAndResistance(0.5F).sound(SoundType.CLOTH)), ItemGroup.DECORATIONS);

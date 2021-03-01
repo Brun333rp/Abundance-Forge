@@ -37,6 +37,8 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SUNNY_MARIGOLD.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SHADY_MARIGOLD.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.TALL_MARIGOLD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_SUNNY_MARIGOLD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_SHADY_MARIGOLD.get(), RenderType.getCutout());
 
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.JACARANDA_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_JACARANDA_SAPLING.get(), RenderType.getCutout());
@@ -70,7 +72,14 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.PURPLE_AFRICAN_DAISY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.YELLOW_AFRICAN_DAISY.get(), RenderType.getCutout());
 
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_AMARANTHUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_CHICORY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_NEMOPHILA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_PURPLE_AFRICAN_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_YELLOW_AFRICAN_DAISY.get(), RenderType.getCutout());
+
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SAGUARO_SPROUT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_SAGUARO_SPROUT.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SAGUARO_FLOWER.get(), RenderType.getCutout());
     }
 
