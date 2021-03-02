@@ -7,6 +7,7 @@ import net.minecraft.potion.Effect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockReader;
 
 import java.util.function.Supplier;
@@ -20,6 +21,7 @@ public class ThiccFlowerBlock extends AbnormalsFlowerBlock {
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return SHAPE;
+        Vector3d vector3d = state.getOffset(worldIn, pos);
+        return SHAPE.withOffset(vector3d.x, vector3d.y, vector3d.z);
     }
 }
