@@ -17,6 +17,8 @@
   "block.abundance.sunny_marigold": "Caléndula soleada",
   "block.abundance.shady_marigold": "Caléndula sombreada",
   "block.abundance.tall_marigold": "Caléndula alta",
+  "block.abundance.potted_sunny_marigold": "Maceta con caléndula soleada",
+  "block.abundance.potted_shady_marigold": "Maceta con caléndula sombreada",
 
 
   "_comment2": "Jacaranda Trees",
@@ -111,6 +113,7 @@
   "block.abundance.saguaro_cactus": "Cactus saguaro",
   "block.abundance.small_saguaro_cactus": "Cactus saguaro pequeño",
   "block.abundance.saguaro_sprout": "Brote de saguaro",
+  "block.abundance.potted_saguaro_sprout": "Maceta con brote de saguaro",
   "block.abundance.saguaro_flower": "Flor de saguaro",
   "item.abundance.saguaro_flower": "Flor de saguaro",
   "effect.abundance.succumbing": "Desistencia",
@@ -119,8 +122,14 @@
   "block.abundance.amaranthus": "Amaranto",
   "block.abundance.chicory": "Achicoria",
   "block.abundance.nemophila": "Nemophila",
-  "block.abundance.purple_african_daisy": "Margarita africana violeta",
+  "block.abundance.purple_african_daisy": "Margarita africana morada",
   "block.abundance.yellow_african_daisy": "Margarita africana amarilla",
+
+  "block.abundance.potted_amaranthus": "Maceta con amaranto",
+  "block.abundance.potted_chicory": "Maceta con achicoria",
+  "block.abundance.potted_nemophila": "Maceta con nemophila",
+  "block.abundance.potted_purple_african_daisy": "Maceta con margarita africana morada",
+  "block.abundance.potted_yellow_african_daisy": "Maceta con margarita africana amarilla",
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
