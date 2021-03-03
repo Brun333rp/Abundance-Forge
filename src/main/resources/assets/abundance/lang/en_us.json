@@ -108,6 +108,10 @@
   "entity.abundance.slabfish.type.lavender_fields": "Lavender Fields",
   "entity.abundance.slabfish.type.nemophila_fields": "Nemophila Fields",
 
+  "biome.abundance.lavender_fields": "Lavender Fields",
+  "biome.abundance.lavender_forest": "Lavender Forest",
+  "biome.abundance.nemophila_fields": "Nemophila Fields",
+
 
   "_comment5": "Saguaro Cactus",
   "block.abundance.saguaro_cactus": "Saguaro Cactus",
