@@ -2,10 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "abundance:small_marigolds"
+      "item": "abundance:tall_marigold"
     }
   ],
   "result": {
-    "item": "minecraft:yellow_dye"
+    "item": "minecraft:orange_dye",
+    "count": 2
   }
 }
