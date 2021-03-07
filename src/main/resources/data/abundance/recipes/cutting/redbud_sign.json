@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "abundance:redbud_sign"
+    }
+  ],
+  "tool": {
+    "type": "axe"
+  },
+  "result": [
+    {
+      "item": "abundance:redbud_planks"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

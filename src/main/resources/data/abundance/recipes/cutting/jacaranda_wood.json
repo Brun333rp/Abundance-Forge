@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "abundance:jacaranda_wood"
+    }
+  ],
+  "tool": {
+    "type": "axe"
+  },
+  "result": [
+    {
+      "item": "abundance:stripped_jacaranda_wood"
+    },
+    {
+      "item": "farmersdelight:tree_bark"
+    }
+  ],
+  "sound": "minecraft:item.axe.strip",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}
