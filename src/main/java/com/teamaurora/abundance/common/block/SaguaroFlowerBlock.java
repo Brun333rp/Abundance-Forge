@@ -1,9 +1,11 @@
 package com.teamaurora.abundance.common.block;
 
 import com.teamaurora.abundance.core.registry.AbundanceBlocks;
+import com.teamaurora.abundance.core.registry.AbundanceItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BushBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
@@ -13,6 +15,10 @@ import net.minecraftforge.common.PlantType;
 public class SaguaroFlowerBlock extends BushBlock {
     public SaguaroFlowerBlock(Properties properties) {
         super(properties);
+    }
+
+    public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
+        return new ItemStack(AbundanceItems.SAGUARO_FLOWER.get());
     }
 
     @Override
