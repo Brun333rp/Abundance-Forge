@@ -18,6 +18,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
@@ -70,7 +71,7 @@ public class SaguaroCactusBlock extends Block implements net.minecraftforge.comm
     @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         BlockState blockstate1 = worldIn.getBlockState(pos.down());
-        return (blockstate1.getBlock() == Blocks.SAND || blockstate1.getBlock() == Blocks.RED_SAND || blockstate1.getBlock() == AbundanceBlocks.SAGUARO_CACTUS.get()) && !worldIn.getBlockState(pos.up()).getMaterial().isLiquid();
+        return (blockstate1.isIn(BlockTags.SAND) || blockstate1.getBlock() == AbundanceBlocks.SAGUARO_CACTUS.get()) && !worldIn.getBlockState(pos.up()).getMaterial().isLiquid();
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {

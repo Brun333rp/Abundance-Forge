@@ -9,6 +9,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.SoundCategory;
@@ -29,7 +30,7 @@ public class SaguaroFlowerItem extends BlockItem {
         World world = context.getWorld();
         Block blockDown = world.getBlockState(context.getPos().down()).getBlock();
         BlockState blockstate = null;
-        if (blockDown == Blocks.SAND || blockDown == Blocks.RED_SAND) {
+        if (blockDown.isIn(BlockTags.SAND)) {
             blockstate = AbundanceBlocks.SAGUARO_SPROUT.get().getStateForPlacement(context);
         } else if (blockDown == AbundanceBlocks.SAGUARO_CACTUS.get() || blockDown == AbundanceBlocks.SMALL_SAGUARO_CACTUS.get()) {
             blockstate = AbundanceBlocks.SAGUARO_FLOWER.get().getStateForPlacement(context);

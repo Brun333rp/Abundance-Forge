@@ -13,6 +13,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -37,7 +38,7 @@ public class SmallSaguaroCactusBlock extends SixWayBlock implements IPlantable {
     }
 
     public boolean canConnect(Block block) {
-        return block == Blocks.SAND || block == Blocks.RED_SAND || block == this || block == AbundanceBlocks.SAGUARO_CACTUS.get() || block == AbundanceBlocks.SAGUARO_FLOWER.get();
+        return block.isIn(BlockTags.SAND) || block == this || block == AbundanceBlocks.SAGUARO_CACTUS.get() || block == AbundanceBlocks.SAGUARO_FLOWER.get();
     }
 
     public BlockState getStateForPlacement(BlockItemUseContext context) {
