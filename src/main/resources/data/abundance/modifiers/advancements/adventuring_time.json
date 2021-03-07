@@ -1,0 +1,37 @@
+{
+  "advancement": "minecraft:adventure/adventuring_time",
+  "modifiers": [
+    {
+      "type": "criteria",
+      "config": {
+        "mode": "modify",
+        "criteria": {
+          "abundance:lavender_fields": {
+            "trigger": "minecraft:location",
+            "conditions": {
+              "location": {
+                "biome": "abundance:lavender_fields"
+              }
+            }
+          },
+          "abundance:lavender_forest": {
+            "trigger": "minecraft:location",
+            "conditions": {
+              "location": {
+                "biome": "abundance:lavender_forest"
+              }
+            }
+          }
+        },
+        "requirements": [
+          [
+            "abundance:lavender_fields"
+          ],
+          [
+            "abundance:lavender_forest"
+          ]
+        ]
+      }
+    }
+  ]
+}

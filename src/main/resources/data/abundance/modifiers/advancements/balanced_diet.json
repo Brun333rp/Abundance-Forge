@@ -1,0 +1,48 @@
+{
+  "advancement": "minecraft:husbandry/balanced_diet",
+  "modifiers": [
+    {
+      "type": "criteria",
+      "config": {
+        "mode": "modify",
+        "criteria": {
+          "abundance:lavender_salad": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+              "item": {
+                "item": "abundance:lavender_salad"
+              }
+            }
+          },
+          "abundance:lavender_tea": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+              "item": {
+                "item": "abundance:lavender_tea"
+              }
+            }
+          },
+          "abundance:sunflower_seeds": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+              "item": {
+                "item": "abundance:sunflower_seeds"
+              }
+            }
+          }
+        },
+        "requirements": [
+          [
+            "abundance:lavender_salad"
+          ],
+          [
+            "abundance:lavender_tea"
+          ],
+          [
+            "abundance:sunflower_seeds"
+          ]
+        ]
+      }
+    }
+  ]
+}
