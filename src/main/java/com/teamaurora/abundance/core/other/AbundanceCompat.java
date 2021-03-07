@@ -80,6 +80,7 @@ public class AbundanceCompat {
         DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LEAVES.get(), 30, 60);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_LOG.get(), 5, 5);
         DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_LOG.get(), 5, 5);
+        DataUtil.registerFlammable(AbundanceBlocks.FLOWERING_REDBUD_WOOD.get(), 5, 5);
         DataUtil.registerFlammable(AbundanceBlocks.REDBUD_WOOD.get(), 5, 5);
         DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_REDBUD_LOG.get(), 5, 5);
         DataUtil.registerFlammable(AbundanceBlocks.STRIPPED_REDBUD_WOOD.get(), 5, 5);

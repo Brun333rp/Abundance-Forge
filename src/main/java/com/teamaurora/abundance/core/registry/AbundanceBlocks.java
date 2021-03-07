@@ -114,7 +114,8 @@ public class AbundanceBlocks {
 
     public static final RegistryObject<Block> REDBUD_BEEHIVE = HELPER.createCompatBlock("buzzier_bees", "redbud_beehive", ()->new AbnormalsBeehiveBlock(Block.Properties.from(Blocks.BEEHIVE)), ItemGroup.DECORATIONS);
 
-    public static final RegistryObject<Block> FLOWERING_REDBUD_LOG= HELPER.createBlock("flowering_redbud_log", ()->new AbnormalsLogBlock(STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_LOG= HELPER.createBlock("flowering_redbud_log", ()->new FloweringLogBlock(REDBUD_LOG, STRIPPED_REDBUD_LOG, Block.Properties.from(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_WOOD= HELPER.createBlock("flowering_redbud_wood", ()->new FloweringWoodBlock(REDBUD_WOOD, STRIPPED_REDBUD_WOOD, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAVES = HELPER.createBlock("flowering_redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock("quark", "flowering_redbud_leaf_carpet", ()->new LeafCarpetBlock(Block.Properties.from(REDBUD_LEAVES.get())), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> BUDDING_REDBUD_LEAVES = HELPER.createBlock("budding_redbud_leaves", ()->new AbnormalsLeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)), ItemGroup.DECORATIONS);
