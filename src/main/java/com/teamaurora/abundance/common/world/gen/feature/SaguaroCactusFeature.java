@@ -5,6 +5,7 @@ import com.minecraftabnormals.abnormals_core.core.util.TreeUtil;
 import com.mojang.serialization.Codec;
 import com.teamaurora.abundance.core.registry.AbundanceBlocks;
 import net.minecraft.block.*;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -35,7 +36,7 @@ public class SaguaroCactusFeature extends Feature<BaseTreeFeatureConfig> {
             return false;
         }
         Block downward = worldIn.getBlockState(position.down()).getBlock();
-        if (downward != Blocks.SAND && downward != Blocks.RED_SAND) {
+        if (!downward.isIn(BlockTags.SAND)) {
             return false;
         }
 
