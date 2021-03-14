@@ -47,7 +47,7 @@
   "block.abundance.vertical_jacaranda_planks": "Madera vertical de jacarandá",
   "block.abundance.jacaranda_hedge": "Seto de jacarandá",
   "block.abundance.budding_jacaranda_hedge": "Seto de jacarandá en ciernes",
-  "block.abundance.flowering_jacaranda_hedge": "Seto de jacarandá florecido",
+  "block.abundance.flowering_jacaranda_hedge": "Seto de jacarandá florido",
   "block.abundance.jacaranda_post": "Poste de jacarandá",
   "block.abundance.stripped_jacaranda_post": "Poste de jacarandá sin corteza",
   "block.abundance.jacaranda_beehive": "Apiario de jacarandá",
@@ -56,9 +56,9 @@
   "item.abundance.jacaranda_boat": "Bote de jacarandá",
 
   "block.abundance.budding_jacaranda_leaves": "Hojas de jacarandá en ciernes",
-  "block.abundance.flowering_jacaranda_leaves": "Hojas de jacarandá florecidas",
+  "block.abundance.flowering_jacaranda_leaves": "Hojas de jacarandá floridas",
   "block.abundance.budding_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá en ciernes",
-  "block.abundance.flowering_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá florecidas",
+  "block.abundance.flowering_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá floridas",
 
 
   "_comment3": "Redbud Trees",
@@ -87,7 +87,7 @@
   "block.abundance.vertical_redbud_planks": "Madera vertical de ciclamor",
   "block.abundance.redbud_hedge": "Seto de ciclamor",
   "block.abundance.budding_redbud_hedge": "Seto de ciclamor en ciernes",
-  "block.abundance.flowering_redbud_hedge": "Seto de ciclamor florecido",
+  "block.abundance.flowering_redbud_hedge": "Seto de ciclamor florido",
   "block.abundance.redbud_post": "Poste de ciclamor",
   "block.abundance.stripped_redbud_post": "Poste de ciclamor sin corteza",
   "block.abundance.redbud_beehive": "Apiario de ciclamor",
@@ -97,11 +97,12 @@
 
   "block.abundance.budding_redbud_leaves": "Hojas de ciclamor en ciernes",
   "block.abundance.budding_redbud_leaf_carpet": "Alfombra de hojas de ciclamor en ciernes",
-  "block.abundance.flowering_redbud_leaves": "Hojas de ciclamor florecidas",
-  "block.abundance.flowering_redbud_leaf_carpet": "Alfombra de hojas de ciclamor florecidas",
-  "block.abundance.flowering_redbud_log": "Tronco de ciclamor florecido",
-  "block.abundance.flowering_redbud_sapling": "Brote de ciclamor florecido",
-  "block.abundance.potted_flowering_redbud_sapling": "Maceta con brote de ciclamor florecido",
+  "block.abundance.flowering_redbud_leaves": "Hojas de ciclamor floridas",
+  "block.abundance.flowering_redbud_leaf_carpet": "Alfombra de hojas de ciclamor floridas",
+  "block.abundance.flowering_redbud_log": "Tronco de ciclamor florido",
+  "block.abundance.flowering_redbud_wood": "Leño de ciclamor florido",
+  "block.abundance.flowering_redbud_sapling": "Brote de ciclamor florido",
+  "block.abundance.potted_flowering_redbud_sapling": "Maceta con brote de ciclamor florido",
 
 
   "_comment4": "Biomes & Mobs",
