@@ -173,6 +173,8 @@ public class AbundanceFeatures {
 
             register("lavender", LAVENDER);
             register("lavender_sparse", LAVENDER_SPARSE);
+            register("marigold", MARIGOLD);
+            register("dense_marigold", DENSE_MARIGOLD);
 
             register("saguaro_cactus", SAGUARO_CACTUS);
             register("saguaro_cactus_decorated", SAGUARO_CACTUS_DECORATED);
