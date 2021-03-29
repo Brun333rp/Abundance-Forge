@@ -28,10 +28,6 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 0.3F);
 
-        DataUtil.registerCompostable(AbundanceBlocks.SAGUARO_CACTUS.get(), 0.5F);
-        DataUtil.registerCompostable(AbundanceBlocks.SMALL_SAGUARO_CACTUS.get(), 0.5F);
-        DataUtil.registerCompostable(AbundanceItems.SAGUARO_FLOWER.get(), 0.5F);
-
         DataUtil.registerCompostable(AbundanceBlocks.SUNNY_MARIGOLD.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.SHADY_MARIGOLD.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.TALL_MARIGOLD.get(), 0.65F);

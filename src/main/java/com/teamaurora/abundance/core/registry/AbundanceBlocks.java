@@ -12,7 +12,6 @@ import com.teamaurora.abundance.common.block.*;
 import com.teamaurora.abundance.common.block.trees.FloweringRedbudTree;
 import com.teamaurora.abundance.common.block.trees.JacarandaTree;
 import com.teamaurora.abundance.common.block.trees.RedbudTree;
-import com.teamaurora.abundance.common.block.trees.SaguaroCactusTree;
 import com.teamaurora.abundance.core.Abundance;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -124,13 +123,6 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> FLOWERING_REDBUD_HEDGE = HELPER.createCompatFuelBlock("quark", "flowering_redbud_hedge", () -> new HedgeBlock(AbstractBlock.Properties.from(Blocks.OAK_FENCE)), 300, ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", ()->new AbnormalsSaplingBlock(new FloweringRedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", ()->new FlowerPotBlock(FLOWERING_REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
-
-    // saguaro cactus
-    public static final RegistryObject<Block> SAGUARO_CACTUS = HELPER.createBlock("saguaro_cactus", ()->new SaguaroCactusBlock(Block.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> SMALL_SAGUARO_CACTUS = HELPER.createBlock("small_saguaro_cactus", ()->new SmallSaguaroCactusBlock(AbstractBlock.Properties.from(Blocks.CACTUS)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> SAGUARO_SPROUT = HELPER.createBlockNoItem("saguaro_sprout", ()->new SaguaroSproutBlock(new SaguaroCactusTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).sound(SoundType.CLOTH)));
-    public static final RegistryObject<Block> SAGUARO_FLOWER = HELPER.createBlockNoItem("saguaro_flower", ()->new SaguaroFlowerBlock(AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)));
-    public static final RegistryObject<Block> POTTED_SAGUARO_SPROUT = HELPER.createBlockNoItem("potted_saguaro_sprout", ()->new FlowerPotBlock(SAGUARO_SPROUT.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);

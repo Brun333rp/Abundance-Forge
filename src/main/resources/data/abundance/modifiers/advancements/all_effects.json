@@ -7,7 +7,6 @@
         "criteria": "all_effects",
         "removes": false,
         "effects": {
-          "abundance:succumbing": {},
           "abundance:supportive": {}
         }
       }

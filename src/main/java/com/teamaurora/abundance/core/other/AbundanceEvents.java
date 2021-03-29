@@ -18,14 +18,6 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Abundance.MODID)
 public class AbundanceEvents {
-    @SubscribeEvent
-    public static void onLivingEntityDamage(LivingDamageEvent event) {
-        LivingEntity entity = event.getEntityLiving();
-        if (entity.isPotionActive(AbundanceEffects.SUCCUMBING.get()) && event.getSource() != DamageSource.MAGIC) {
-            int amplifier = entity.getActivePotionEffect(AbundanceEffects.SUCCUMBING.get()).getAmplifier();
-            entity.addPotionEffect(new EffectInstance(Effects.POISON, 100 + 25 * amplifier, 0, false, false, false));
-        }
-    }
 
     @SubscribeEvent
     public static void onWandererTradesEvent(WandererTradesEvent event) {
