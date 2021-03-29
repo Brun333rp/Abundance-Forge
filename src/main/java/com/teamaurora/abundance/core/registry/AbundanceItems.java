@@ -13,13 +13,13 @@ public class AbundanceItems {
     public static final ItemSubRegistryHelper HELPER = Abundance.REGISTRY_HELPER.getItemSubHelper();
 
     public static final RegistryObject<Item> LAVENDER = HELPER.createItem("lavender", ()->new BlockNamedItem(AbundanceBlocks.LAVENDER.get(), new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<Item> LAVENDER_BLOSSOMS = HELPER.createItem("lavender_blossoms", ()->new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> LAVENDER_SALAD = HELPER.createItem("lavender_salad", ()->new SoupItem(new Item.Properties().maxStackSize(1).food(Foods.LAVENDER_SALAD).group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> LAVENDER_TEA = HELPER.createItem("lavender_tea", ()->new LavenderTeaItem(new Item.Properties().food(Foods.EMPTY).maxStackSize(16).group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> JACARANDA_BOAT = HELPER.createBoatItem("jacaranda", AbundanceBlocks.JACARANDA_PLANKS);
     public static final RegistryObject<Item> REDBUD_BOAT = HELPER.createBoatItem("redbud", AbundanceBlocks.REDBUD_PLANKS);
 
+    public static final RegistryObject<Item> PINK_BLOSSOMS = HELPER.createItem("pink_blossoms", ()->new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", ()->new Item(new Item.Properties().group(ItemGroup.MISC).food(Foods.SUNFLOWER_SEEDS)));
 
     public static class Foods {

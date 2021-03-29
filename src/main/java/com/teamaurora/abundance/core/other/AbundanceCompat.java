@@ -7,8 +7,7 @@ import com.teamaurora.abundance.core.registry.AbundanceItems;
 public class AbundanceCompat {
     public static void registerCompostables() {
         DataUtil.registerCompostable(AbundanceItems.LAVENDER.get(), 0.65F);
-        DataUtil.registerCompostable(AbundanceItems.LAVENDER_BLOSSOMS.get(), 0.65F);
-        DataUtil.registerCompostable(AbundanceBlocks.LAVENDER_BLOSSOM_CARPET.get(), 0.65F);
+        DataUtil.registerCompostable(AbundanceBlocks.PINK_BLOSSOM_CARPET.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.LAVENDER_BASKET.get(), 1.0F);
 
         DataUtil.registerCompostable(AbundanceBlocks.JACARANDA_LEAVES.get(), 0.3F);
@@ -28,6 +27,8 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), 0.3F);
 
+        DataUtil.registerCompostable(AbundanceItems.PINK_BLOSSOMS.get(), 0.65F);
+
         DataUtil.registerCompostable(AbundanceBlocks.SUNNY_MARIGOLD.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.SHADY_MARIGOLD.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.TALL_MARIGOLD.get(), 0.65F);
@@ -41,7 +42,8 @@ public class AbundanceCompat {
     }
 
     public static void registerFlammables() {
-        DataUtil.registerFlammable(AbundanceBlocks.LAVENDER_BLOSSOM_CARPET.get(), 30, 60);
+        DataUtil.registerFlammable(AbundanceBlocks.PINK_BLOSSOM_CARPET.get(), 30, 60);
+
         DataUtil.registerFlammable(AbundanceBlocks.LAVENDER_BASKET.get(), 5, 20);
 
         DataUtil.registerFlammable(AbundanceBlocks.JACARANDA_LEAVES.get(), 30, 60);

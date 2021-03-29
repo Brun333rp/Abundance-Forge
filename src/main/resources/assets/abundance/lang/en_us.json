@@ -5,9 +5,6 @@
   "item.abundance.lavender": "Lavender",
   "block.abundance.lavender_basket": "Lavender Basket",
 
-  "item.abundance.lavender_blossoms": "Lavender Blossoms",
-  "block.abundance.lavender_blossom_carpet": "Lavender Blossom Carpet",
-
   "item.abundance.lavender_salad": "Lavender Salad",
   "item.abundance.lavender_tea": "Lavender Tea",
   "effect.abundance.supportive": "Supportive",
@@ -103,6 +100,9 @@
   "block.abundance.flowering_redbud_wood": "Flowering Redbud Wood",
   "block.abundance.flowering_redbud_sapling": "Flowering Redbud Sapling",
   "block.abundance.potted_flowering_redbud_sapling": "Potted Flowering Redbud Sapling",
+
+  "item.abundance.pink_blossoms": "Pink Blossoms",
+  "block.abundance.pink_blossom_carpet": "Pink Blossom Carpet",
 
 
   "_comment4": "Biomes & Mobs",

@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "abundance:lavender_blossoms"
+      "item": "abundance:pink_blossoms"
     }
   },
   "result": {
-    "item": "abundance:lavender_blossom_carpet"
+    "item": "abundance:pink_blossom_carpet"
   }
 }

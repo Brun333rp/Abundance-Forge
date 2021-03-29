@@ -30,7 +30,6 @@ public class AbundanceBlocks {
     // lavender
     public static final RegistryObject<Block> LAVENDER = HELPER.createBlockNoItem("lavender", ()->new LavenderBlock(AbstractBlock.Properties.from(Blocks.ALLIUM)));
     public static final RegistryObject<Block> TALL_LAVENDER = HELPER.createBlockNoItem("tall_lavender", ()->new TallLavenderBlock(AbstractBlock.Properties.from(Blocks.ALLIUM)));
-    public static final RegistryObject<Block> LAVENDER_BLOSSOM_CARPET = HELPER.createBlock("lavender_blossom_carpet", ()->new BlossomCarpetBlock(AbstractBlock.Properties.create(Material.CARPET, MaterialColor.PURPLE).notSolid().hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT).harvestTool(ToolType.HOE)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> LAVENDER_BASKET = HELPER.createCompatBlock("quark", "lavender_basket", ()->new Block(Block.Properties.create(Material.WOOL, MaterialColor.PURPLE).hardnessAndResistance(0.5F).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 
     // marigold
@@ -123,6 +122,8 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> FLOWERING_REDBUD_HEDGE = HELPER.createCompatFuelBlock("quark", "flowering_redbud_hedge", () -> new HedgeBlock(AbstractBlock.Properties.from(Blocks.OAK_FENCE)), 300, ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", ()->new AbnormalsSaplingBlock(new FloweringRedbudTree(), Block.Properties.from(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", ()->new FlowerPotBlock(FLOWERING_REDBUD_SAPLING.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> PINK_BLOSSOM_CARPET = HELPER.createBlock("pink_blossom_carpet", ()->new BlossomCarpetBlock(AbstractBlock.Properties.create(Material.CARPET, MaterialColor.PURPLE).notSolid().hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT).harvestTool(ToolType.HOE)), ItemGroup.DECORATIONS);
 
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);

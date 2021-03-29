@@ -32,7 +32,7 @@ public class ClientRegister {
     public static void setupRenderLayer() {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.LAVENDER.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.TALL_LAVENDER.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AbundanceBlocks.LAVENDER_BLOSSOM_CARPET.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.PINK_BLOSSOM_CARPET.get(), RenderType.getCutoutMipped());
 
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SUNNY_MARIGOLD.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.SHADY_MARIGOLD.get(), RenderType.getCutout());
