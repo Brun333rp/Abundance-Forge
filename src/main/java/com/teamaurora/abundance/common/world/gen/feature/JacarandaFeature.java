@@ -115,8 +115,9 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
     private void cir1(BlockPos pos, List<BlockPos> leaves, Random rand) {
         for (int x = -1; x <= 1; x++) {
             for (int z = -1; z <= 1; z++) {
-                if (Math.abs(x) != 1 || Math.abs(z) != 1 || rand.nextBoolean()) {
-                    leaves.add(pos.add(x, 0, z));
+                //if (Math.abs(x) != 1 || Math.abs(z) != 1 || rand.nextBoolean()) {
+                if (Math.abs(x) != 1 || Math.abs(z) != 1) {
+                        leaves.add(pos.add(x, 0, z));
                 }
             }
         }
@@ -125,7 +126,8 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
     private void cir2(BlockPos pos, List<BlockPos> leaves, Random rand) {
         for (int x = -2; x <= 2; x++) {
             for (int z = -2; z <= 2; z++) {
-                if (Math.abs(x) != 2 || Math.abs(z) != 2 || rand.nextBoolean()) {
+                //if (Math.abs(x) != 2 || Math.abs(z) != 2 || rand.nextBoolean()) {
+                if (Math.abs(x) != 2 || Math.abs(z) != 2) {
                     leaves.add(pos.add(x, 0, z));
                 }
             }

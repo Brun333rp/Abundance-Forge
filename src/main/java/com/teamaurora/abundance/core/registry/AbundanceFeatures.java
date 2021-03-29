@@ -68,7 +68,7 @@ public class AbundanceFeatures {
     public static final class Configs {
         public static final BaseTreeFeatureConfig JACARANDA_TREE_CONFIG = (new BaseTreeFeatureConfig.Builder(
                 new SimpleBlockStateProvider(BlockStates.JACARANDA_LOG),
-                new SimpleBlockStateProvider(BlockStates.JACARANDA_LEAVES),
+                new WeightedBlockStateProvider().addWeightedBlockstate(BlockStates.JACARANDA_LEAVES, 3).addWeightedBlockstate(BlockStates.BUDDING_JACARANDA_LEAVES, 1),
                 new BlobFoliagePlacer(FeatureSpread.func_242252_a(0), FeatureSpread.func_242252_a(0), 0),
                 new StraightTrunkPlacer(0, 0, 0),
                 new TwoLayerFeature(0, 0, 0)
