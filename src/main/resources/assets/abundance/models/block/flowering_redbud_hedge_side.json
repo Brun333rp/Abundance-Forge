@@ -1,7 +1,6 @@
 {
-  "parent": "abundance:block/hedge_side_overlay",
+  "parent": "abnormals_core:block/hedge_side",
   "textures": {
-    "leaf": "abundance:block/flowering_redbud_leaves",
-    "overlay": "abundance:block/flowering_redbud_leaves_overlay"
+    "leaf": "abundance:block/flowering_redbud_leaves"
   }
 }

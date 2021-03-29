@@ -1,1 +1,1 @@
-{"parent": "abundance:block/leaves_overlay", "textures": {"leaves": "abundance:block/flowering_redbud_leaves", "overlay": "abundance:block/flowering_redbud_leaves_overlay"}}
+{"parent": "block/leaves", "textures": {"all": "abundance:block/flowering_redbud_leaves"}}

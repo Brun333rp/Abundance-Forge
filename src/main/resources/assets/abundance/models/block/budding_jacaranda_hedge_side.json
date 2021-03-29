@@ -1,6 +1,6 @@
 {
   "parent": "abnormals_core:block/hedge_side",
   "textures": {
-    "leaf": "abundance:block/flowering_jacaranda_leaves_0"
+    "leaf": "abundance:block/budding_jacaranda_leaves"
   }
 }

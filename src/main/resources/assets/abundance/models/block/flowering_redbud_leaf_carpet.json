@@ -1,1 +1,1 @@
-{"parent": "abundance:block/leaf_carpet_overlay", "textures": {"leaves": "abundance:block/flowering_redbud_leaves", "overlay": "abundance:block/flowering_redbud_leaves_overlay"}}
+{"parent": "abnormals_core:block/leaf_carpet", "textures": {"leaves": "abundance:block/flowering_redbud_leaves"}}

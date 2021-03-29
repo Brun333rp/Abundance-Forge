@@ -105,30 +105,6 @@ public class ClientRegister {
     }
 
     public static void registerBlockColors() {
-        BlockColors blockColors = Minecraft.getInstance().getBlockColors();
-        DataUtil.registerBlockColor(blockColors, (x, world, pos, u) -> world != null && pos != null ? getRedbudColor(world, pos) : 0xACE352, Arrays.asList(
-                AbundanceBlocks.REDBUD_LEAVES,
-                AbundanceBlocks.REDBUD_LEAF_CARPET,
-                AbundanceBlocks.REDBUD_HEDGE,
-                AbundanceBlocks.BUDDING_REDBUD_LEAVES,
-                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
-                AbundanceBlocks.BUDDING_REDBUD_HEDGE,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET,
-                AbundanceBlocks.FLOWERING_REDBUD_HEDGE
-        ));
 
-        ItemColors itemColors = Minecraft.getInstance().getItemColors();
-        DataUtil.registerBlockItemColor(itemColors, (color, items) -> 0xACE352, Arrays.asList(
-                AbundanceBlocks.REDBUD_LEAVES,
-                AbundanceBlocks.REDBUD_LEAF_CARPET,
-                AbundanceBlocks.REDBUD_HEDGE,
-                AbundanceBlocks.BUDDING_REDBUD_LEAVES,
-                AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET,
-                AbundanceBlocks.BUDDING_REDBUD_HEDGE,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAVES,
-                AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET,
-                AbundanceBlocks.FLOWERING_REDBUD_HEDGE
-        ));
     }
 }
