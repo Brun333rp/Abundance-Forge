@@ -69,14 +69,10 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.AMARANTHUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.CHICORY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.NEMOPHILA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AbundanceBlocks.PURPLE_AFRICAN_DAISY.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AbundanceBlocks.YELLOW_AFRICAN_DAISY.get(), RenderType.getCutout());
 
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_AMARANTHUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_CHICORY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_NEMOPHILA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_PURPLE_AFRICAN_DAISY.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_YELLOW_AFRICAN_DAISY.get(), RenderType.getCutout());
     }
 
     private static int blendColors(int color1, int color2, float biasTowards1) {

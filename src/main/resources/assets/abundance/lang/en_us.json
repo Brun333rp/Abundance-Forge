@@ -118,14 +118,10 @@
   "block.abundance.amaranthus": "Amaranthus",
   "block.abundance.chicory": "Chicory",
   "block.abundance.nemophila": "Nemophila",
-  "block.abundance.purple_african_daisy": "Purple African Daisy",
-  "block.abundance.yellow_african_daisy": "Yellow African Daisy",
 
   "block.abundance.potted_amaranthus": "Potted Amaranthus",
   "block.abundance.potted_chicory": "Potted Chicory",
   "block.abundance.potted_nemophila": "Potted Nemophila",
-  "block.abundance.potted_purple_african_daisy": "Potted Purple African Daisy",
-  "block.abundance.potted_yellow_african_daisy": "Potted Yellow African Daisy",
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Sunflower Seeds",

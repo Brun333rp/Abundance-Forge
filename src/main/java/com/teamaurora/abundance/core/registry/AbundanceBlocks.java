@@ -128,14 +128,10 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new ThiccFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> NEMOPHILA = HELPER.createBlock("nemophila", ()->new NemophilaBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> PURPLE_AFRICAN_DAISY = HELPER.createBlock("purple_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
-    public static final RegistryObject<Block> YELLOW_AFRICAN_DAISY = HELPER.createBlock("yellow_african_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
 
     public static final RegistryObject<Block> POTTED_CHICORY = HELPER.createBlockNoItem("potted_chicory", ()->new FlowerPotBlock(CHICORY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> POTTED_AMARANTHUS = HELPER.createBlockNoItem("potted_amaranthus", ()->new FlowerPotBlock(AMARANTHUS.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> POTTED_NEMOPHILA = HELPER.createBlockNoItem("potted_nemophila", ()->new FlowerPotBlock(NEMOPHILA.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
-    public static final RegistryObject<Block> POTTED_PURPLE_AFRICAN_DAISY = HELPER.createBlockNoItem("potted_purple_african_daisy", ()->new FlowerPotBlock(PURPLE_AFRICAN_DAISY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
-    public static final RegistryObject<Block> POTTED_YELLOW_AFRICAN_DAISY = HELPER.createBlockNoItem("potted_yellow_african_daisy", ()->new FlowerPotBlock(YELLOW_AFRICAN_DAISY.get(), Block.Properties.from(Blocks.POTTED_ALLIUM)));
 
     // sacc
     public static final RegistryObject<Block> SUNFLOWER_SEED_SACK = HELPER.createCompatBlock("quark", "sunflower_seed_sack", ()->new Block(Block.Properties.create(Material.WOOL, MaterialColor.GRAY).hardnessAndResistance(0.5F).sound(SoundType.CLOTH)), ItemGroup.DECORATIONS);

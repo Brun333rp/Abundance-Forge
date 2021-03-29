@@ -53,8 +53,6 @@ public class AbundanceFeatures {
 
         public static final BlockState CHICORY = AbundanceBlocks.CHICORY.get().getDefaultState();
         public static final BlockState AMARANTHUS = AbundanceBlocks.AMARANTHUS.get().getDefaultState();
-        public static final BlockState PURPLE_AFRICAN_DAISY = AbundanceBlocks.PURPLE_AFRICAN_DAISY.get().getDefaultState();
-        public static final BlockState YELLOW_AFRICAN_DAISY = AbundanceBlocks.YELLOW_AFRICAN_DAISY.get().getDefaultState();
 
         public static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
         public static final BlockState PINK_TULIP = Blocks.PINK_TULIP.getDefaultState();
@@ -94,8 +92,6 @@ public class AbundanceFeatures {
 
         public static final BlockClusterFeatureConfig CHICORY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.CHICORY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
         public static final BlockClusterFeatureConfig AMARANTHUS_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.AMARANTHUS), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
-        public static final BlockClusterFeatureConfig YELLOW_AFRICAN_DAISY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.YELLOW_AFRICAN_DAISY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
-        public static final BlockClusterFeatureConfig PURPLE_AFRICAN_DAISY_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.PURPLE_AFRICAN_DAISY), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build();
     }
 
     public static final class Configured {
@@ -128,11 +124,6 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<?, ?> CHICORY = Feature.RANDOM_PATCH.withConfiguration(Configs.CHICORY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(24)));
         public static final ConfiguredFeature<?, ?> CHICORY_DENSE = Feature.RANDOM_PATCH.withConfiguration(Configs.CHICORY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(6)));
         public static final ConfiguredFeature<?, ?> AMARANTHUS = Feature.RANDOM_PATCH.withConfiguration(Configs.AMARANTHUS_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(6)));
-        public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
-        public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY = Feature.RANDOM_PATCH.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(18)));
-        public static final ConfiguredFeature<?, ?> YELLOW_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.YELLOW_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
-        public static final ConfiguredFeature<?, ?> PURPLE_AFRICAN_DAISY_SPARSE = Feature.NO_BONEMEAL_FLOWER.withConfiguration(Configs.PURPLE_AFRICAN_DAISY_CONFIG).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(32)));
-
         private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> LAVENDER_FOREST_FLOWER_VEGETATION_LIST = ImmutableList.of(() -> {
             return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(BlockStates.ALLIUM), SimpleBlockPlacer.PLACER)).tries(64).func_227317_b_().build());
         }, () -> {
@@ -178,10 +169,6 @@ public class AbundanceFeatures {
             register("amaranthus", AMARANTHUS);
             register("chicory", CHICORY);
             register("chicory_dense", CHICORY_DENSE);
-            register("yellow_african_daisy", YELLOW_AFRICAN_DAISY);
-            register("purple_african_daisy", PURPLE_AFRICAN_DAISY);
-            register("yellow_african_daisy_sparse", YELLOW_AFRICAN_DAISY_SPARSE);
-            register("purple_african_daisy_sparse", PURPLE_AFRICAN_DAISY_SPARSE);
 
             register("forest_flower_vegetation_lavender", FOREST_FLOWER_VEGETATION_LAVENDER);
         }
