@@ -5,9 +5,6 @@
   "item.abundance.lavender": "Lavanda",
   "block.abundance.lavender_basket": "Canasta de lavandas",
 
-  "item.abundance.lavender_blossoms": "Flores de lavanda",
-  "block.abundance.lavender_blossom_carpet": "Alfombra de flores de lavanda",
-
   "item.abundance.lavender_salad": "Ensalada de lavanda",
   "item.abundance.lavender_tea": "Té de lavanda",
   "effect.abundance.supportive": "Apoyo",
@@ -104,6 +101,9 @@
   "block.abundance.flowering_redbud_sapling": "Brote de ciclamor florido",
   "block.abundance.potted_flowering_redbud_sapling": "Maceta con brote de ciclamor florido",
 
+  "item.abundance.pink_blossoms": "Flores rosas",
+  "block.abundance.pink_blossom_carpet": "Alfombra de flores rosas",
+
 
   "_comment4": "Biomes & Mobs",
   "entity.abundance.slabfish.type.lavender_fields": "Campo de lavandas",
@@ -114,45 +114,20 @@
   "biome.abundance.nemophila_fields": "Campo de nemophilas",
 
 
-  "_comment5": "Saguaro Cactus",
-  "block.abundance.saguaro_cactus": "Cactus saguaro",
-  "block.abundance.small_saguaro_cactus": "Cactus saguaro pequeño",
-  "block.abundance.saguaro_sprout": "Brote de saguaro",
-  "block.abundance.potted_saguaro_sprout": "Maceta con brote de saguaro",
-  "block.abundance.saguaro_flower": "Flor de saguaro",
-  "item.abundance.saguaro_flower": "Flor de saguaro",
-  "effect.abundance.succumbing": "Desistencia",
-
   "_comment6": "Flowers",
   "block.abundance.amaranthus": "Amaranto",
   "block.abundance.chicory": "Achicoria",
   "block.abundance.nemophila": "Nemophila",
-  "block.abundance.purple_african_daisy": "Margarita africana violeta",
-  "block.abundance.yellow_african_daisy": "Margarita africana amarilla",
 
   "block.abundance.potted_amaranthus": "Maceta con amaranto",
   "block.abundance.potted_chicory": "Maceta con achicoria",
   "block.abundance.potted_nemophila": "Maceta con nemophila",
-  "block.abundance.potted_purple_african_daisy": "Maceta con margarita africana violeta",
-  "block.abundance.potted_yellow_african_daisy": "Maceta con margarita africana amarilla",
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
   "block.abundance.sunflower_seed_sack": "Saco de semillas de girasol",
 
   "_comment8": "Potions",
-  "item.minecraft.potion.effect.succumbing": "Poción de desistencia",
-  "item.minecraft.potion.effect.succumbing_strong": "Poción de desistencia",
-  "item.minecraft.potion.effect.succumbing_long": "Poción de desistencia",
-  "item.minecraft.splash_potion.effect.succumbing": "Poción arrojadiza de desistencia",
-  "item.minecraft.splash_potion.effect.succumbing_strong": "Poción arrojadiza de desistencia",
-  "item.minecraft.splash_potion.effect.succumbing_long": "Poción arrojadiza de desistencia",
-  "item.minecraft.lingering_potion.effect.succumbing": "Poción persistente de desistencia",
-  "item.minecraft.lingering_potion.effect.succumbing_strong": "Poción persistente de desistencia",
-  "item.minecraft.lingering_potion.effect.succumbing_long": "Poción persistente de desistencia",
-  "item.minecraft.tipped_arrow.effect.succumbing": "Flecha de desistencia",
-  "item.minecraft.tipped_arrow.effect.succumbing_strong": "Flecha de desistencia",
-  "item.minecraft.tipped_arrow.effect.succumbing_long": "Flecha de desistencia",
 
   "item.minecraft.potion.effect.supportive": "Poción de apoyo",
   "item.minecraft.potion.effect.supportive_strong": "Poción de apoyo",
