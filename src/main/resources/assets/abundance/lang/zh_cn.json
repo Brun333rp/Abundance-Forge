@@ -5,9 +5,6 @@
   "item.abundance.lavender": "薰衣草",
   "block.abundance.lavender_basket": "筐装薰衣草",
 
-  "item.abundance.lavender_blossoms": "薰衣草花",
-  "block.abundance.lavender_blossom_carpet": "薰衣草花地毯",
-
   "item.abundance.lavender_salad": "薰衣草沙拉",
   "item.abundance.lavender_tea": "薰衣草茶",
   "effect.abundance.supportive": "支援",
@@ -103,6 +100,9 @@
   "block.abundance.flowering_redbud_wood": "开花紫荆木",
   "block.abundance.flowering_redbud_sapling": "开花紫荆树苗",
   "block.abundance.potted_flowering_redbud_sapling": "开花紫荆树苗盆栽",
+  
+  "item.abundance.lavender_blossoms": "紫色花朵",
+  "block.abundance.lavender_blossom_carpet": "紫色花朵地毯",
 
 
   "_comment4": "Biomes & Mobs/生物群系与生物",
@@ -114,45 +114,20 @@
   "biome.abundance.nemophila_fields": "喜林草花田",
 
 
-  "_comment5": "Saguaro Cactus/树形仙人掌",
-  "block.abundance.saguaro_cactus": "树形仙人掌",
-  "block.abundance.small_saguaro_cactus": "小树形仙人掌",
-  "block.abundance.saguaro_sprout": "树形仙人掌苗",
-  "block.abundance.potted_saguaro_sprout": "树形仙人掌苗盆栽",
-  "block.abundance.saguaro_flower": "树形仙人掌花",
-  "item.abundance.saguaro_flower": "树形仙人掌花",
-  "effect.abundance.succumbing": "屈服",
-
   "_comment6": "Flowers/各种花",
   "block.abundance.amaranthus": "苋菜",
   "block.abundance.chicory": "菊苣",
   "block.abundance.nemophila": "喜林草",
-  "block.abundance.purple_african_daisy": "紫色非洲菊",
-  "block.abundance.yellow_african_daisy": "黄色非洲菊",
 
   "block.abundance.potted_amaranthus": "苋菜盆栽",
   "block.abundance.potted_chicory": "菊苣盆栽",
   "block.abundance.potted_nemophila": "喜林草盆栽",
-  "block.abundance.potted_purple_african_daisy": "紫色非洲菊盆栽",
-  "block.abundance.potted_yellow_african_daisy": "黄色非洲菊盆栽",
 
   "_comment7": "Misc/乱七八糟",
   "item.abundance.sunflower_seeds": "向日葵种子",
   "block.abundance.sunflower_seed_sack": "袋装向日葵种子",
 
   "_comment8": "Potions/药水",
-  "item.minecraft.potion.effect.succumbing": "屈服药水",
-  "item.minecraft.potion.effect.succumbing_strong": "屈服药水",
-  "item.minecraft.potion.effect.succumbing_long": "屈服药水",
-  "item.minecraft.splash_potion.effect.succumbing": "喷溅型屈服药水",
-  "item.minecraft.splash_potion.effect.succumbing_strong": "喷溅型屈服药水",
-  "item.minecraft.splash_potion.effect.succumbing_long": "喷溅型屈服药水",
-  "item.minecraft.lingering_potion.effect.succumbing": "滞留型屈服药水",
-  "item.minecraft.lingering_potion.effect.succumbing_strong": "滞留型屈服药水",
-  "item.minecraft.lingering_potion.effect.succumbing_long": "滞留型屈服药水",
-  "item.minecraft.tipped_arrow.effect.succumbing": "屈服之箭",
-  "item.minecraft.tipped_arrow.effect.succumbing_strong": "屈服之箭",
-  "item.minecraft.tipped_arrow.effect.succumbing_long": "屈服之箭",
 
   "item.minecraft.potion.effect.supportive": "支援药水",
   "item.minecraft.potion.effect.supportive_strong": "支援药水",
