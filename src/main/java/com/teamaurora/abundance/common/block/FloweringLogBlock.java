@@ -14,6 +14,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
@@ -31,7 +32,7 @@ public class FloweringLogBlock extends AbnormalsLogBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         ItemStack item = player.getHeldItem(handIn);
 
-        if (item.getItem() instanceof ShearsItem) {
+        if (Tags.Items.SHEARS.contains(item.getItem())) {
             worldIn.playSound(null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS, 1.0F, 0.8F + worldIn.rand.nextFloat() * 0.4F);
             worldIn.setBlockState(pos, snipBlock.get().getDefaultState().with(AXIS, state.get(AXIS)), 2);
 
