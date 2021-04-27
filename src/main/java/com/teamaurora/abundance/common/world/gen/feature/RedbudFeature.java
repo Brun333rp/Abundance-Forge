@@ -17,18 +17,9 @@ import net.minecraft.world.gen.feature.Feature;
 import java.util.*;
 
 public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
+
     public RedbudFeature(Codec<BaseTreeFeatureConfig> config) {
         super(config);
-    }
-
-    private class DirectionalBlockPos {
-        public BlockPos pos;
-        public Direction direction;
-
-        public DirectionalBlockPos(BlockPos p, Direction a) {
-            pos = p;
-            direction = a;
-        }
     }
 
     @Override
@@ -87,7 +78,7 @@ public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
 
         boolean flag = true;
         for (DirectionalBlockPos log : logs) {
-            if (!TreeUtil.isAirOrLeaves(worldIn, log.pos)) {
+            if (!TreeUtil.isAirOrLeaves(worldIn, log.getPos())) {
                 flag = false;
             }
         }
@@ -96,7 +87,7 @@ public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
         TreeUtil.setDirtAt(worldIn, position.down());
 
         for (DirectionalBlockPos log : logs) {
-            TreeUtil.placeDirectionalLogAt(worldIn, log.pos, log.direction, rand, config);
+            TreeUtil.placeDirectionalLogAt(worldIn, log.getPos(), log.getDirection(), rand, config);
         }
         for (BlockPos leaf : leavesClean) {
             TreeUtil.placeLeafAt(worldIn, leaf, rand, config);
@@ -108,7 +99,7 @@ public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
 
         List<BlockPos> logsPos = new ArrayList<>();
         for (DirectionalBlockPos log : logs) {
-            logsPos.add(log.pos);
+            logsPos.add(log.getPos());
         }
 
         if (!config.decorators.isEmpty()) {
@@ -116,7 +107,6 @@ public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
             leavesClean.sort(Comparator.comparingInt(Vector3i::getY));
             config.decorators.forEach((decorator) -> decorator.func_225576_a_(worldIn, rand, logsPos, leavesClean, decSet, mutableBoundingBox));
         }
-
         return true;
     }
 
@@ -134,8 +124,9 @@ public class RedbudFeature extends Feature<BaseTreeFeatureConfig> {
 
     private List<BlockPos> cleanLeavesArray(List<BlockPos> leaves, List<DirectionalBlockPos> logs) {
         List<BlockPos> logsPos = new ArrayList<>();
+
         for (DirectionalBlockPos log : logs) {
-            logsPos.add(log.pos);
+            logsPos.add(log.getPos());
         }
         List<BlockPos> newLeaves = new ArrayList<>();
         for (BlockPos leaf : leaves) {

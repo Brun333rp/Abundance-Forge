@@ -17,18 +17,9 @@ import net.minecraft.world.gen.feature.Feature;
 import java.util.*;
 
 public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
+
     public JacarandaFeature(Codec<BaseTreeFeatureConfig> config) {
         super(config);
-    }
-
-    private class DirectionalBlockPos {
-        public BlockPos pos;
-        public Direction direction;
-
-        public DirectionalBlockPos(BlockPos p, Direction a) {
-            pos = p;
-            direction = a;
-        }
     }
 
     @Override
@@ -40,18 +31,19 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
         if (!TreeUtil.isValidGround(worldIn, position.down(), (SaplingBlock) AbundanceBlocks.JACARANDA_SAPLING.get())) {
             return false;
         }
-
         List<DirectionalBlockPos> logs = new ArrayList<>();
         List<BlockPos> leaves = new ArrayList<>();
 
         for (int i = 0; i <= height; i++) {
             logs.add(new DirectionalBlockPos(position.up(i), Direction.UP));
         }
+
         List<Direction> dirs = new ArrayList<>();
         dirs.add(Direction.NORTH);
         dirs.add(Direction.EAST);
         dirs.add(Direction.SOUTH);
         dirs.add(Direction.EAST);
+
         for (int i = 2; i <= height - 2; i++) {
             Direction dir = dirs.get(rand.nextInt(dirs.size()));
             dirs.remove(dir);
@@ -59,12 +51,11 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
         }
         addCanopy(position.up(height), leaves, rand);
 
-
         List<BlockPos> leavesClean = cleanLeavesArray(leaves, logs);
 
         boolean flag = true;
         for (DirectionalBlockPos log : logs) {
-            if (!TreeUtil.isAirOrLeaves(worldIn, log.pos)) {
+            if (!TreeUtil.isAirOrLeaves(worldIn, log.getPos())) {
                 flag = false;
             }
         }
@@ -73,19 +64,18 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
         TreeUtil.setDirtAt(worldIn, position.down());
 
         for (DirectionalBlockPos log : logs) {
-            TreeUtil.placeDirectionalLogAt(worldIn, log.pos, log.direction, rand, config);
+            TreeUtil.placeDirectionalLogAt(worldIn, log.getPos(), log.getDirection(), rand, config);
         }
         for (BlockPos leaf : leavesClean) {
             TreeUtil.placeLeafAt(worldIn, leaf, rand, config);
         }
-
-
         Set<BlockPos> decSet = Sets.newHashSet();
         MutableBoundingBox mutableBoundingBox = MutableBoundingBox.getNewBoundingBox();
 
         List<BlockPos> logsPos = new ArrayList<>();
+
         for (DirectionalBlockPos log : logs) {
-            logsPos.add(log.pos);
+            logsPos.add(log.getPos());
         }
 
         if (!config.decorators.isEmpty()) {
@@ -93,7 +83,6 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
             leavesClean.sort(Comparator.comparingInt(Vector3i::getY));
             config.decorators.forEach((decorator) -> decorator.func_225576_a_(worldIn, rand, logsPos, leavesClean, decSet, mutableBoundingBox));
         }
-
         return true;
     }
 
@@ -137,7 +126,7 @@ public class JacarandaFeature extends Feature<BaseTreeFeatureConfig> {
     private List<BlockPos> cleanLeavesArray(List<BlockPos> leaves, List<DirectionalBlockPos> logs) {
         List<BlockPos> logsPos = new ArrayList<>();
         for (DirectionalBlockPos log : logs) {
-            logsPos.add(log.pos);
+            logsPos.add(log.getPos());
         }
         List<BlockPos> newLeaves = new ArrayList<>();
         for (BlockPos leaf : leaves) {
