@@ -125,6 +125,7 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Sunflower Seeds",
+  "item.abundance.screecher_spawn_egg": "Screecher Spawn Egg",
   "block.abundance.sunflower_seed_sack": "Sunflower Seed Sack",
 
   "_comment8": "Potions",
@@ -140,5 +141,7 @@
   "item.minecraft.lingering_potion.effect.supportive_long": "Lingering Potion of Supporting",
   "item.minecraft.tipped_arrow.effect.supportive": "Arrow of Supporting",
   "item.minecraft.tipped_arrow.effect.supportive_strong": "Arrow of Supporting",
-  "item.minecraft.tipped_arrow.effect.supportive_long": "Arrow of Supporting"
+  "item.minecraft.tipped_arrow.effect.supportive_long": "Arrow of Supporting",
+
+  "entity.abundance.screecher": "Screecher"
 }

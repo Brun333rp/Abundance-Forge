@@ -4,6 +4,7 @@ import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
 import com.teamaurora.abundance.core.other.AbundanceCompat;
 import com.teamaurora.abundance.core.registry.AbundanceBiomes;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
+import com.teamaurora.abundance.core.registry.AbundanceEntities;
 import com.teamaurora.abundance.core.registry.AbundanceFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -42,6 +43,7 @@ public class Abundance {
         AbundanceEffects.POTIONS.register(eventBus);
 
         eventBus.addListener(this::commonSetup);
+        eventBus.addListener(AbundanceEntities::registerEntityAttributes);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AbundanceConfig.COMMON_SPEC);
     }

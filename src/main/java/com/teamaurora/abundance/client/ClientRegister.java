@@ -1,35 +1,37 @@
 package com.teamaurora.abundance.client;
 
-import com.minecraftabnormals.abnormals_core.core.util.DataUtil;
+import com.teamaurora.abundance.client.render.entity.living.ScreecherRenderer;
 import com.teamaurora.abundance.core.Abundance;
 import com.teamaurora.abundance.core.registry.AbundanceBlocks;
-import net.minecraft.client.Minecraft;
+import com.teamaurora.abundance.core.registry.AbundanceEntities;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.FoliageColors;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-import java.util.Arrays;
-
 @Mod.EventBusSubscriber(modid = Abundance.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientRegister {
+
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             registerBlockColors();
             setupRenderLayer();
+            registerEntityRenderers();
         });
     }
 
-    public static void setupRenderLayer() {
+    private static void registerEntityRenderers() {
+        RenderingRegistry.registerEntityRenderingHandler(AbundanceEntities.SCREECHER.get(), ScreecherRenderer::new);
+    }
+
+    private static void setupRenderLayer() {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.LAVENDER.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.TALL_LAVENDER.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.PINK_BLOSSOM_CARPET.get(), RenderType.getCutoutMipped());

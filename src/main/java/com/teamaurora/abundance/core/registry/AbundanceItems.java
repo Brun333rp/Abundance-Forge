@@ -1,5 +1,6 @@
 package com.teamaurora.abundance.core.registry;
 
+import com.minecraftabnormals.abnormals_core.common.items.AbnormalsSpawnEggItem;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 import com.minecraftabnormals.abnormals_core.core.util.registry.ItemSubRegistryHelper;
 import com.teamaurora.abundance.common.item.LavenderTeaItem;
@@ -21,6 +22,8 @@ public class AbundanceItems {
 
     public static final RegistryObject<Item> PINK_BLOSSOMS = HELPER.createItem("pink_blossoms", ()->new Item(new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", ()->new Item(new Item.Properties().group(ItemGroup.MISC).food(Foods.SUNFLOWER_SEEDS)));
+
+    public static final RegistryObject<AbnormalsSpawnEggItem> SCREECHER_SPAWN_EGG = HELPER.createSpawnEggItem("screecher", AbundanceEntities.SCREECHER::get, 0x516D26, 0x845AAA);
 
     public static class Foods {
         public static final Food EMPTY = (new Food.Builder()).hunger(0).saturation(0.0F).setAlwaysEdible().build();
