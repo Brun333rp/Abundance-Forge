@@ -9,6 +9,8 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 public class JacarandaTree extends Tree {
+
+    @Override
     @Nullable
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
         if (randomIn.nextBoolean()) {

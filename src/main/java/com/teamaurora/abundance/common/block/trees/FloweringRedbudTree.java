@@ -9,6 +9,8 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 public class FloweringRedbudTree extends Tree {
+
+    @Override
     @Nullable
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
         return AbundanceFeatures.Configured.FLOWERING_REDBUD;

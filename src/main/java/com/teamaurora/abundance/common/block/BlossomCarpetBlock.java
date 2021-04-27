@@ -9,10 +9,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class BlossomCarpetBlock extends LeafCarpetBlock {
+
     public BlossomCarpetBlock(Properties properties) {
         super(properties);
     }
 
+    @Override
+    @SuppressWarnings("deprecation")
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
         if (worldIn.isAirBlock(pos.down()) && entityIn instanceof LivingEntity && entityIn.getPosY() < pos.getY() && entityIn.getType() != EntityType.BAT && entityIn.getType() != EntityType.BEE) {
             worldIn.destroyBlock(pos, false);

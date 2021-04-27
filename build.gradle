@@ -90,9 +90,9 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:quark-243121:3221260")
     runtimeOnly fg.deobf("curse.maven:atmospheric-362393:3154934")
     runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3188508")
+    runtimeOnly fg.deobf("curse.maven:buzzier-bees-355458:3154937")
 
     implementation fg.deobf("com.minecraftabnormals:abnormals-core:${minecraft_version}-${ac_version}")
-    implementation fg.deobf("curse.maven:buzzier-bees-355458:3154937")
 }
 
 repositories {

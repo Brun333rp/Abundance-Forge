@@ -37,7 +37,7 @@ public class AbundanceEvents {
 
     @SubscribeEvent
     public static void onVillagerTradesEvent(VillagerTradesEvent event) {
-        if (event.getType().equals(VillagerProfession.FARMER)) {
+        if (event.getType() == VillagerProfession.FARMER) {
             TradeUtil.addVillagerTrades(event, TradeUtil.NOVICE,
                     new TradeUtil.AbnormalsTrade(AbundanceItems.LAVENDER.get(), 20, 1, 16, 2, 0.05F)
             );

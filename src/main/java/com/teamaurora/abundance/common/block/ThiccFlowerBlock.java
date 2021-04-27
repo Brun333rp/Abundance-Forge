@@ -13,6 +13,7 @@ import net.minecraft.world.IBlockReader;
 import java.util.function.Supplier;
 
 public class ThiccFlowerBlock extends AbnormalsFlowerBlock {
+
     // hey mojang i took your nether roots VoxelShape how do you like that huh? gamere
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
@@ -20,6 +21,7 @@ public class ThiccFlowerBlock extends AbnormalsFlowerBlock {
         super(stewEffect, stewEffectDuration, properties);
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         Vector3d vector3d = state.getOffset(worldIn, pos);
         return SHAPE.withOffset(vector3d.x, vector3d.y, vector3d.z);

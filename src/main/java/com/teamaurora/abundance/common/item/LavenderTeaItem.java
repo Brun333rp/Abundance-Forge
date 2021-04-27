@@ -17,16 +17,19 @@ import net.minecraft.world.World;
 
 // copy-pasted from hanami lmao
 public class LavenderTeaItem extends Item {
+
     public LavenderTeaItem(Item.Properties properties) {
         super(properties);
     }
 
+    @Override
     public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity livingEntity) {
         super.onItemUseFinish(stack, world, livingEntity);
+
         if (livingEntity instanceof ServerPlayerEntity) {
-            ServerPlayerEntity serverplayerentity = (ServerPlayerEntity)livingEntity;
-            CriteriaTriggers.CONSUME_ITEM.trigger(serverplayerentity, stack);
-            serverplayerentity.addStat(Stats.ITEM_USED.get(this));
+            ServerPlayerEntity serverPlayer = (ServerPlayerEntity)livingEntity;
+            CriteriaTriggers.CONSUME_ITEM.trigger(serverPlayer, stack);
+            serverPlayer.addStat(Stats.ITEM_USED.get(this));
         }
 
         if (livingEntity instanceof PlayerEntity) {
@@ -36,7 +39,8 @@ public class LavenderTeaItem extends Item {
 
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
-        } else {
+        }
+        else {
             if (livingEntity instanceof PlayerEntity && !((PlayerEntity)livingEntity).abilities.isCreativeMode) {
                 ItemStack itemstack = new ItemStack(Items.GLASS_BOTTLE);
                 PlayerEntity playerentity = (PlayerEntity)livingEntity;
@@ -44,15 +48,16 @@ public class LavenderTeaItem extends Item {
                     playerentity.dropItem(itemstack, false);
                 }
             }
-
             return stack;
         }
     }
 
+    @Override
     public UseAction getUseAction(ItemStack itemStack) {
         return UseAction.DRINK;
     }
 
+    @Override
     public SoundEvent getEatSound() {
         return SoundEvents.ENTITY_GENERIC_DRINK;
     }

@@ -11,6 +11,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
 public class TallMarigoldBlock extends AbnormalsTallFlowerBlock {
+
     protected static final VoxelShape SHAPE_BOTTOM = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     protected static final VoxelShape SHAPE_TOP = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
 
@@ -18,6 +19,8 @@ public class TallMarigoldBlock extends AbnormalsTallFlowerBlock {
         super(properties);
     }
 
+    @Override
+    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         return state.get(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? SHAPE_BOTTOM : SHAPE_TOP;
     }

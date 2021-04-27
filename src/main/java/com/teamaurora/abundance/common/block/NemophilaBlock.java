@@ -14,18 +14,21 @@ import net.minecraft.world.IBlockReader;
 import java.util.function.Supplier;
 
 public class NemophilaBlock extends AbnormalsFlowerBlock {
+
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
 
     public NemophilaBlock(Supplier<Effect> stewEffect, int stewEffectDuration, Properties properties) {
         super(stewEffect, stewEffectDuration, properties);
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         Vector3d vector3d = state.getOffset(worldIn, pos);
         return SHAPE.withOffset(vector3d.x, vector3d.y, vector3d.z);
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public boolean isReplaceable(BlockState state, BlockItemUseContext useContext) {
         return true;
     }

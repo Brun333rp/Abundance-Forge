@@ -26,9 +26,9 @@ import static com.teamaurora.abundance.core.Abundance.MODID;
  * Add gooseberries
  * Add cypress branches
  */
-@Mod("abundance")
-public class Abundance
-{
+@Mod(Abundance.MODID)
+public class Abundance {
+
     public static final String MODID = "abundance";
     public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MODID);
 
@@ -40,8 +40,6 @@ public class Abundance
         AbundanceFeatures.FEATURES.register(eventBus);
         AbundanceEffects.EFFECTS.register(eventBus);
         AbundanceEffects.POTIONS.register(eventBus);
-
-        MinecraftForge.EVENT_BUS.register(this);
 
         eventBus.addListener(this::commonSetup);
 
