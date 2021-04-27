@@ -1,5 +1,6 @@
 package com.teamaurora.abundance.common.potion;
 
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IAngerable;
@@ -14,9 +15,14 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
 public class SupportiveEffect extends Effect {
+
     public SupportiveEffect() {
         super(EffectType.NEUTRAL, 0x845AAA);
     }
@@ -34,9 +40,10 @@ public class SupportiveEffect extends Effect {
         }
     }
 
-    private int getHostilityBetween(Entity e1, Entity e2) {
-        int hos1 = getHostility(e1);
-        int hos2 = getHostility(e2);
+    private int getHostilityBetween(Entity effectUser, Entity affectedEntity) {
+        int hos1 = getHostility(effectUser);
+        int hos2 = getHostility(affectedEntity);
+
         if (hos1 == 1 || hos2 == 1) {
             return 1;
         }
@@ -50,32 +57,39 @@ public class SupportiveEffect extends Effect {
     public void performEffect(LivingEntity livingEntity, int amplifier) {
         World world = livingEntity.getEntityWorld();
         BlockPos entityPos = livingEntity.getPosition();
-        List<Entity> entities = world.getEntitiesWithinAABBExcludingEntity(livingEntity, new AxisAlignedBB(entityPos.add(-10, -10, -10), entityPos.add(10, 10, 10)));
-        for (Entity entity : entities) {
-            if (entity instanceof LivingEntity) {
-                LivingEntity livingEntity2 = (LivingEntity) entity;
-                int hostility = getHostilityBetween(livingEntity, livingEntity2);
-                if (hostility == 0) {
-                    // passive
-                    livingEntity2.addPotionEffect(new EffectInstance(Effects.REGENERATION, 200, amplifier, false, true, true));
-                } else if (hostility == 1) {
-                    // neutral
-                    livingEntity2.addPotionEffect(new EffectInstance(Effects.STRENGTH, 200, amplifier, false, true, true));
-                } else {
-                    // aggressive
-                    livingEntity2.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 200, amplifier, false, true, true));
-                }
+        List<LivingEntity> entities = world.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(entityPos.add(-10, -10, -10), entityPos.add(10, 10, 10)));
+        entities.remove(livingEntity);
+
+        for (LivingEntity affectedEntity : entities) {
+            int hostility = getHostilityBetween(livingEntity, affectedEntity);
+            Effect effectToApply;
+
+            switch (hostility) {
+                default:
+                case 0:
+                   // Passive
+                    effectToApply = Effects.REGENERATION;
+                    break;
+                case 1:
+                   // Strength
+                    effectToApply = Effects.STRENGTH;
+                    break;
+                case 2:
+                    // Aggressive
+                    effectToApply = Effects.RESISTANCE;
+                    break;
             }
+            affectedEntity.addPotionEffect(new EffectInstance(effectToApply, 200, amplifier, false, true, true));
         }
     }
 
     @Override
-    public void affectEntity(Entity source, Entity indirectSource, LivingEntity livingEntity, int amplifier, double health) {
+    public void affectEntity(@Nullable Entity source, @Nullable Entity indirectSource, LivingEntity livingEntity, int amplifier, double health) {
 
     }
 
     @Override
     public boolean isReady(int duration, int amplifier) {
-        return true;
+        return duration % 4 == 0;
     }
 }
