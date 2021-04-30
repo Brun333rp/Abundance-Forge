@@ -1,10 +1,12 @@
 package com.teamaurora.abundance.common.event;
 
 import com.teamaurora.abundance.common.capability.CapabilityHelper;
+import com.teamaurora.abundance.common.network.NetworkHelper;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.potion.Effect;
 import net.minecraftforge.event.entity.living.PotionEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -32,6 +34,30 @@ public class PlayerEvents {
                     return;
 
                 CapabilityHelper.setPlayerDeafened(player, true);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPlayerDimensionChanged(PlayerEvent.PlayerChangedDimensionEvent event) {
+        // Not even sure if destination and current
+        // dimension can even be the same
+        if (event.getFrom() == event.getTo()) {
+            return;
+        }
+
+        if (event.getPlayer() instanceof ServerPlayerEntity) {
+            NetworkHelper.updatePlayerDeafness((ServerPlayerEntity) event.getPlayer());
+        }
+    }
+
+    @SubscribeEvent
+    public void onPlayerCloned(PlayerEvent.Clone event) {
+        if (!event.isWasDeath()) {
+
+            if (event.getPlayer() instanceof ServerPlayerEntity) {
+                boolean deafened = CapabilityHelper.getPlayerDeafened(event.getOriginal());
+                CapabilityHelper.setPlayerDeafened((ServerPlayerEntity) event.getPlayer(), deafened);
             }
         }
     }
