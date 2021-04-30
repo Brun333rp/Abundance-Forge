@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.teamaurora.abundance.common.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "refmap": "abundance.mixins.refmap.json",
+  "mixins": [],
+  "client": [
+    "ClientWorldMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

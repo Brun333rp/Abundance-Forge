@@ -4,6 +4,7 @@ import com.teamaurora.abundance.client.render.entity.living.ScreecherRenderer;
 import com.teamaurora.abundance.core.Abundance;
 import com.teamaurora.abundance.core.registry.AbundanceBlocks;
 import com.teamaurora.abundance.core.registry.AbundanceEntities;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.math.BlockPos;
@@ -28,6 +29,7 @@ public class ClientRegister {
     }
 
     private static void registerEntityRenderers() {
+        Minecraft.getInstance().getSoundHandler().stop();
         RenderingRegistry.registerEntityRenderingHandler(AbundanceEntities.SCREECHER.get(), ScreecherRenderer::new);
     }
 

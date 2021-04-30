@@ -8,6 +8,7 @@
   "item.abundance.lavender_salad": "Lavender Salad",
   "item.abundance.lavender_tea": "Lavender Tea",
   "effect.abundance.supportive": "Supportive",
+  "effect.abundance.deafness": "Deafness",
 
 
   "_comment1": "Marigolds",
@@ -108,6 +109,7 @@
   "_comment4": "Biomes & Mobs",
   "entity.abundance.slabfish.type.lavender_fields": "Lavender Fields",
   "entity.abundance.slabfish.type.nemophila_fields": "Nemophila Fields",
+  "entity.abundance.screecher": "Screecher",
 
   "biome.abundance.lavender_fields": "Lavender Fields",
   "biome.abundance.lavender_forest": "Lavender Forest",
@@ -129,7 +131,6 @@
   "block.abundance.sunflower_seed_sack": "Sunflower Seed Sack",
 
   "_comment8": "Potions",
-
   "item.minecraft.potion.effect.supportive": "Potion of Supporting",
   "item.minecraft.potion.effect.supportive_strong": "Potion of Supporting",
   "item.minecraft.potion.effect.supportive_long": "Potion of Supporting",
@@ -142,6 +143,10 @@
   "item.minecraft.tipped_arrow.effect.supportive": "Arrow of Supporting",
   "item.minecraft.tipped_arrow.effect.supportive_strong": "Arrow of Supporting",
   "item.minecraft.tipped_arrow.effect.supportive_long": "Arrow of Supporting",
-
-  "entity.abundance.screecher": "Screecher"
+  "item.minecraft.potion.effect.deafness": "Potion of Deafness",
+  "item.minecraft.potion.effect.deafness_long": "Potion of Deafness",
+  "item.minecraft.splash_potion.effect.deafness": "Splash Potion of Deafness",
+  "item.minecraft.splash_potion.effect.deafness_long": "Splash Potion of Deafness",
+  "item.minecraft.lingering_potion.effect.deafness": "Lingering Potion of Deafness",
+  "item.minecraft.lingering_potion.effect.deafness_long": "Lingering Potion of Deafness"
 }
