@@ -2,7 +2,7 @@ package com.teamaurora.abundance.common.capability.deafness;
 
 public class DefaultDeafnessCapability implements IDeafnessCapability {
 
-    private boolean isDeaf;
+    private boolean isDeaf = false;
 
     @Override
     public boolean isDeaf() {

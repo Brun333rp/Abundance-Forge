@@ -5,6 +5,8 @@ import com.teamaurora.abundance.common.network.NetworkHelper;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.potion.Effect;
+import net.minecraft.util.SoundEvents;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.PotionEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -35,6 +37,15 @@ public class PlayerEvents {
 
                 CapabilityHelper.setPlayerDeafened(player, true);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPlayerJoinWorld(EntityJoinWorldEvent event) {
+        if (event.getEntity() instanceof ServerPlayerEntity) {
+            ServerPlayerEntity player = (ServerPlayerEntity) event.getEntity();
+
+            NetworkHelper.updatePlayerDeafness(player);
         }
     }
 
