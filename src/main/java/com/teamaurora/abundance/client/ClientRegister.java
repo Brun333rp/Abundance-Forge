@@ -29,7 +29,6 @@ public class ClientRegister {
     }
 
     private static void registerEntityRenderers() {
-        Minecraft.getInstance().getSoundHandler().stop();
         RenderingRegistry.registerEntityRenderingHandler(AbundanceEntities.SCREECHER.get(), ScreecherRenderer::new);
     }
 

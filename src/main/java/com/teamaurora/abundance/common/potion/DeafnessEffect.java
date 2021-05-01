@@ -8,7 +8,10 @@ import net.minecraft.potion.EffectType;
 import javax.annotation.Nullable;
 
 /**
+ * Note: the actual logic for this effect is handled elsewhere.
+ *       this functions merely as a marker and visual indicator.
  *
+ *       {@link com.teamaurora.abundance.common.event.PlayerEvents}
  */
 public class DeafnessEffect extends Effect {
 

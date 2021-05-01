@@ -38,6 +38,8 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
             property 'mixin.env.disableRefMap', 'true'
 
+            property "mixin.debug.export", "true"
+
             arg "-mixin.config=abundance.mixins.json"
 
             mods {
@@ -53,6 +55,8 @@ minecraft {
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
             property 'mixin.env.disableRefMap', 'true'
+
+            property "mixin.debug.export", "true"
 
             arg "-mixin.config=abundance.mixins.json"
 

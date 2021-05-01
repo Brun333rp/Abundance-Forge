@@ -5,7 +5,6 @@ import com.teamaurora.abundance.common.network.NetworkHelper;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.potion.Effect;
-import net.minecraft.util.SoundEvents;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.PotionEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -16,6 +15,17 @@ public class PlayerEvents {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onPotionEffectExpire(PotionEvent.PotionExpiryEvent event) {
+        if (event.getPotionEffect() == null || !(event.getEntityLiving() instanceof ServerPlayerEntity))
+            return;
+
+        if (event.getPotionEffect().getPotion() == AbundanceEffects.DEAFNESS.get()) {
+            ServerPlayerEntity player = (ServerPlayerEntity) event.getEntityLiving();
+            CapabilityHelper.setPlayerDeafened(player, false);
+        }
+    }
+
+    @SubscribeEvent
+    public void onPotionRemoved(PotionEvent.PotionRemoveEvent event) {
         if (event.getPotionEffect() == null || !(event.getEntityLiving() instanceof ServerPlayerEntity))
             return;
 
@@ -64,6 +74,8 @@ public class PlayerEvents {
 
     @SubscribeEvent
     public void onPlayerCloned(PlayerEvent.Clone event) {
+        // This is to make sure the deafness capability persists
+        // after a player leaves The End.
         if (!event.isWasDeath()) {
 
             if (event.getPlayer() instanceof ServerPlayerEntity) {

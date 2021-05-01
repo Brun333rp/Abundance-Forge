@@ -27,11 +27,11 @@ public abstract class ClientWorldMixin extends World {
 
     @Inject(method = "playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V", at = @At("HEAD"), cancellable = true)
     public void onPlaySound(double x, double y, double z, SoundEvent soundIn, SoundCategory category, float volume, float pitch, boolean distanceDelay, CallbackInfo ci) {
-        MixinClientHooks.handleOnPlaySound(ci);
+        MixinClientHooks.checkDeafenedAndCancel(ci);
     }
 
     @Inject(method = "playMovingSound", at = @At("HEAD"), cancellable = true)
     public void onPlayMovingSound(PlayerEntity playerIn, Entity entityIn, SoundEvent eventIn, SoundCategory categoryIn, float volume, float pitch, CallbackInfo ci) {
-        MixinClientHooks.handleOnPlaySound(ci);
+        MixinClientHooks.checkDeafenedAndCancel(ci);
     }
 }
