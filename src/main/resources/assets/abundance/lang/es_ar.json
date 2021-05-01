@@ -8,6 +8,7 @@
   "item.abundance.lavender_salad": "Ensalada de lavanda",
   "item.abundance.lavender_tea": "Té de lavanda",
   "effect.abundance.supportive": "Apoyo",
+  "effect.abundance.deafness": "Sordera",
 
 
   "_comment1": "Marigolds",
@@ -108,6 +109,7 @@
   "_comment4": "Biomes & Mobs",
   "entity.abundance.slabfish.type.lavender_fields": "Campo de lavandas",
   "entity.abundance.slabfish.type.nemophila_fields": "Campo de nemophilas",
+  "entity.abundance.screecher": "Screecher",
 
   "biome.abundance.lavender_fields": "Campo de lavandas",
   "biome.abundance.lavender_forest": "Bosque de lavandas",
@@ -125,10 +127,10 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
+  "item.abundance.screecher_spawn_egg": "Generar screecher",
   "block.abundance.sunflower_seed_sack": "Saco de semillas de girasol",
 
   "_comment8": "Potions",
-
   "item.minecraft.potion.effect.supportive": "Poción de apoyo",
   "item.minecraft.potion.effect.supportive_strong": "Poción de apoyo",
   "item.minecraft.potion.effect.supportive_long": "Poción de apoyo",
@@ -140,5 +142,11 @@
   "item.minecraft.lingering_potion.effect.supportive_long": "Poción persistente de apoyo",
   "item.minecraft.tipped_arrow.effect.supportive": "Flecha de apoyo",
   "item.minecraft.tipped_arrow.effect.supportive_strong": "Flecha de apoyo",
-  "item.minecraft.tipped_arrow.effect.supportive_long": "Flecha de apoyo"
+  "item.minecraft.tipped_arrow.effect.supportive_long": "Flecha de apoyo",
+  "item.minecraft.potion.effect.deafness": "Poción de sordera",
+  "item.minecraft.potion.effect.deafness_long": "Poción de sordera",
+  "item.minecraft.splash_potion.effect.deafness": "Poción arrojadiza de sordera",
+  "item.minecraft.splash_potion.effect.deafness_long": "Poción arrojadiza de sordera",
+  "item.minecraft.lingering_potion.effect.deafness": "Poción de persistente sordera",
+  "item.minecraft.lingering_potion.effect.deafness_long": "Poción persistente de sordera"
 }
