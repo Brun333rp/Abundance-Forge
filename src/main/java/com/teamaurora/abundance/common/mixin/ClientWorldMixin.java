@@ -1,6 +1,7 @@
 package com.teamaurora.abundance.common.mixin;
 
 import com.teamaurora.abundance.common.misc.mixinwork.MixinClientHooks;
+import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,6 +9,7 @@ import net.minecraft.profiler.IProfiler;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.ISpawnWorldInfo;
@@ -32,6 +34,11 @@ public abstract class ClientWorldMixin extends World {
 
     @Inject(method = "playMovingSound", at = @At("HEAD"), cancellable = true)
     public void onPlayMovingSound(PlayerEntity playerIn, Entity entityIn, SoundEvent eventIn, SoundCategory categoryIn, float volume, float pitch, CallbackInfo ci) {
+        MixinClientHooks.checkDeafenedAndCancel(ci);
+    }
+
+    @Inject(method = "playSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V", at = @At("HEAD"), cancellable = true)
+    public void onPlaySound(BlockPos pos, SoundEvent soundIn, SoundCategory category, float volume, float pitch, boolean distanceDelay, CallbackInfo ci) {
         MixinClientHooks.checkDeafenedAndCancel(ci);
     }
 }

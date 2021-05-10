@@ -14,7 +14,7 @@ public class AbundanceEntities {
 
     public static final EntitySubRegistryHelper HELPER = Abundance.REGISTRY_HELPER.getEntitySubHelper();
 
-    public static final RegistryObject<EntityType<ScreecherEntity>> SCREECHER = HELPER.createLivingEntity("screecher", ScreecherEntity::new, EntityClassification.MONSTER, 2.0F, 2.0F);
+    public static final RegistryObject<EntityType<ScreecherEntity>> SCREECHER = HELPER.createLivingEntity("screecher", ScreecherEntity::new, EntityClassification.MONSTER, 1.1F, 1.0F);
 
 
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {

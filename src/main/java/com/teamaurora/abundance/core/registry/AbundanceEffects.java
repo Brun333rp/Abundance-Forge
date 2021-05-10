@@ -29,5 +29,9 @@ public class AbundanceEffects {
         PotionBrewing.addMix(Potions.AWKWARD, AbundanceItems.LAVENDER.get(), SUPPORTIVE_NORMAL.get());
         PotionBrewing.addMix(SUPPORTIVE_NORMAL.get(), Items.GLOWSTONE_DUST, SUPPORTIVE_STRONG.get());
         PotionBrewing.addMix(SUPPORTIVE_NORMAL.get(), Items.REDSTONE, SUPPORTIVE_LONG.get());
+
+        PotionBrewing.addMix(Potions.AWKWARD, AbundanceItems.SCREECHER_TAIL.get(), DEAFNESS_NORMAL.get());
+        PotionBrewing.addMix(DEAFNESS_NORMAL.get(), Items.GLOWSTONE_DUST, DEAFNESS_STRONG.get());
+        PotionBrewing.addMix(DEAFNESS_NORMAL.get(), Items.REDSTONE, DEAFNESS_LONG.get());
     }
 }

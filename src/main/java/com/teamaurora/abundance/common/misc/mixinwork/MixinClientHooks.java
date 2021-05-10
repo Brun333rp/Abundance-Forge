@@ -26,22 +26,4 @@ public class MixinClientHooks {
             callbackInfo.cancel();
         }
     }
-
-    /**
-     * Checks if the client player is deafened and
-     * modifies the list of ambient sound handlers accordingly.
-     *
-     * @param soundHandlers The original iterator of sound handlers.
-     * @return An iterator of sound handlers that will be ticked.
-     */
-    public static Iterator<IAmbientSoundHandler> clientPlayerModifyAmbientSoundList(Iterator<IAmbientSoundHandler> soundHandlers) {
-        ClientPlayerEntity player = Minecraft.getInstance().player;
-
-        if (player != null && CapabilityHelper.getPlayerDeafened(player)) {
-            Abundance.LOGGER.info("Parsed the empty iterator");
-            return EMPTY_SOUND_HANDLER_ITERATOR;
-        }
-        Abundance.LOGGER.info("Parsed the default iterator, smh");
-        return soundHandlers;
-    }
 }

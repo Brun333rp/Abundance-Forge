@@ -11,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -21,11 +22,8 @@ public class ClientRegister {
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-            registerBlockColors();
-            setupRenderLayer();
-            registerEntityRenderers();
-        });
+        setupRenderLayer();
+        registerEntityRenderers();
     }
 
     private static void registerEntityRenderers() {
@@ -99,7 +97,8 @@ public class ClientRegister {
         return blendColors(0xACE352, BiomeColors.getFoliageColor(worldIn, blockPosIn), 0.5F);
     }
 
-    public static void registerBlockColors() {
+    @SubscribeEvent
+    public static void registerBlockColors(ColorHandlerEvent.Block event) {
 
     }
 }
