@@ -55,7 +55,7 @@ public class LavenderBlock extends BushBlock implements IGrowable {
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         int j = state.get(AGE);
-        if (j < 3 && worldIn.getLightSubtracted(pos.up(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, pos, state,random.nextInt(14) == 0) && (j < 2 || (worldIn.getBlockState(pos.down()).getBlock() == Blocks.COARSE_DIRT))) {
+        if ((j < 2 || (worldIn.getBlockState(pos.down()).getBlock() == Blocks.COARSE_DIRT)) && j < 3 && worldIn.getLightSubtracted(pos.up(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, pos, state,random.nextInt(14) == 0)) {
             if (j == 2) {
                 if (worldIn.isAirBlock(pos.up())) {
                     TallLavenderBlock tallLavender = (TallLavenderBlock) AbundanceBlocks.TALL_LAVENDER.get();
