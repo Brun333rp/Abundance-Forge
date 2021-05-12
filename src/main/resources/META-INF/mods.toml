@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[32,)"
+loaderVersion="[36,)"
 license="All rights reserved"
 issueTrackerURL="https://github.com/teamauroramods/Abundance/issues"
 
@@ -15,14 +15,14 @@ issueTrackerURL="https://github.com/teamauroramods/Abundance/issues"
 [[dependencies.abundance]]
     modId="forge"
     mandatory=true
-    versionRange="[35.1.10,)"
+    versionRange="[36.0.43,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.abundance]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
 
