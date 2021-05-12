@@ -105,7 +105,7 @@ public class AbundanceFeatures {
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> REDBUD = AbundanceFeatures.REDBUD_TREE.get().withConfiguration(Configs.REDBUD_TREE_CONFIG);
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_REDBUD = AbundanceFeatures.REDBUD_TREE.get().withConfiguration(Configs.FLOWERING_REDBUD_TREE_CONFIG);
 
-        public static final ConfiguredFeature<?, ?> TREES_JACARANDA_REDBUD = Feature.RANDOM_SELECTOR.withConfiguration((new MultipleRandomFeatureConfig(ImmutableList.of(Configured.FLOWERING_REDBUD.withChance(0.1F), Configured.JACARANDA_BEES_0002.withChance(0.5F)), Configured.FLOWERING_JACARANDA_BEES_0002))).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(8)));
+        public static final ConfiguredFeature<?, ?> TREES_JACARANDA_SPARSE = Feature.RANDOM_SELECTOR.withConfiguration((new MultipleRandomFeatureConfig(ImmutableList.of(Configured.JACARANDA_BEES_0002.withChance(0.5F)), Configured.FLOWERING_JACARANDA_BEES_0002))).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(8)));
         public static final ConfiguredFeature<?, ?> TREES_REDBUD_SPARSE = REDBUD.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(64)));
         public static final ConfiguredFeature<?, ?> TREES_REDBUD_SPARSER = REDBUD.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(256)));
         public static final ConfiguredFeature<?, ?> TREES_JACARANDA = JACARANDA_BEES_0002.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.CHANCE.configure(new ChanceConfig(16)));
@@ -151,7 +151,7 @@ public class AbundanceFeatures {
             register("redbud", REDBUD);
             register("flowering_redbud", FLOWERING_REDBUD);
 
-            register("trees_jacaranda_redbud", TREES_JACARANDA_REDBUD);
+            register("trees_jacaranda_sparse", TREES_JACARANDA_SPARSE);
             register("trees_redbud_sparse", TREES_REDBUD_SPARSE);
             register("trees_redbud_sparser", TREES_REDBUD_SPARSER);
             register("trees_jacaranda", TREES_JACARANDA);

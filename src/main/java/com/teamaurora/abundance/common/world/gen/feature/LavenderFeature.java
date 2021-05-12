@@ -32,17 +32,13 @@ public class LavenderFeature extends Feature<NoFeatureConfig> {
                                 i++;
                             }
                         } else {
-                            worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, rand.nextInt(2)+1), 2);
+                            worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, 2), 2);
                             i++;
                         }
                     }
                 } else {
                     if (rand.nextInt(3) == 0) {
-                        if (rand.nextBoolean()) {
-                            worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, 2), 2);
-                        } else {
-                            worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, rand.nextInt(2)), 2);
-                        }
+                        worldIn.setBlockState(pos2, AbundanceBlocks.LAVENDER.get().getDefaultState().with(LavenderBlock.AGE, 2), 2);
                         i++;
                     }
                 }
