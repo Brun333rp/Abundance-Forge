@@ -48,7 +48,7 @@ public class LavenderBlock extends BushBlock implements IGrowable {
 
     @Override
     public boolean ticksRandomly(BlockState state) {
-        return state.get(AGE) < 3;
+        return true;
     }
 
     @Override
