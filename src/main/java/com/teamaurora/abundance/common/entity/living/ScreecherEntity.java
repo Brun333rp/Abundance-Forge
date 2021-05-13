@@ -1,5 +1,8 @@
 package com.teamaurora.abundance.common.entity.living;
 
+import com.minecraftabnormals.abnormals_core.core.endimator.Endimation;
+import com.minecraftabnormals.abnormals_core.core.endimator.entity.EndimatedEntity;
+import com.teamaurora.abundance.core.Abundance;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import com.teamaurora.abundance.core.registry.AbundanceEntities;
 import com.teamaurora.abundance.core.registry.AbundanceSoundEvents;
@@ -32,8 +35,9 @@ import net.minecraft.world.World;
 
 import java.util.EnumSet;
 import java.util.List;
+import java.util.logging.Logger;
 
-public class ScreecherEntity extends CreatureEntity {
+public class ScreecherEntity extends EndimatedEntity {
 
     public static final DataParameter<Boolean> IS_SCREECHING = EntityDataManager.createKey(ScreecherEntity.class, DataSerializers.BOOLEAN);
     private int timeNextScreech = 0;
@@ -64,6 +68,7 @@ public class ScreecherEntity extends CreatureEntity {
     }
 
     public boolean canScreech() {
+        Abundance.LOGGER.info("Can screech: " + (this.timeNextScreech <= 0));
         return this.timeNextScreech <= 0;
     }
 
@@ -72,6 +77,7 @@ public class ScreecherEntity extends CreatureEntity {
     }
 
     public boolean isScreeching() {
+        Abundance.LOGGER.info("Is screeching: " + this.dataManager.get(IS_SCREECHING));
         return this.dataManager.get(IS_SCREECHING);
     }
 
@@ -115,6 +121,11 @@ public class ScreecherEntity extends CreatureEntity {
     public void readAdditional(CompoundNBT compoundNBT) {
         super.readAdditional(compoundNBT);
         this.timeNextScreech = compoundNBT.getInt("ScreechTime");
+    }
+
+    @Override
+    public Endimation[] getEndimations() {
+        return new Endimation[0];
     }
 
     private static class ScreechGoal extends Goal {
@@ -161,7 +172,7 @@ public class ScreecherEntity extends CreatureEntity {
 
         private void doScreechEffect() {
             if (!this.screecher.world.isRemote) {
-                AxisAlignedBB box = this.screecher.getBoundingBox().expand(10.0D, 10.0D, 10.0D);
+                AxisAlignedBB box = this.screecher.getBoundingBox().expand(14.0D, 14.0D, 14.0D);
                 List<PlayerEntity> nearbyPlayers = this.screecher.world.getEntitiesWithinAABB(PlayerEntity.class, box);
 
                 for (PlayerEntity player : nearbyPlayers) {

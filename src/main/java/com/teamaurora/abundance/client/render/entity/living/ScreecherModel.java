@@ -1,6 +1,7 @@
 package com.teamaurora.abundance.client.render.entity.living;
 
 import com.google.common.collect.ImmutableList;
+import com.minecraftabnormals.abnormals_core.core.endimator.entity.EndimatorEntityModel;
 import com.teamaurora.abundance.common.entity.living.ScreecherEntity;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -11,7 +12,7 @@ import net.minecraft.util.math.MathHelper;
 //
 // Model author: Audako
 
-public class ScreecherModel<T extends ScreecherEntity> extends SegmentedModel<T> {
+public class ScreecherModel<T extends ScreecherEntity> extends EndimatorEntityModel<T> {
 
     private final ModelRenderer bone3;
     private final ModelRenderer bone;
@@ -95,11 +96,6 @@ public class ScreecherModel<T extends ScreecherEntity> extends SegmentedModel<T>
         rightArm.setRotationPoint(-5.5F, -8.0F, -7.0F);
         bone3.addChild(rightArm);
         rightArm.setTextureOffset(40, 24).addBox(-2.5F, 0.0F, -2.0F, 4.0F, 8.0F, 4.0F, 0.0F, true);
-    }
-
-    @Override
-    public Iterable<ModelRenderer> getParts() {
-        return ImmutableList.of(this.bone3);
     }
 
     @Override
