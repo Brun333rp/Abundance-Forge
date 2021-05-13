@@ -2,6 +2,7 @@ package com.teamaurora.abundance.common.entity.living;
 
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import com.teamaurora.abundance.core.registry.AbundanceEntities;
+import com.teamaurora.abundance.core.registry.AbundanceSoundEvents;
 import net.minecraft.command.impl.EffectCommand;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
@@ -22,6 +23,7 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -74,6 +76,25 @@ public class ScreecherEntity extends CreatureEntity {
     }
 
     @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return AbundanceSoundEvents.SCREECHER_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return AbundanceSoundEvents.SCREECHER_DEATH.get();
+    }
+
+    protected SoundEvent getScreechSound() {
+        return AbundanceSoundEvents.SCREECHER_SCREECH.get();
+    }
+
+    @Override
+    public float getSoundVolume() {
+        return 0.8F;
+    }
+
+    @Override
     public void livingTick() {
         super.livingTick();
 
@@ -120,7 +141,7 @@ public class ScreecherEntity extends CreatureEntity {
         public void startExecuting() {
             this.screecher.setScreeching(true);
             this.screecher.timeNextScreech = 600;
-            this.screecher.world.playSound(null, this.screecher.getPosition(), SoundEvents.ENTITY_CAT_HISS, SoundCategory.NEUTRAL, 2.0F, this.screecher.getSoundPitch());
+            this.screecher.world.playSound(null, this.screecher.getPosition(), this.screecher.getScreechSound(), SoundCategory.NEUTRAL, 2.0F, this.screecher.getSoundPitch());
         }
 
         @Override

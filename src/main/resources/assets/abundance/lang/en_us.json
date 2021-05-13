@@ -149,5 +149,10 @@
   "item.minecraft.splash_potion.effect.deafness": "Splash Potion of Deafness",
   "item.minecraft.splash_potion.effect.deafness_long": "Splash Potion of Deafness",
   "item.minecraft.lingering_potion.effect.deafness": "Lingering Potion of Deafness",
-  "item.minecraft.lingering_potion.effect.deafness_long": "Lingering Potion of Deafness"
+  "item.minecraft.lingering_potion.effect.deafness_long": "Lingering Potion of Deafness",
+
+  "_comment9": "Sound subtitles",
+  "sound_event.abundance.entity.screecher.hurt": "Screecher hurts",
+  "sound_event.abundance.entity.screecher.screech": "Screecher screeching",
+  "sound_event.abundance.entity.screecher.death": "Screecher dies"
 }

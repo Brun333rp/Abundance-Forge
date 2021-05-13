@@ -7,10 +7,7 @@ import com.teamaurora.abundance.common.event.PlayerEvents;
 import com.teamaurora.abundance.common.network.NetworkHelper;
 import com.teamaurora.abundance.common.network.PacketHandler;
 import com.teamaurora.abundance.core.other.AbundanceCompat;
-import com.teamaurora.abundance.core.registry.AbundanceBiomes;
-import com.teamaurora.abundance.core.registry.AbundanceEffects;
-import com.teamaurora.abundance.core.registry.AbundanceEntities;
-import com.teamaurora.abundance.core.registry.AbundanceFeatures;
+import com.teamaurora.abundance.core.registry.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -58,6 +55,7 @@ public class Abundance {
         AbundanceFeatures.FEATURES.register(eventBus);
         AbundanceEffects.EFFECTS.register(eventBus);
         AbundanceEffects.POTIONS.register(eventBus);
+        AbundanceSoundEvents.SOUNDS.register(eventBus);
 
         eventBus.addListener(this::commonSetup);
         eventBus.addListener(AbundanceEntities::registerEntityAttributes);
