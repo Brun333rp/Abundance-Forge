@@ -109,7 +109,7 @@
   "_comment4": "Biomes & Mobs",
   "entity.abundance.slabfish.type.lavender_fields": "Campo de lavandas",
   "entity.abundance.slabfish.type.nemophila_fields": "Campo de nemophilas",
-  "entity.abundance.screecher": "Screecher",
+  "entity.abundance.screecher": "Chillón",
 
   "biome.abundance.lavender_fields": "Campo de lavandas",
   "biome.abundance.lavender_forest": "Bosque de lavandas",
@@ -127,7 +127,8 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
-  "item.abundance.screecher_spawn_egg": "Generar screecher",
+  "item.abundance.screecher_tail": "Cola de chillón",
+  "item.abundance.screecher_spawn_egg": "Generar chillón",
   "block.abundance.sunflower_seed_sack": "Saco de semillas de girasol",
 
   "_comment8": "Potions",
@@ -148,5 +149,10 @@
   "item.minecraft.splash_potion.effect.deafness": "Poción arrojadiza de sordera",
   "item.minecraft.splash_potion.effect.deafness_long": "Poción arrojadiza de sordera",
   "item.minecraft.lingering_potion.effect.deafness": "Poción de persistente sordera",
-  "item.minecraft.lingering_potion.effect.deafness_long": "Poción persistente de sordera"
+  "item.minecraft.lingering_potion.effect.deafness_long": "Poción persistente de sordera",
+
+  "_comment9": "Sound subtitles",
+  "sound_event.abundance.entity.screecher.hurt": "Chillón herido",
+  "sound_event.abundance.entity.screecher.screech": "Chillido de chillón",
+  "sound_event.abundance.entity.screecher.death": "Chillón muerto"
 }
