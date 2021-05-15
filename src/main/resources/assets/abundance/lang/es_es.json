@@ -127,6 +127,7 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
+  "item.abundance.screecher_tail": "Cola de chillón",
   "item.abundance.screecher_spawn_egg": "Generar chillón",
   "block.abundance.sunflower_seed_sack": "Saco de semillas de girasol",
 
@@ -148,5 +149,10 @@
   "item.minecraft.splash_potion.effect.deafness": "Poción de sordera arrojadiza",
   "item.minecraft.splash_potion.effect.deafness_long": "Poción de sordera arrojadiza",
   "item.minecraft.lingering_potion.effect.deafness": "Poción de sordera persistente",
-  "item.minecraft.lingering_potion.effect.deafness_long": "Poción de sordera persistente"
+  "item.minecraft.lingering_potion.effect.deafness_long": "Poción de sordera persistente",
+
+  "_comment9": "Sound subtitles",
+  "sound_event.abundance.entity.screecher.hurt": "Chillón herido",
+  "sound_event.abundance.entity.screecher.screech": "Chillido de chillón",
+  "sound_event.abundance.entity.screecher.death": "Chillón muere"
 }
