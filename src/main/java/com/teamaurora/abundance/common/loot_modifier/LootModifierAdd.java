@@ -3,7 +3,6 @@ package com.teamaurora.abundance.common.loot_modifier;
 import com.google.gson.JsonObject;
 import com.mojang.serialization.JsonOps;
 import com.teamaurora.abundance.core.Abundance;
-import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -48,7 +47,6 @@ public class LootModifierAdd extends LootModifier {
         if (context.getQueriedLootTableId().equals(this.targetLootTable)) {
             Random random = new Random();
             int count = this.maxStackCount == 1 ? 1 : random.nextInt((this.maxStackCount - this.minStackCount) + 1) + this.minStackCount;
-
             ItemStack stack = new ItemStack(this.itemToAdd, count);
 
             generatedLoot.add(stack);

@@ -2,6 +2,7 @@ package com.teamaurora.abundance.common.entity.living;
 
 import com.minecraftabnormals.abnormals_core.core.endimator.Endimation;
 import com.minecraftabnormals.abnormals_core.core.endimator.entity.EndimatedEntity;
+import com.minecraftabnormals.abnormals_core.core.util.NetworkUtil;
 import com.teamaurora.abundance.core.Abundance;
 import com.teamaurora.abundance.core.registry.AbundanceEffects;
 import com.teamaurora.abundance.core.registry.AbundanceEntities;
@@ -162,6 +163,7 @@ public class ScreecherEntity extends EndimatedEntity {
         public void startExecuting() {
             this.screecher.setScreeching(true);
             this.screecher.setPlayingEndimation(SCREECH_ANIMATION);
+            NetworkUtil.setPlayingAnimationMessage(this.screecher, SCREECH_ANIMATION);
             this.screecher.world.playSound(null, this.screecher.getPosition(), this.screecher.getScreechSound(), SoundCategory.NEUTRAL, 2.0F, this.screecher.getSoundPitch());
         }
 
@@ -169,6 +171,7 @@ public class ScreecherEntity extends EndimatedEntity {
         public void resetTask() {
             this.screecher.setScreeching(false);
             this.screecher.resetEndimation();
+            NetworkUtil.setPlayingAnimationMessage(this.screecher, BLANK_ANIMATION);
             this.screecher.newScreechTime();
             this.screechTime = 0;
         }

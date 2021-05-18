@@ -3,7 +3,6 @@ package com.teamaurora.abundance.common.loot_modifier;
 import com.google.gson.JsonObject;
 import com.mojang.serialization.JsonOps;
 import com.teamaurora.abundance.core.Abundance;
-import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -35,7 +34,6 @@ public class LootModifierRemove extends LootModifier {
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
         if (context.getQueriedLootTableId().equals(this.targetLootTable)) {
-
             generatedLoot.removeIf((itemStack) -> itemStack.getItem() == this.itemToRemove);
         }
         return generatedLoot;
