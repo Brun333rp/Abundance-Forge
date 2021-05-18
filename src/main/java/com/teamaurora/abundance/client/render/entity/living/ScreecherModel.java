@@ -72,7 +72,7 @@ public class ScreecherModel<T extends ScreecherEntity> extends EndimatorEntityMo
         bone2.setTextureOffset(0, 66).addBox(-6.5F, 0.0231F, -13.8345F, 13.0F, 0.0F, 14.0F, 0.0F, false);
 
         propeller = new EndimatorModelRenderer(this);
-        propeller.setRotationPoint(0.0F, -7.95F, -8.0F);
+        propeller.setRotationPoint(0.0F, -7.1F, -8.0F);
         head.addChild(propeller);
 
         cube_r3 = new EndimatorModelRenderer(this);
