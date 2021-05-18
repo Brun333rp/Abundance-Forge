@@ -56,6 +56,7 @@ public class Abundance {
         AbundanceEffects.EFFECTS.register(eventBus);
         AbundanceEffects.POTIONS.register(eventBus);
         AbundanceSoundEvents.SOUNDS.register(eventBus);
+        AbundanceLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(eventBus);
 
         eventBus.addListener(this::commonSetup);
         eventBus.addListener(AbundanceEntities::registerEntityAttributes);

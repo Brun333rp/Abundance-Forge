@@ -6,6 +6,8 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.teamaurora.abundance.common.entity.living.ScreecherEntity;
 import com.teamaurora.abundance.core.Abundance;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
@@ -126,8 +128,6 @@ public class ScreecherModel<T extends ScreecherEntity> extends EndimatorEntityMo
     @Override
     public void animateModel(T screecher) {
         super.animateModel(screecher);
-
-        Abundance.LOGGER.info("Is screeching animation playing: " + (screecher.getPlayingEndimation() == ScreecherEntity.SCREECH_ANIMATION));
 
         if(screecher.isEndimationPlaying(ScreecherEntity.WALKING_ANIMATION)) {
 
