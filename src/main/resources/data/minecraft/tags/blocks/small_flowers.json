@@ -6,6 +6,23 @@
     "abundance:shady_marigold",
     "abundance:amaranthus",
     "abundance:chicory",
-    "abundance:nemophila"
+    "abundance:nemophila",
+    "abundance:budding_redbud_leaves",
+    "abundance:flowering_redbud_leaves",
+    "abundance:flowering_redbud_log",
+    "abundance:flowering_redbud_wood",
+    "abundance:budding_redbud_hedge",
+    "abundance:flowering_redbud_hedge",
+    "abundance:budding_redbud_leaf_carpet",
+    "abundance:flowering_redbud_leaf_carpet",
+    "abundance:flowering_redbud_sapling",
+    "abundance:budding_jacaranda_leaves",
+    "abundance:flowering_jacaranda_leaves",
+    "abundance:budding_jacaranda_hedge",
+    "abundance:flowering_jacaranda_hedge",
+    "abundance:budding_jacaranda_leaf_carpet",
+    "abundance:flowering_jacaranda_leaf_carpet",
+    "abundance:pink_blossom_carpet",
+    "abundance:lavender_basket"
   ]
 }
