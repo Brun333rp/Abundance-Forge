@@ -1,7 +1,6 @@
 package com.teamaurora.abundance.common.mixin;
 
 import com.teamaurora.abundance.common.misc.mixinwork.MixinClientHooks;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,6 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.function.Supplier;
 
+// Today's cancel culture smh
 @Mixin(ClientWorld.class)
 public abstract class ClientWorldMixin extends World {
 

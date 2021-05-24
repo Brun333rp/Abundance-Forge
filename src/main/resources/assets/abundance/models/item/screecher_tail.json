@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "abundance:block/screecher_tail"
+    "layer0": "abundance:item/screecher_tail"
   }
 }

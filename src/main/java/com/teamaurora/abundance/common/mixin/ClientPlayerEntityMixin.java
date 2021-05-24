@@ -17,7 +17,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
         super(world, profile);
     }
 
-    @Inject(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/List;iterator()Ljava/util/Iterator;", shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/Iterator;hasNext()Z", shift = At.Shift.BEFORE), cancellable = true)
     public void onTick(CallbackInfo ci) {
         MixinClientHooks.checkDeafenedAndCancel(ci);
     }
