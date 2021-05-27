@@ -73,7 +73,7 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> STRIPPED_JACARANDA_POST = HELPER.createCompatFuelBlock("quark", "stripped_jacaranda_post", () -> new WoodPostBlock(Properties.PLANKS), 300, ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> JACARANDA_POST = HELPER.createCompatFuelBlock("quark", "jacaranda_post", () -> new WoodPostBlock(STRIPPED_JACARANDA_POST, Properties.PLANKS), 300, ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> JACARANDA_HEDGE = HELPER.createCompatFuelBlock("quark", "jacaranda_hedge", () -> new HedgeBlock(Properties.HEDGE), 300, ItemGroup.DECORATIONS);
-    public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> JACARANDA_CHESTS = HELPER.createCompatChestBlocks("jacaranda", MaterialColor.PURPLE_TERRACOTTA);
+    public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> JACARANDA_CHESTS = HELPER.createCompatChestBlocks("quark", "jacaranda", MaterialColor.PURPLE_TERRACOTTA);
 
     public static final RegistryObject<Block> JACARANDA_BEEHIVE = HELPER.createCompatBlock("buzzier_bees", "jacaranda_beehive", ()->new AbnormalsBeehiveBlock(Block.Properties.from(Blocks.BEEHIVE)), ItemGroup.DECORATIONS);
 
@@ -111,7 +111,7 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> STRIPPED_REDBUD_POST = HELPER.createCompatFuelBlock("quark", "stripped_redbud_post", () -> new WoodPostBlock(Properties.PLANKS), 300, ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_POST = HELPER.createCompatFuelBlock("quark", "redbud_post", () -> new WoodPostBlock(STRIPPED_REDBUD_POST, Properties.PLANKS), 300, ItemGroup.BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDBUD_HEDGE = HELPER.createCompatFuelBlock("quark", "redbud_hedge", () -> new HedgeBlock(Properties.HEDGE), 300, ItemGroup.DECORATIONS);
-    public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> REDBUD_CHESTS = HELPER.createCompatChestBlocks("redbud", MaterialColor.PURPLE_TERRACOTTA);
+    public static final Pair<RegistryObject<AbnormalsChestBlock>, RegistryObject<AbnormalsTrappedChestBlock>> REDBUD_CHESTS = HELPER.createCompatChestBlocks("quark", "redbud", MaterialColor.PURPLE_TERRACOTTA);
 
     public static final RegistryObject<Block> REDBUD_BEEHIVE = HELPER.createCompatBlock("buzzier_bees", "redbud_beehive", ()->new AbnormalsBeehiveBlock(Block.Properties.from(Blocks.BEEHIVE)), ItemGroup.DECORATIONS);
 
