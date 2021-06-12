@@ -86,12 +86,12 @@
   "block.abundance.redbud_hedge": "Siepe di siliquastro",
   "block.abundance.budding_redbud_hedge": "Siepe di siliquastro germogliante",
   "block.abundance.flowering_redbud_hedge": "Siepe di siliquastro fiorente",
-  "block.abundance.redbud_post": "Palo di Redbud Post",
-  "block.abundance.stripped_redbud_post": "Palo di Stripped Redbud Post scortecciato",
-  "block.abundance.redbud_beehive": "Arnia di Redbud",
-  "block.abundance.potted_redbud_sapling": "Alberello di Potted Redbud Sapling in vaso",
+  "block.abundance.redbud_post": "Palo di siliquastro",
+  "block.abundance.stripped_redbud_post": "Palo di siliquastro scortecciato",
+  "block.abundance.redbud_beehive": "Arnia di siliquastro",
+  "block.abundance.potted_redbud_sapling": "Alberello di siliquastro in vaso",
 
-  "item.abundance.redbud_boat": "Barca di Redbud",
+  "item.abundance.redbud_boat": "Barca di siliquastro",
 
   "block.abundance.budding_redbud_leaves": "Foglie di siliquastro germoglianti",
   "block.abundance.budding_redbud_leaf_carpet": "Tappeto di foglie di siliquastro germoglianti",
@@ -109,7 +109,7 @@
   "_comment4": "Biomes & Mobs",
   "entity.abundance.slabfish.type.lavender_fields": "Campi di lavanda",
   "entity.abundance.slabfish.type.nemophila_fields": "Campi di nemophila",
-  "entity.abundance.screecher": "Screecher",
+  "entity.abundance.screecher": "Strillatore",
 
   "biome.abundance.lavender_fields": "Campi di lavanda",
   "biome.abundance.lavender_forest": "Foresta di lavanda",
@@ -127,8 +127,8 @@
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semi di girasole",
-  "item.abundance.screecher_tail": "Coda di screecher",
-  "item.abundance.screecher_spawn_egg": "Uovo generatore di screecher",
+  "item.abundance.screecher_tail": "Coda di strillatore",
+  "item.abundance.screecher_spawn_egg": "Uovo generatore di strillatore",
   "block.abundance.sunflower_seed_sack": "Sacco di semi di girasole",
 
   "_comment8": "Potions",
@@ -152,7 +152,7 @@
   "item.minecraft.lingering_potion.effect.deafness_long": "Pozione persistente di sordità",
 
   "_comment9": "Sound subtitles",
-  "sound_event.abundance.entity.screecher.hurt": "Screecher ferito",
-  "sound_event.abundance.entity.screecher.screech": "Strillo dello screecher",
-  "sound_event.abundance.entity.screecher.death": "Screecher muore"
+  "sound_event.abundance.entity.screecher.hurt": "Strillatore ferito",
+  "sound_event.abundance.entity.screecher.screech": "Strillo dello strillatore",
+  "sound_event.abundance.entity.screecher.death": "Strillatore muore"
 }
