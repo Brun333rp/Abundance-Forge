@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 license="All rights reserved"
-issueTrackerURL="https://github.com/teamauroramods/Abundance/issues"
+issueTrackerURL="https://github.com/teamauroramods/Abundance-Forge/issues"
 
 [[mods]]
     modId="abundance"
