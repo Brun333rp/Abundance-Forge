@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 license="All rights reserved"
-issueTrackerURL="https://github.com/teamauroramods/Abundance/issues"
+issueTrackerURL="https://github.com/teamauroramods/Abundance-Forge/issues"
 
 [[mods]]
     modId="abundance"
     version="${file.jarVersion}"
     displayName="Abundance"
-    displayURL="https://discord.gg/BgE4EpP"
+    displayURL="https://discord.gg/VzXSCFp"
     logoFile="logo.png"
     authors="Team Aurora"
     description="New flowers and flowery biomes!"
