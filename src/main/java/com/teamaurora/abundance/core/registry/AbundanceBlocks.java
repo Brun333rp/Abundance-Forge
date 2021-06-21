@@ -149,10 +149,16 @@ public class AbundanceBlocks {
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new ThiccFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> NEMOPHILA = HELPER.createBlock("nemophila", ()->new NemophilaBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> MYOSOTIS = HELPER.createBlock("myosotis", ()->new AbnormalsFlowerBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> FIDDLENECK = HELPER.createBlock("fiddleneck", ()->new AbnormalsFlowerBlock(()->Effects.SPEED, 8, AbstractBlock.Properties.from(Blocks.DANDELION)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> HELICONIA = HELPER.createBlock("heliconia", ()->new AbnormalsTallFlowerBlock(AbstractBlock.Properties.from(Blocks.PEONY)), ItemGroup.DECORATIONS);
+    // TODO: different effects for myosotis & fiddleneck
 
     public static final RegistryObject<Block> POTTED_CHICORY = HELPER.createBlockNoItem("potted_chicory", ()->new FlowerPotBlock(CHICORY.get(), Properties.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_AMARANTHUS = HELPER.createBlockNoItem("potted_amaranthus", ()->new FlowerPotBlock(AMARANTHUS.get(), Properties.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_NEMOPHILA = HELPER.createBlockNoItem("potted_nemophila", ()->new FlowerPotBlock(NEMOPHILA.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_MYOSOTIS = HELPER.createBlockNoItem("potted_myosotis", ()->new FlowerPotBlock(MYOSOTIS.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_FIDDLENECK = HELPER.createBlockNoItem("potted_fiddleneck", ()->new FlowerPotBlock(FIDDLENECK.get(), Properties.FLOWER_POT));
 
     // sacc
     public static final RegistryObject<Block> SUNFLOWER_SEED_SACK = HELPER.createCompatBlock("quark", "sunflower_seed_sack", ()->new Block(Block.Properties.create(Material.WOOL, MaterialColor.GRAY).hardnessAndResistance(0.5F).sound(SoundType.CLOTH)), ItemGroup.DECORATIONS);

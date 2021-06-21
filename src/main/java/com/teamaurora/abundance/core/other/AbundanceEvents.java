@@ -28,6 +28,9 @@ public class AbundanceEvents {
                 new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.NEMOPHILA.get().asItem(), 1, 12, 1),
                 new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.CHICORY.get().asItem(), 1, 12, 1),
                 new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.AMARANTHUS.get().asItem(), 1, 12, 1),
+                new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.MYOSOTIS.get().asItem(), 1, 12, 1),
+                new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.FIDDLENECK.get().asItem(), 1, 12, 1),
+                new TradeUtil.AbnormalsTrade(1, AbundanceBlocks.HELICONIA.get().asItem(), 1, 12, 1),
 
                 new TradeUtil.AbnormalsTrade(5, AbundanceBlocks.JACARANDA_SAPLING.get().asItem(), 1, 8, 1),
                 new TradeUtil.AbnormalsTrade(5, AbundanceBlocks.REDBUD_SAPLING.get().asItem(), 1, 8, 1),

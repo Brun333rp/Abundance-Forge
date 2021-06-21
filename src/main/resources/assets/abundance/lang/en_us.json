@@ -128,6 +128,9 @@
   "block.abundance.amaranthus": "Amaranthus",
   "block.abundance.chicory": "Chicory",
   "block.abundance.nemophila": "Nemophila",
+  "block.abundance.myosotis": "Myosotis",
+  "block.abundance.fiddleneck": "Fiddleneck",
+  "block.abundance.heliconia": "Heliconia",
 
   "block.abundance.potted_pink_daisy": "Potted Pink Daisy",
   "block.abundance.potted_purple_daisy": "Potted Purple Daisy",
@@ -140,6 +143,8 @@
   "block.abundance.potted_amaranthus": "Potted Amaranthus",
   "block.abundance.potted_chicory": "Potted Chicory",
   "block.abundance.potted_nemophila": "Potted Nemophila",
+  "block.abundance.potted_myosotis": "Potted Myosotis",
+  "block.abundance.potted_fiddleneck": "Potted Fiddleneck",
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Sunflower Seeds",

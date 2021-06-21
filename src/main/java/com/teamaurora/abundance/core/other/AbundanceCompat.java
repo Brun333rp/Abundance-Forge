@@ -36,6 +36,9 @@ public class AbundanceCompat {
         DataUtil.registerCompostable(AbundanceBlocks.AMARANTHUS.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.CHICORY.get(), 0.65F);
         DataUtil.registerCompostable(AbundanceBlocks.NEMOPHILA.get(), 0.65F);
+        DataUtil.registerCompostable(AbundanceBlocks.MYOSOTIS.get(), 0.65F);
+        DataUtil.registerCompostable(AbundanceBlocks.FIDDLENECK.get(), 0.65F);
+        DataUtil.registerCompostable(AbundanceBlocks.HELICONIA.get(), 0.65F);
 
         DataUtil.registerCompostable(AbundanceItems.SUNFLOWER_SEEDS.get(), 0.3F);
         DataUtil.registerCompostable(AbundanceBlocks.SUNFLOWER_SEED_SACK.get(), 1.0F);
