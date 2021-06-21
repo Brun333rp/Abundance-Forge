@@ -36,7 +36,7 @@ public class AbundanceBiomeFeatures {
             withLavenderFieldsFeatures(event.getGeneration(), event.getSpawns());
         } else if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.LAVENDER_FOREST.getKey())) {
             withLavenderForestFeatures(event.getGeneration(), event.getSpawns());
-        } else if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.NEMOPHILA_FIELDS.getKey())) {
+        } else if (DataUtil.matchesKeys(biomeName, AbundanceBiomes.MEADOW.getKey())) {
             withNemophilaFieldsFeatures(event.getGeneration(), event.getSpawns());
         }
 
