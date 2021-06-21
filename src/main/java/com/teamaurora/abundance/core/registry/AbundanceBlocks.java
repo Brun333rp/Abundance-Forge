@@ -128,6 +128,23 @@ public class AbundanceBlocks {
 
     public static final RegistryObject<Block> PINK_BLOSSOM_CARPET = HELPER.createBlock("pink_blossom_carpet", ()->new BlossomCarpetBlock(AbstractBlock.Properties.create(Material.CARPET, MaterialColor.PURPLE).notSolid().hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT).harvestTool(ToolType.HOE)), ItemGroup.DECORATIONS);
 
+    // HI IM DAISY
+    public static final RegistryObject<Block> PINK_DAISY = HELPER.createBlock("pink_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> PURPLE_DAISY = HELPER.createBlock("purple_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> MAGENTA_DAISY = HELPER.createBlock("magenta_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> YELLOW_DAISY = HELPER.createBlock("yellow_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> ORANGE_DAISY = HELPER.createBlock("orange_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> RED_DAISY = HELPER.createBlock("red_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+    public static final RegistryObject<Block> BLUE_DAISY = HELPER.createBlock("blue_daisy", ()->new AbnormalsFlowerBlock(()->Effects.REGENERATION, 8, AbstractBlock.Properties.from(Blocks.OXEYE_DAISY)), ItemGroup.DECORATIONS);
+
+    public static final RegistryObject<Block> POTTED_PINK_DAISY = HELPER.createBlockNoItem("potted_pink_daisy", ()->new FlowerPotBlock(PINK_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_PURPLE_DAISY = HELPER.createBlockNoItem("potted_purple_daisy", ()->new FlowerPotBlock(PURPLE_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_MAGENTA_DAISY = HELPER.createBlockNoItem("potted_magenta_daisy", ()->new FlowerPotBlock(MAGENTA_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_YELLOW_DAISY = HELPER.createBlockNoItem("potted_yellow_daisy", ()->new FlowerPotBlock(YELLOW_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_ORANGE_DAISY = HELPER.createBlockNoItem("potted_orange_daisy", ()->new FlowerPotBlock(ORANGE_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_RED_DAISY = HELPER.createBlockNoItem("potted_red_daisy", ()->new FlowerPotBlock(RED_DAISY.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_BLUE_DAISY = HELPER.createBlockNoItem("potted_blue_daisy", ()->new FlowerPotBlock(BLUE_DAISY.get(), Properties.FLOWER_POT));
+
     // random new flowers
     public static final RegistryObject<Block> CHICORY = HELPER.createBlock("chicory", ()->new AbnormalsFlowerBlock(()->Effects.HASTE, 5, AbstractBlock.Properties.from(Blocks.ALLIUM)), ItemGroup.DECORATIONS);
     public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", ()->new ThiccFlowerBlock(()->Effects.HUNGER, 6, AbstractBlock.Properties.from(Blocks.POPPY)), ItemGroup.DECORATIONS);

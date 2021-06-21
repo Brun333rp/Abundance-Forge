@@ -67,6 +67,22 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
 
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.PINK_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.PURPLE_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.MAGENTA_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.YELLOW_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.ORANGE_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.RED_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.BLUE_DAISY.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_PINK_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_PURPLE_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_MAGENTA_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_YELLOW_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_ORANGE_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_RED_DAISY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.POTTED_BLUE_DAISY.get(), RenderType.getCutout());
+
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.AMARANTHUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.CHICORY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.NEMOPHILA.get(), RenderType.getCutout());
