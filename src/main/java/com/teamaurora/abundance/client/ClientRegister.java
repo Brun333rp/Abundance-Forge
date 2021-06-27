@@ -62,6 +62,8 @@ public class ClientRegister {
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_LADDER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_TRAPDOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_DOOR.get(), RenderType.getCutout());
 
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(AbundanceBlocks.BUDDING_REDBUD_HEDGE.get(), RenderType.getCutoutMipped());
