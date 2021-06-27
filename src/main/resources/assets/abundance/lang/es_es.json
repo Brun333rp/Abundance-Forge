@@ -117,13 +117,34 @@
 
 
   "_comment6": "Flowers",
+  "block.abundance.pink_daisy": "Margarita rosa",
+  "block.abundance.purple_daisy": "Margarita morada",
+  "block.abundance.magenta_daisy": "Margarita magenta",
+  "block.abundance.yellow_daisy": "Margarita amarilla",
+  "block.abundance.orange_daisy": "Margarita naranja",
+  "block.abundance.red_daisy": "Margarita roja",
+  "block.abundance.blue_daisy": "Margarita azul",
+  
   "block.abundance.amaranthus": "Amaranto",
   "block.abundance.chicory": "Achicoria",
   "block.abundance.nemophila": "Nemophila",
+  "block.abundance.myosotis": "Nomeolvides",
+  "block.abundance.fiddleneck": "Amsinckia",
+  "block.abundance.heliconia": "Heliconia",
+
+  "block.abundance.potted_pink_daisy": "Maceta con margarita rosa",
+  "block.abundance.potted_purple_daisy": "Maceta con margarita morada",
+  "block.abundance.potted_magenta_daisy": "Maceta con margarita magenta",
+  "block.abundance.potted_yellow_daisy": "Maceta con margarita amarilla",
+  "block.abundance.potted_orange_daisy": "Maceta con margarita naranja",
+  "block.abundance.potted_red_daisy": "Maceta con margarita roja",
+  "block.abundance.potted_blue_daisy": "Maceta con margarita azul",
 
   "block.abundance.potted_amaranthus": "Maceta con amaranto",
   "block.abundance.potted_chicory": "Maceta con achicoria",
   "block.abundance.potted_nemophila": "Maceta con nemophila",
+  "block.abundance.potted_myosotis": "Maceta con nomeolvides",
+  "block.abundance.potted_fiddleneck": "Maceta con amsinckia",
 
   "_comment7": "Misc",
   "item.abundance.sunflower_seeds": "Semillas de girasol",
