@@ -44,7 +44,7 @@
   "block.abundance.jacaranda_vertical_slab": "Losa vertical de jacarandá",
   "block.abundance.vertical_jacaranda_planks": "Tablones de jacarandá verticales",
   "block.abundance.jacaranda_hedge": "Seto de jacarandá",
-  "block.abundance.budding_jacaranda_hedge": "Seto de jacarandá en ciernes",
+  "block.abundance.budding_jacaranda_hedge": "Seto de jacarandá en brote",
   "block.abundance.flowering_jacaranda_hedge": "Seto de jacarandá florecido",
   "block.abundance.jacaranda_post": "Poste de jacarandá",
   "block.abundance.stripped_jacaranda_post": "Poste de jacarandá sin corteza",
@@ -53,9 +53,9 @@
 
   "item.abundance.jacaranda_boat": "Barca de jacarandá",
 
-  "block.abundance.budding_jacaranda_leaves": "Hojas de jacarandá en ciernes",
+  "block.abundance.budding_jacaranda_leaves": "Hojas de jacarandá en brote",
   "block.abundance.flowering_jacaranda_leaves": "Hojas de jacarandá florecidas",
-  "block.abundance.budding_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá en ciernes",
+  "block.abundance.budding_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá en brote",
   "block.abundance.flowering_jacaranda_leaf_carpet": "Alfombra de hojas de jacarandá florecidas",
 
 
@@ -84,7 +84,7 @@
   "block.abundance.redbud_vertical_slab": "Losa vertical de ciclamor",
   "block.abundance.vertical_redbud_planks": "Tablones de ciclamor verticales",
   "block.abundance.redbud_hedge": "Seto de ciclamor",
-  "block.abundance.budding_redbud_hedge": "Seto de ciclamor en ciernes",
+  "block.abundance.budding_redbud_hedge": "Seto de ciclamor en brote",
   "block.abundance.flowering_redbud_hedge": "Seto de ciclamor florecido",
   "block.abundance.redbud_post": "Poste de ciclamor",
   "block.abundance.stripped_redbud_post": "Poste de ciclamor sin corteza",
@@ -93,8 +93,8 @@
 
   "item.abundance.redbud_boat": "Barca de ciclamor",
 
-  "block.abundance.budding_redbud_leaves": "Hojas de ciclamor en ciernes",
-  "block.abundance.budding_redbud_leaf_carpet": "Alfombra de hojas de ciclamor en ciernes",
+  "block.abundance.budding_redbud_leaves": "Hojas de ciclamor en brote",
+  "block.abundance.budding_redbud_leaf_carpet": "Alfombra de hojas de ciclamor en brote",
   "block.abundance.flowering_redbud_leaves": "Hojas de ciclamor florecidas",
   "block.abundance.flowering_redbud_leaf_carpet": "Alfombra de hojas de ciclamor florecidas",
   "block.abundance.flowering_redbud_log": "Tronco de ciclamor florecido",
