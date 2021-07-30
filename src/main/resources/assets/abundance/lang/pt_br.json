@@ -117,13 +117,34 @@
 
 
   "_comment5": "Flowers",
+  "block.abundance.pink_daisy": "Margarida rosa",
+  "block.abundance.purple_daisy": "Margarida roxa",
+  "block.abundance.magenta_daisy": "Margarida magenta",
+  "block.abundance.yellow_daisy": "Margarida amarela",
+  "block.abundance.orange_daisy": "Margarida laranja",
+  "block.abundance.red_daisy": "Margarida vermelha",
+  "block.abundance.blue_daisy": "Margarida azul",
+  
   "block.abundance.amaranthus": "Amaranto",
   "block.abundance.chicory": "Chicória",
   "block.abundance.nemophila": "Nemófila",
+  "block.abundance.myosotis": "Miosótis",
+  "block.abundance.fiddleneck": "Fiddleneck",
+  "block.abundance.heliconia": "Helicônia",
+  
+  "block.abundance.potted_pink_daisy": "Margarida rosa envasada",
+  "block.abundance.potted_purple_daisy": "Margarida roxa envasada",
+  "block.abundance.potted_magenta_daisy": "Margarida magenta envasada",
+  "block.abundance.potted_yellow_daisy": "Margarida amarela envasada",
+  "block.abundance.potted_orange_daisy": "Margarida laranja envasada",
+  "block.abundance.potted_red_daisy": "Margarida vermelha envasada",
+  "block.abundance.potted_blue_daisy": "Margarida azul envasada",
 
   "block.abundance.potted_amaranthus": "Amaranto envasado",
   "block.abundance.potted_chicory": "Chicória envasada",
   "block.abundance.potted_nemophila": "Nemófila envasada",
+  "block.abundance.potted_myosotis": "Miosótis envasada",
+  "block.abundance.potted_fiddleneck": "Fiddleneck envasada",
 
   "_comment6": "Misc",
   "item.abundance.sunflower_seeds": "Sementes de girassol",
